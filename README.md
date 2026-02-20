@@ -1,1 +1,1 @@
-# Soner Akça
+7/24 Canlı Tv Yayınları
