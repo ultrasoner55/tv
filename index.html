@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>υLтяαδσηєя 📺</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #151515;
+      --surface-2: #1e1e1e;
+      --text: #f5f5f5;
+      --muted: #aaaaaa;
+      --accent: #3b82f6;
+      --border: #2f2f2f;
+      --player-bg: #000000;
+    }
+
+    body[data-theme="light"] {
+      --bg: #ffffff;
+      --surface: #f3f4f6;
+      --surface-2: #ffffff;
+      --text: #111111;
+      --muted: #4b5563;
+      --accent: #1d4ed8;
+      --border: #d1d5db;
+      --player-bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      transition: background .2s, color .2s;
+    }
+
+    .layout {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 16px;
+      padding: 62px 16px 16px;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      background: linear-gradient(180deg, var(--surface), var(--surface-2));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .header-row {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 6;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .app-header {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--accent);
+      text-align: center;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 6px 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .search {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      padding: 10px;
+      margin-bottom: 10px;
+      margin-top: 8px;
+    }
+
+    .category-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--muted);
+      margin: 14px 0 8px;
+      font-weight: 700;
+    }
+
+    .channel-btn {
+      width: 100%;
+      text-align: left;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      padding: 10px;
+      cursor: pointer;
+      transition: .18s;
+      font-size: 14px;
+    }
+
+    .channel-btn:hover,
+    .channel-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .channel-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .channel-logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--surface-2);
+    }
+
+    .channel-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .main {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 0 12px 0;
+      min-height: 0;
+    }
+
+    .theme-toggle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 22px;
+      color: var(--text);
+    }
+
+    .player-wrap {
+      width: min(1000px, 100%);
+      background: var(--player-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.35);
+      padding: 14px;
+    }
+
+    .now-playing {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    video {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 10px;
+      background: #000;
+    }
+
+    #channelList {
+      overflow-y: auto;
+      min-height: 0;
+      flex: 1;
+      padding-right: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .header-row {
+        top: 8px;
+        gap: 8px;
+      }
+
+      .app-header {
+        font-size: 24px;
+      }
+
+      .theme-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+      }
+
+      .main {
+        order: 1;
+        padding: 50px 0 0;
+      }
+
+      .player-wrap {
+        padding: 10px;
+        border-radius: 12px;
+      }
+
+      .sidebar {
+        order: 2;
+        height: auto !important;
+      }
+
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <div class="header-row">
+    <h1 class="app-header">υLтяαδσηєя 📺</h1>
+    <button id="themeBtn" class="theme-toggle" aria-label="Tema değiştir">🌙</button>
+  </div>
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="subtitle">Kategorilere göre kanal listesi</p>
+      <input id="search" class="search" type="text" placeholder="Kanal ara..." />
+      <div id="channelList"></div>
+    </aside>
+
+    <main class="main">
+      <div class="player-wrap">
+        <p id="nowPlaying" class="now-playing">Şu an: Kanal seçin</p>
+        <video id="player" controls autoplay muted playsinline></video>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const channels = [
+      { name: "TRT 1", category: "Ulusal", url: "https://ti-content-global.cdn.turner.com/PROD-APAC/C_GUMBAL_XXXXX205_MEI_TUR/c77b5891-bd60-45ca-b540-3c998f50a2d0/PCTV.m3u8" },
+      { name: "ATV", category: "Ulusal", url: "http://89.187.191.41/ATV-HD-TR/video.m3u8" },
+      { name: "Kanal D", category: "Ulusal", url: "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3" },
+      { name: "Show TV", category: "Ulusal", url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8" },
+      { name: "NOW TV", category: "Ulusal", url: "http://116.202.238.88/FOXTV_TR/index.m3u8" },
+      { name: "Star TV", category: "Ulusal", url: "https://dogus-live.daioncdn.net/startv/startv.m3u8" },
+      { name: "TV8", category: "Ulusal", url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8" },
+      { name: "Kanal 7", category: "Ulusal", url: "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8" },
+
+      { name: "TRT Spor", category: "Spor", url: "https://tv-trtspor1.medya.trt.com.tr/master_720.m3u8" },
+      { name: "A Spor", category: "Spor", url: "https://live.sportstv.com.tr/hls/sportstv.m3u8" },
+      { name: "Tivibu Spor", category: "Spor", url: "https://tv-trtspor2.medya.trt.com.tr/master_720.m3u8" },
+      { name: "beIN Sports Haber", category: "Spor", url: "https://ythls-v2.onrender.com/channel/UC0XWS6A5x-1o0i1VJ9h7mZA.m3u8" },
+      { name: "FB TV", category: "Spor", url: "https://fl1.moveonjoy.com/FENERBAHCETV/index.m3u8" },
+
+      { name: "NTV", category: "Haber", url: "https://dogus-live.daioncdn.net/ntv/ntv.m3u8" },
+      { name: "TRT Haber", category: "Haber", url: "https://tv-trthaber.medya.trt.com.tr/master_720.m3u8" },
+      { name: "A Haber", category: "Haber", url: "https://trkvz-live.daioncdn.net/ahaber/ahaber.m3u8" },
+      { name: "CNN Türk", category: "Haber", url: "https://demiroren-live.daioncdn.net/cnnturk/cnnturk.m3u8" },
+      { name: "Haber Global", category: "Haber", url: "https://haberglobal.live/hls/haberglobal.m3u8" },
+      { name: "24 TV", category: "Haber", url: "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8" },
+
+      { name: "TRT Belgesel", category: "Belgesel", url: "https://tv-trtbelgesel.medya.trt.com.tr/master_720.m3u8" },
+      { name: "Love Nature", category: "Belgesel", url: "https://amg01264-judobaby-lovenature-cineverse-aykg8.amagi.tv/playlist/amg01264-judobaby-lovenature-cineverse/playlist.m3u8" },
+      { name: "Nature Time", category: "Belgesel", url: "https://ythls-v2.onrender.com/channel/UC5-I7g9P0qCrXqQhVJf7M9A.m3u8" },
+
+      { name: "TRT Çocuk", category: "Çocuk", url: "https://tv-trtcocuk.medya.trt.com.tr/master_720.m3u8" },
+      { name: "Cartoon Channel", category: "Çocuk", url: "https://bozztv.com/gusa/gusa-cartoonnetwork/index.m3u8" },
+      { name: "Baby Shark TV", category: "Çocuk", url: "https://newidco-babysharktv-1-eu.xiaomi.wurl.tv/playlist.m3u8" },
+
+      { name: "Dream Türk", category: "Müzik", url: "https://dreamturk-live.daioncdn.net/dreamturk/dreamturk.m3u8" },
+      { name: "Power Türk TV", category: "Müzik", url: "https://livetv.powerapp.com.tr/powerturktv/powerturktv.smil/playlist.m3u8" },
+      { name: "NR1 Türk", category: "Müzik", url: "https://blox-livemedia.hzcdn.com/live/playlist.m3u8" },
+      { name: "Number One TV", category: "Müzik", url: "https://nr1numberone-tv.ercdn.net/nr1numberone/nr1numberone.m3u8" }
+    ];
+
+    const player = document.getElementById("player");
+    const listEl = document.getElementById("channelList");
+    const nowPlaying = document.getElementById("nowPlaying");
+    const search = document.getElementById("search");
+    const themeBtn = document.getElementById("themeBtn");
+    let hls;
+
+    function playChannel(channel) {
+      nowPlaying.textContent = `Şu an: ${channel.name}`;
+      document.querySelectorAll(".channel-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.name === channel.name);
+      });
+
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
+
+      if (Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(channel.url);
+        hls.attachMedia(player);
+      } else if (player.canPlayType("application/vnd.apple.mpegurl")) {
+        player.src = channel.url;
+      } else {
+        alert("Tarayıcı bu canlı yayın formatını desteklemiyor.");
+      }
+    }
+
+
+    function getChannelLogo(channelName) {
+      const encoded = encodeURIComponent(channelName);
+      return `https://ui-avatars.com/api/?name=${encoded}&background=1f2937&color=ffffff&size=64&rounded=true&bold=true`;
+    }
+
+    function renderChannels(filter = "") {
+      const normalized = filter.trim().toLowerCase();
+      const groups = {};
+
+      channels
+        .filter((ch) => ch.name.toLowerCase().includes(normalized) || ch.category.toLowerCase().includes(normalized))
+        .forEach((ch) => {
+          if (!groups[ch.category]) groups[ch.category] = [];
+          groups[ch.category].push(ch);
+        });
+
+      listEl.innerHTML = "";
+      Object.keys(groups).forEach((category) => {
+        const title = document.createElement("div");
+        title.className = "category-title";
+        title.textContent = category;
+        listEl.appendChild(title);
+
+        groups[category].forEach((channel) => {
+          const btn = document.createElement("button");
+          btn.className = "channel-btn";
+
+          const content = document.createElement("div");
+          content.className = "channel-content";
+
+          const logo = document.createElement("img");
+          logo.className = "channel-logo";
+          logo.src = getChannelLogo(channel.name);
+          logo.alt = `${channel.name} logosu`;
+          logo.loading = "lazy";
+
+          const name = document.createElement("span");
+          name.className = "channel-name";
+          name.textContent = channel.name;
+
+          content.appendChild(logo);
+          content.appendChild(name);
+          btn.appendChild(content);
+
+          btn.dataset.name = channel.name;
+          btn.onclick = () => playChannel(channel);
+          listEl.appendChild(btn);
+        });
+      });
+    }
+
+    themeBtn.addEventListener("click", () => {
+      const body = document.body;
+      const light = body.getAttribute("data-theme") === "light";
+      body.setAttribute("data-theme", light ? "dark" : "light");
+      themeBtn.textContent = light ? "🌙" : "☀️";
+    });
+
+    search.addEventListener("input", (e) => renderChannels(e.target.value));
+
+    function syncSidebarHeight() {
+      if (window.innerWidth <= 900) return;
+      const playerWrap = document.querySelector(".player-wrap");
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.height = `${playerWrap.getBoundingClientRect().height}px`;
+    }
+
+    renderChannels();
+    playChannel(channels[0]);
+    syncSidebarHeight();
+
+    window.addEventListener("resize", syncSidebarHeight);
+  </script>
+</body>
+</html>
