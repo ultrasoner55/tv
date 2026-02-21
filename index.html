@@ -248,6 +248,7 @@
   <div class="layout">
     <aside class="sidebar">
       <p class="subtitle">Kategorilere göre kanal listesi</p>
+      <p id="channelStatus" class="subtitle">Kanallar kontrol ediliyor...</p>
       <input id="search" class="search" type="text" placeholder="Kanal ara..." />
       <div id="channelList"></div>
     </aside>
@@ -263,39 +264,31 @@
   <script>
     const channels = [
       { name: "TRT 1", category: "Ulusal", url: "https://tv-trt1.medya.trt.com.tr/master_720.m3u8" },
-      { name: "Now TV", category: "Ulusal", url: "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8" },
-      { name: "ATV", category: "Ulusal", url: "https://trkvz.daioncdn.net/atv/atv_1080p.m3u8?e=1771663126&st=Nv3JHsE7Dhwfj_-YZpt3pA&sid=86nq3n0nsdce&app=d1ce2d40-5256-4550-b02e-e73c185a314e&ce=3" },
-      { name: "Kanal D", category: "Ulusal", url: "live.amazertv.workers.dev/?ID=brazzerstv&CDN=2" },
-      { name: "Show TV", category: "Ulusal", url: "https://ciner.daioncdn.net/showtv/showtv_480p.m3u8?ex=1664766175&st=RBzhSuGauna0OGld-DJUVA&tv=1&sid=86nqap8gbvzt&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&ce=3" },
+      { name: "ATV", category: "Ulusal", url: "https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8" },
+      { name: "Kanal D", category: "Ulusal", url: "https://demiroren-live.daioncdn.net/kanald/kanald.m3u8" },
+      { name: "Show TV", category: "Ulusal", url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8" },
       { name: "Star TV", category: "Ulusal", url: "https://dogus-live.daioncdn.net/startv/startv.m3u8" },
       { name: "TV8", category: "Ulusal", url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8" },
       { name: "Kanal 7", category: "Ulusal", url: "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8" },
 
       { name: "TRT Spor", category: "Spor", url: "https://tv-trtspor1.medya.trt.com.tr/master_720.m3u8" },
-      { name: "A Spor", category: "Spor", url: "https://live.sportstv.com.tr/hls/sportstv.m3u8" },
-      { name: "Tivibu Spor", category: "Spor", url: "https://tv-trtspor2.medya.trt.com.tr/master_720.m3u8" },
-      { name: "beIN Sports Haber", category: "Spor", url: "https://ythls-v2.onrender.com/channel/UC0XWS6A5x-1o0i1VJ9h7mZA.m3u8" },
-      { name: "FB TV", category: "Spor", url: "https://fl1.moveonjoy.com/FENERBAHCETV/index.m3u8" },
+      { name: "TRT Spor Yıldız", category: "Spor", url: "https://tv-trtspor2.medya.trt.com.tr/master_720.m3u8" },
+      { name: "A Spor", category: "Spor", url: "https://trkvz-live.ercdn.net/aspor/aspor.m3u8" },
 
-      { name: "NTV", category: "Haber", url: "https://dogus.daioncdn.net/ntv/ntv_480p.m3u8?token=e8c0dec16bf84c8cc187224d13811c0e705fd2c58b25d7ee&sid=86nrnhj04vvv&app=c68bddbe-3dbf-49f7-892a-93de5ae37f1f&ce=3" },
+      { name: "NTV", category: "Haber", url: "https://dogus-live.daioncdn.net/ntv/ntv.m3u8" },
       { name: "TRT Haber", category: "Haber", url: "https://tv-trthaber.medya.trt.com.tr/master_720.m3u8" },
       { name: "A Haber", category: "Haber", url: "https://trkvz-live.daioncdn.net/ahaber/ahaber.m3u8" },
       { name: "CNN Türk", category: "Haber", url: "https://demiroren-live.daioncdn.net/cnnturk/cnnturk.m3u8" },
-      { name: "Haber Global", category: "Haber", url: "https://haberglobal.live/hls/haberglobal.m3u8" },
       { name: "24 TV", category: "Haber", url: "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8" },
 
       { name: "TRT Belgesel", category: "Belgesel", url: "https://tv-trtbelgesel.medya.trt.com.tr/master_720.m3u8" },
       { name: "Love Nature", category: "Belgesel", url: "https://amg01264-judobaby-lovenature-cineverse-aykg8.amagi.tv/playlist/amg01264-judobaby-lovenature-cineverse/playlist.m3u8" },
-      { name: "Nature Time", category: "Belgesel", url: "https://ythls-v2.onrender.com/channel/UC5-I7g9P0qCrXqQhVJf7M9A.m3u8" },
 
       { name: "TRT Çocuk", category: "Çocuk", url: "https://tv-trtcocuk.medya.trt.com.tr/master_720.m3u8" },
-      { name: "Cartoon Channel", category: "Çocuk", url: "https://bozztv.com/gusa/gusa-cartoonnetwork/index.m3u8" },
       { name: "Baby Shark TV", category: "Çocuk", url: "https://newidco-babysharktv-1-eu.xiaomi.wurl.tv/playlist.m3u8" },
 
       { name: "Dream Türk", category: "Müzik", url: "https://dreamturk-live.daioncdn.net/dreamturk/dreamturk.m3u8" },
       { name: "Power Türk TV", category: "Müzik", url: "https://livetv.powerapp.com.tr/powerturktv/powerturktv.smil/playlist.m3u8" },
-      { name: "NR1 Türk", category: "Müzik", url: "https://blox-livemedia.hzcdn.com/live/playlist.m3u8" },
-      { name: "NR1 Türk", category: "Müzik", url: "https://blox-livemedia.hzcdn.com/live/playlist.m3u8" },
       { name: "Number One TV", category: "Müzik", url: "https://nr1numberone-tv.ercdn.net/nr1numberone/nr1numberone.m3u8" }
     ];
 
@@ -304,6 +297,8 @@
     const nowPlaying = document.getElementById("nowPlaying");
     const search = document.getElementById("search");
     const themeBtn = document.getElementById("themeBtn");
+    const channelStatus = document.getElementById("channelStatus");
+    let availableChannels = [];
     let hls;
 
     function playChannel(channel) {
@@ -334,11 +329,46 @@
       return `https://ui-avatars.com/api/?name=${encoded}&background=1f2937&color=ffffff&size=64&rounded=true&bold=true`;
     }
 
+    async function isChannelAvailable(url) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 8000);
+
+      try {
+        const response = await fetch(url, {
+          method: "GET",
+          cache: "no-store",
+          signal: controller.signal
+        });
+
+        if (!response.ok) return false;
+
+        const manifest = await response.text();
+        return manifest.includes("#EXTM3U");
+      } catch {
+        return false;
+      } finally {
+        clearTimeout(timeout);
+      }
+    }
+
+    async function buildWorkingChannelList() {
+      const working = [];
+
+      for (const channel of channels) {
+        // Kullanıcı tarafında tek tek kontrol edip sadece çalışanları listeliyoruz.
+        if (await isChannelAvailable(channel.url)) {
+          working.push(channel);
+        }
+      }
+
+      return working;
+    }
+
     function renderChannels(filter = "") {
       const normalized = filter.trim().toLowerCase();
       const groups = {};
 
-      channels
+      availableChannels
         .filter((ch) => ch.name.toLowerCase().includes(normalized) || ch.category.toLowerCase().includes(normalized))
         .forEach((ch) => {
           if (!groups[ch.category]) groups[ch.category] = [];
@@ -396,9 +426,24 @@
       sidebar.style.height = `${playerWrap.getBoundingClientRect().height}px`;
     }
 
-    renderChannels();
-    playChannel(channels[0]);
-    syncSidebarHeight();
+    async function init() {
+      channelStatus.textContent = "Kanallar tek tek kontrol ediliyor...";
+      availableChannels = await buildWorkingChannelList();
+
+      if (!availableChannels.length) {
+        channelStatus.textContent = "Çalışan kanal bulunamadı (ağ/CORS engeli olabilir).";
+        listEl.innerHTML = "";
+        nowPlaying.textContent = "Şu an: Kanal seçin";
+        return;
+      }
+
+      channelStatus.textContent = `${availableChannels.length} kanal aktif.`;
+      renderChannels();
+      playChannel(availableChannels[0]);
+      syncSidebarHeight();
+    }
+
+    init();
 
     window.addEventListener("resize", syncSidebarHeight);
   </script>
