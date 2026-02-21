@@ -1,3 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="52">📺</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TV icon">
+  <rect x="8" y="14" width="48" height="34" rx="6" fill="#2563eb" />
+  <rect x="13" y="19" width="38" height="24" rx="3" fill="#0b1020" />
+  <path d="M25 8l7 7 7-7" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="22" y="50" width="20" height="4" rx="2" fill="#2563eb"/>
+  <circle cx="48" cy="24" r="2" fill="#60a5fa"/>
+  <circle cx="48" cy="30" r="2" fill="#60a5fa"/>
 </svg>
