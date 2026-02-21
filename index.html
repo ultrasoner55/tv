@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>υLтяαδσηєя 📺</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <style>
     :root {
@@ -263,39 +264,39 @@
     const channels = [
       { name: "TRT 1", category: "Ulusal", url: "https://tv-trt1.medya.trt.com.tr/master_720.m3u8" },
       { name: "Now TV", category: "Ulusal", url: "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8" },
-      { name: "ATV", category: "Ulusal", url: "https://trkvz.daioncdn.net/atv/atv_1080p.m3u8?e=1771663126&st=Nv3JHsE7Dhwfj_-YZpt3pA&sid=86nq3n0nsdce&app=d1ce2d40-5256-4550-b02e-e73c185a314e&ce=3" },
-      { name: "Kanal D", category: "Ulusal", url: "live.amazertv.workers.dev/?ID=brazzerstv&CDN=2" },
-      { name: "Show TV", category: "Ulusal", url: "https://ciner.daioncdn.net/showtv/showtv_480p.m3u8?ex=1664766175&st=RBzhSuGauna0OGld-DJUVA&tv=1&sid=86nqap8gbvzt&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&ce=3" },
-      { name: "Star TV", category: "Ulusal", url: "https://dogus-live.daioncdn.net/startv/startv.m3u8" },
-      { name: "TV8", category: "Ulusal", url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8" },
-      { name: "Kanal 7", category: "Ulusal", url: "https://kanal7.daioncdn.net/kanal7/kanal7.m3u8" },
+      { name: "ATV", category: "Ulusal", url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" },
+      { name: "Kanal D", category: "Ulusal", url: "https://test-streams.mux.dev/pts_shift/master.m3u8" },
+      { name: "Show TV", category: "Ulusal", url: "https://test-streams.mux.dev/tos_ismc/main.m3u8" },
+      { name: "Star TV", category: "Ulusal", url: "https://test-streams.mux.dev/test_001/stream.m3u8" },
+      { name: "TV8", category: "Ulusal", url: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8" },
+      { name: "Kanal 7", category: "Ulusal", url: "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8" },
 
-      { name: "TRT Spor", category: "Spor", url: "https://tv-trtspor1.medya.trt.com.tr/master_720.m3u8" },
-      { name: "A Spor", category: "Spor", url: "https://live.sportstv.com.tr/hls/sportstv.m3u8" },
-      { name: "Tivibu Spor", category: "Spor", url: "https://tv-trtspor2.medya.trt.com.tr/master_720.m3u8" },
-      { name: "beIN Sports Haber", category: "Spor", url: "https://ythls-v2.onrender.com/channel/UC0XWS6A5x-1o0i1VJ9h7mZA.m3u8" },
-      { name: "FB TV", category: "Spor", url: "https://fl1.moveonjoy.com/FENERBAHCETV/index.m3u8" },
+      { name: "TRT Spor", category: "Spor", url: "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8" },
+      { name: "A Spor", category: "Spor", url: "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8" },
+      { name: "Tivibu Spor", category: "Spor", url: "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.mp4/.m3u8" },
+      { name: "beIN Sports Haber", category: "Spor", url: "https://content.jwplatform.com/manifests/yp34SRmf.m3u8" },
+      { name: "FB TV", category: "Spor", url: "https://test-streams.mux.dev/dai-discontinuity-deltatre/manifest.m3u8" },
 
-      { name: "NTV", category: "Haber", url: "https://dogus.daioncdn.net/ntv/ntv_480p.m3u8?token=e8c0dec16bf84c8cc187224d13811c0e705fd2c58b25d7ee&sid=86nrnhj04vvv&app=c68bddbe-3dbf-49f7-892a-93de5ae37f1f&ce=3" },
+      { name: "NTV", category: "Haber", url: "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8" },
       { name: "TRT Haber", category: "Haber", url: "https://tv-trthaber.medya.trt.com.tr/master_720.m3u8" },
-      { name: "A Haber", category: "Haber", url: "https://trkvz-live.daioncdn.net/ahaber/ahaber.m3u8" },
-      { name: "CNN Türk", category: "Haber", url: "https://demiroren-live.daioncdn.net/cnnturk/cnnturk.m3u8" },
-      { name: "Haber Global", category: "Haber", url: "https://haberglobal.live/hls/haberglobal.m3u8" },
+      { name: "A Haber", category: "Haber", url: "https://test-streams.mux.dev/issue666/playlists/cisq0gim60007xzvi505emlxx.m3u8" },
+      { name: "CNN Türk", category: "Haber", url: "https://test-streams.mux.dev/pts_shift/master.m3u8" },
+      { name: "Haber Global", category: "Haber", url: "https://test-streams.mux.dev/tos_ismc/main.m3u8" },
       { name: "24 TV", category: "Haber", url: "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8" },
 
-      { name: "TRT Belgesel", category: "Belgesel", url: "https://tv-trtbelgesel.medya.trt.com.tr/master_720.m3u8" },
-      { name: "Love Nature", category: "Belgesel", url: "https://amg01264-judobaby-lovenature-cineverse-aykg8.amagi.tv/playlist/amg01264-judobaby-lovenature-cineverse/playlist.m3u8" },
-      { name: "Nature Time", category: "Belgesel", url: "https://ythls-v2.onrender.com/channel/UC5-I7g9P0qCrXqQhVJf7M9A.m3u8" },
+      { name: "TRT Belgesel", category: "Belgesel", url: "https://test-streams.mux.dev/x36xhzz/url_6/193039199_mp4_h264_aac_hq_7.m3u8" },
+      { name: "Love Nature", category: "Belgesel", url: "https://test-streams.mux.dev/bbbAES/playlists/sample_aes/index.m3u8" },
+      { name: "Nature Time", category: "Belgesel", url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" },
 
       { name: "TRT Çocuk", category: "Çocuk", url: "https://tv-trtcocuk.medya.trt.com.tr/master_720.m3u8" },
-      { name: "Cartoon Channel", category: "Çocuk", url: "https://bozztv.com/gusa/gusa-cartoonnetwork/index.m3u8" },
-      { name: "Baby Shark TV", category: "Çocuk", url: "https://newidco-babysharktv-1-eu.xiaomi.wurl.tv/playlist.m3u8" },
+      { name: "Cartoon Channel", category: "Çocuk", url: "https://test-streams.mux.dev/test_001/stream.m3u8" },
+      { name: "Baby Shark TV", category: "Çocuk", url: "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8" },
 
-      { name: "Dream Türk", category: "Müzik", url: "https://dreamturk-live.daioncdn.net/dreamturk/dreamturk.m3u8" },
-      { name: "Power Türk TV", category: "Müzik", url: "https://livetv.powerapp.com.tr/powerturktv/powerturktv.smil/playlist.m3u8" },
-      { name: "NR1 Türk", category: "Müzik", url: "https://blox-livemedia.hzcdn.com/live/playlist.m3u8" },
-      { name: "NR1 Türk", category: "Müzik", url: "https://blox-livemedia.hzcdn.com/live/playlist.m3u8" },
-      { name: "Number One TV", category: "Müzik", url: "https://nr1numberone-tv.ercdn.net/nr1numberone/nr1numberone.m3u8" }
+      { name: "Dream Türk", category: "Müzik", url: "https://content.jwplatform.com/manifests/yp34SRmf.m3u8" },
+      { name: "Power Türk TV", category: "Müzik", url: "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8" },
+      { name: "NR1 Türk", category: "Müzik", url: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8" },
+      { name: "NR1 Türk", category: "Müzik", url: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8" },
+      { name: "Number One TV", category: "Müzik", url: "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8" }
     ];
 
     const player = document.getElementById("player");
