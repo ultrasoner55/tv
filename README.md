@@ -1,4 +1,4 @@
-# 📺 TV Web
+# 📺 Web TV
 
 Kategorilere ayrılmış kanal listesi, gündüz/gece teması, merkezde video oynatıcı ve M3U kaynak bağlantıları içeren basit bir web arayüzü.
 
