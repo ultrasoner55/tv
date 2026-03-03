@@ -2,7 +2,7 @@
 
 Kategorilere ayrılmış kanal listesi, gündüz/gece teması, merkezde video oynatıcı ve M3U kaynak bağlantıları içeren basit bir web arayüzü.
 
-## Çalıştırma
+## ⚙️ Çalıştırma
 
 Projeyi klonladıktan sonra `index.html` dosyasını doğrudan tarayıcıda açabilirsiniz.
 
