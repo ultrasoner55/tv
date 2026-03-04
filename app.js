@@ -15,7 +15,7 @@ const channelData = [
       { name: "10•STAR TV HD", url: "https://dogus-live.daioncdn.net/startv/startv.m3u8" },
       { name: "11•KRAL POP", url: "https://dogus-live.daioncdn.net/kralpop/kralpop.m3u8" },
       { name: "12•HALK TV", url: "https://halktv-live.daioncdn.net/halktv/halktv.m3u8" },
-      { name: "13•TV100", url: "https://tv100-live.ercdn.net/tv100/tv100.m3u8" }
+      { name: "13•TV100", url: "https://nowtv-live-ad.ercdn.net/nowtv/nowtv_360p.m3u8?e=1772650315&st=zg05ky1cDBkbCy-zJ_Xv6A" }
     ]
   }
 ];
