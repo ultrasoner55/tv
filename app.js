@@ -3,16 +3,16 @@ const channelData = [
     category: "Ulusal Haber",
     channels: [
       { name: "1•TRT 1 HD", url: "https://tv-trt1.medya.trt.com.tr/master.m3u8" },
-      { name: "2•TRT HABER HD", url: "https://trkvz-live.daioncdn.net/ahaber/ahaber.m3u8" },
-      { name: "3•TRT SPOR HD", url: "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8" },
-      { name: "4•TRT TÜRK HD", url: "https://tv100-live.ercdn.net/tv100/tv100.m3u8" },
-      { name: "5•TRT MÜZİK HD", url: "https://bloomberght.live.cdn.bitgravity.com/cdn-live/stream.m3u8" }, // Buradaki virgül eksikti
-      { name: "6•TRT BELGESEL HD", url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8" },
+      { name: "2•TRT HABER HD", url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8" },
+      { name: "3•TRT SPOR HD", url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8" },
+      { name: "4•TRT TÜRK HD", url: "https://tv-trtturk.medya.trt.com.tr/master.m3u8" },
+      { name: "5•TRT MÜZİK HD", url: "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8" }, // Buradaki virgül eksikti
+      { name: "6•TRT BELGESEL HD", url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8" },
       { name: "7•SHOW TV", url: "https://tv-trtspor2.medya.trt.com.tr/master.m3u8" },
       { name: "8•SHOW TÜRK", url: "https://trkvz-live.daioncdn.net/aspor/aspor.m3u8" },
       { name: "9•KANAL D", url: "https://ssportplusmobilehls.ercdn.net/SSportPlus/movie.m3u8" }, // Buradaki virgül eksikti
       { name: "10•EURO D", url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8" },
-      { name: "11•ATV", url: "https://ntv1-lh.akamaihd.net/i/NASA_101@319270/master.m3u8" },
+      { name: "11•ATV", url: "https://trkvz.daioncdn.net/atv/atv_1080p.m3u8?e=1772635715&st=H5NUj0b0gUZTydSzdjQKqw&sid=87rw3sbzvpnn&app=d1ce2d40-5256-4550-b02e-e73c185a314e&ce=3" },
       { name: "12•ATV AVRUPA", url: "https://tv-eba.medya.trt.com.tr/master.m3u8" }, // Buradaki virgül eksikti
       { name: "13•NTV", url: "https://dogus-live.daioncdn.net/kralpop/kralpop.m3u8" },
       { name: "14•DMAX", url: "https://dogus-live.daioncdn.net/dreamturk/dreamturk.m3u8" },
