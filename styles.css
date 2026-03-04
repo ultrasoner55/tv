@@ -1,96 +1,93 @@
 :root {
-  --bg: #000000;
-  --panel: #0a0a0a;
-  --panel-2: #151515;
-  --text: #f2f2f2;
-  --accent: #7cc4ff;
-  --border: #2a2a2a;
-  --header-height: 64px;
+  --bg: #0f172a;
+  --panel: rgba(30, 41, 59, 0.8);
+  --panel-2: rgba(51, 65, 85, 0.5);
+  --text: #f8fafc;
+  --accent: #38bdf8;
+  --border: rgba(255, 255, 255, 0.1);
 }
 
 body.day {
-  --bg: #ffffff;
-  --panel: #ffffff;
-  --panel-2: #f5f9ff;
-  --text: #122033;
-  --accent: #0077b6;
-  --border: #ccdae8;
+  --bg: #f1f5f9;
+  --panel: rgba(255, 255, 255, 0.9);
+  --panel-2: #e2e8f0;
+  --text: #0f172a;
+  --accent: #0284c7;
+  --border: rgba(0, 0, 0, 0.1);
 }
 
-* {
-  box-sizing: border-box;
+* { 
+  box-sizing: border-box; 
+  transition: background 0.3s, color 0.3s, transform 0.2s; 
+  -webkit-tap-highlight-color: transparent; 
 }
 
 body {
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
+  overflow-x: hidden;
 }
 
 .topbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: var(--header-height);
-  padding: 0 1.25rem;
-  background: transparent;
-  border: none;
+  padding: 0 1.5rem;
+  height: 65px;
+  background: var(--bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
-.topbar h1 {
-  margin: 0;
-  grid-column: 2;
-  text-align: center;
-  font-size: 1.2rem;
-}
+.topbar h1 { font-size: 1.3rem; margin: 0; font-weight: 600; }
+.topbar h1 span { color: var(--accent); }
 
 .theme-toggle {
-  grid-column: 3;
-  justify-self: end;
-  background: none !important;
-  color: var(--text);
-  border: none;
-  box-shadow: none;
-  appearance: none;
-  -webkit-appearance: none;
-  padding: 0.25rem;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  font-size: 1.6rem;
-  line-height: 1;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: 360px 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  height: calc(100vh - var(--header-height));
 }
 
-.sidebar,
+.player-area { width: 100%; }
+
 .player-card {
-  background: var(--panel);
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
   border: 1px solid var(--border);
-  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
+
+video { width: 100%; height: 100%; object-fit: contain; }
 
 .sidebar {
-  padding: 1rem;
-  height: 100%;
+  background: var(--panel);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.2rem;
+  max-height: 55vh;
   overflow-y: auto;
-}
-
-.channel-group {
-  margin-bottom: 1rem;
-}
-
-.channel-group h3 {
-  margin: 0 0 0.5rem;
-  color: var(--accent);
 }
 
 .channel-group button {
@@ -99,46 +96,34 @@ body {
   background: var(--panel-2);
   color: var(--text);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.55rem 0.75rem;
-  margin-bottom: 0.45rem;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.7rem;
   cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
-.channel-group button:hover,
-.channel-group button.active {
+.channel-group button:hover {
+  transform: scale(1.02);
   border-color: var(--accent);
 }
 
-.player-area,
-.player-card {
-  height: 100%;
+.channel-group button.active {
+  background: var(--accent);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
 }
 
-.player-card {
-  padding: 1rem;
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: #000;
-  border: 1px solid var(--border);
-  object-fit: contain;
-}
-
-@media (max-width: 900px) {
+/* Masaüstü Ayarları */
+@media (min-width: 900px) {
   .layout {
-    grid-template-columns: 1fr;
-    height: auto;
+    flex-direction: row;
+    height: calc(100vh - 65px);
+    padding: 1.5rem;
   }
-
-  .sidebar {
-    max-height: 45vh;
-  }
-
-  .player-area {
-    min-height: 320px;
-  }
+  .sidebar { width: 350px; height: 100%; max-height: none; }
+  .player-area { flex: 1; }
+  .player-card { height: 100%; aspect-ratio: auto; }
 }
