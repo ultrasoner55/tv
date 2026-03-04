@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>📺 TV Yayınları</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Web TV | Canlı Yayın</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header class="topbar">
-      <h1>7/24 Televizyon Yayınları</h1>
-      <button id="themeToggle" class="theme-toggle" aria-label="Tema değiştir">🌙</button>
+        <h1>Web<span>TV</span></h1>
+        <button id="themeToggle" class="theme-toggle" aria-label="Tema Değiştir">🌙</button>
     </header>
 
     <main class="layout">
-      <aside class="sidebar">
-        <div id="channelGroups" class="channel-groups"></div>
-      </aside>
+        <section class="player-area">
+            <div class="player-card">
+                <video id="videoPlayer" controls autoplay playsinline></video>
+            </div>
+        </section>
 
-      <section class="player-area">
-        <div class="player-card">
-          <video id="videoPlayer" controls autoplay playsinline></video>
-        </div>
-      </section>
+        <aside class="sidebar">
+            <div id="channelGroups" class="channel-groups"></div>
+        </aside>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
