@@ -2,21 +2,21 @@ const channelData = [
   {
     category: "Ulusal Haber",
     channels: [
-      { name: "1-TRT Haber", url: "https://tv-trt1.medya.trt.com.tr/master.m3u8" },
-      { name: "2-A Haber", url: "https://trkvz-live.daioncdn.net/ahaber/ahaber.m3u8" },
-      { name: "3-Haber Global", url: "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8" },
-      { name: "4-TV100", url: "https://tv100-live.ercdn.net/tv100/tv100.m3u8" },
-      { name: "5-Bloomberg HT", url: "https://bloomberght.live.cdn.bitgravity.com/cdn-live/stream.m3u8" }, // Buradaki virgül eksikti
-      { name: "6-TRT Spor", url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8" },
-      { name: "7-TRT Spor Yıldız", url: "https://tv-trtspor2.medya.trt.com.tr/master.m3u8" },
-      { name: "8-A Spor", url: "https://trkvz-live.daioncdn.net/aspor/aspor.m3u8" },
-      { name: "9-S Sport Plus Tanıtım", url: "https://ssportplusmobilehls.ercdn.net/SSportPlus/movie.m3u8" }, // Buradaki virgül eksikti
-      { name: "10-TRT Belgesel", url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8" },
-      { name: "NASA TV", url: "https://ntv1-lh.akamaihd.net/i/NASA_101@319270/master.m3u8" },
-      { name: "TRT EBA TV", url: "https://tv-eba.medya.trt.com.tr/master.m3u8" }, // Buradaki virgül eksikti
-      { name: "Kral Pop TV", url: "https://dogus-live.daioncdn.net/kralpop/kralpop.m3u8" },
-      { name: "Dream Türk", url: "https://dogus-live.daioncdn.net/dreamturk/dreamturk.m3u8" },
-      { name: "PowerTürk TV", url: "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/chunklist_w650000.m3u8" }
+      { name: "1•TRT 1 HD", url: "https://tv-trt1.medya.trt.com.tr/master.m3u8" },
+      { name: "2•TRT HABER HD", url: "https://trkvz-live.daioncdn.net/ahaber/ahaber.m3u8" },
+      { name: "3•TRT SPOR HD", url: "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8" },
+      { name: "4•TRT TÜRK HD", url: "https://tv100-live.ercdn.net/tv100/tv100.m3u8" },
+      { name: "5•TRT MÜZİK HD", url: "https://bloomberght.live.cdn.bitgravity.com/cdn-live/stream.m3u8" }, // Buradaki virgül eksikti
+      { name: "6•TRT BELGESEL HD", url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8" },
+      { name: "7•SHOW TV", url: "https://tv-trtspor2.medya.trt.com.tr/master.m3u8" },
+      { name: "8•SHOW TÜRK", url: "https://trkvz-live.daioncdn.net/aspor/aspor.m3u8" },
+      { name: "9•KANAL D", url: "https://ssportplusmobilehls.ercdn.net/SSportPlus/movie.m3u8" }, // Buradaki virgül eksikti
+      { name: "10•EURO D", url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8" },
+      { name: "11•ATV", url: "https://ntv1-lh.akamaihd.net/i/NASA_101@319270/master.m3u8" },
+      { name: "12•ATV AVRUPA", url: "https://tv-eba.medya.trt.com.tr/master.m3u8" }, // Buradaki virgül eksikti
+      { name: "13•NTV", url: "https://dogus-live.daioncdn.net/kralpop/kralpop.m3u8" },
+      { name: "14•DMAX", url: "https://dogus-live.daioncdn.net/dreamturk/dreamturk.m3u8" },
+      { name: "15•NOW TV", url: "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/chunklist_w650000.m3u8" }
     ]
   }
 ];
