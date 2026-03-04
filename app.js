@@ -1,4 +1,3 @@
-// 1. Veri Yapısı (Virgül hataları düzeltildi)
 const channelData = [
   {
     category: "Ulusal Haber",
@@ -7,14 +6,14 @@ const channelData = [
       { name: "2-A Haber", url: "https://trkvz-live.daioncdn.net/ahaber/ahaber.m3u8" },
       { name: "3-Haber Global", url: "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8" },
       { name: "4-TV100", url: "https://tv100-live.ercdn.net/tv100/tv100.m3u8" },
-      { name: "5-Bloomberg HT", url: "https://bloomberght.live.cdn.bitgravity.com/cdn-live/stream.m3u8" }, // Virgül eklendi
+      { name: "5-Bloomberg HT", url: "https://bloomberght.live.cdn.bitgravity.com/cdn-live/stream.m3u8" }, // Buradaki virgül eksikti
       { name: "6-TRT Spor", url: "https://tv-trtspor1.medya.trt.com.tr/master.m3u8" },
       { name: "7-TRT Spor Yıldız", url: "https://tv-trtspor2.medya.trt.com.tr/master.m3u8" },
       { name: "8-A Spor", url: "https://trkvz-live.daioncdn.net/aspor/aspor.m3u8" },
-      { name: "9-S Sport Plus Tanıtım", url: "https://ssportplusmobilehls.ercdn.net/SSportPlus/movie.m3u8" }, // Virgül eklendi
+      { name: "9-S Sport Plus Tanıtım", url: "https://ssportplusmobilehls.ercdn.net/SSportPlus/movie.m3u8" }, // Buradaki virgül eksikti
       { name: "10-TRT Belgesel", url: "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8" },
       { name: "NASA TV", url: "https://ntv1-lh.akamaihd.net/i/NASA_101@319270/master.m3u8" },
-      { name: "TRT EBA TV", url: "https://tv-eba.medya.trt.com.tr/master.m3u8" }, // Virgül eklendi
+      { name: "TRT EBA TV", url: "https://tv-eba.medya.trt.com.tr/master.m3u8" }, // Buradaki virgül eksikti
       { name: "Kral Pop TV", url: "https://dogus-live.daioncdn.net/kralpop/kralpop.m3u8" },
       { name: "Dream Türk", url: "https://dogus-live.daioncdn.net/dreamturk/dreamturk.m3u8" },
       { name: "PowerTürk TV", url: "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/chunklist_w650000.m3u8" }
@@ -22,16 +21,15 @@ const channelData = [
   }
 ];
 
-// 2. Element Seçiciler
+// HTML elementlerini seçiyoruz
 const channelGroupsEl = document.getElementById("channelGroups");
 const videoEl = document.getElementById("videoPlayer");
 const themeToggleBtn = document.getElementById("themeToggle");
 
 let hls;
 
-// 3. Oynatma Fonksiyonu
 function playChannel(channel, btnEl) {
-  // Aktif buton stilini güncelle
+  // Eski aktif butonları temizle
   document.querySelectorAll(".channel-group button").forEach((button) => button.classList.remove("active"));
   btnEl.classList.add("active");
 
@@ -39,25 +37,24 @@ function playChannel(channel, btnEl) {
     hls.destroy();
   }
 
-  // Safari desteği (Native HLS)
+  // Tarayıcı m3u8 destekliyor mu? (Örn: Safari)
   if (videoEl.canPlayType("application/vnd.apple.mpegurl")) {
     videoEl.src = channel.url;
-    videoEl.play().catch(e => console.error("Oynatma hatası:", e));
+    videoEl.play().catch(() => console.log("Video başlatılamadı."));
   } 
-  // Diğer tarayıcılar (hls.js kütüphanesi ile)
+  // Desteklemiyorsa Hls.js kullan (Örn: Chrome, Brave)
   else if (window.Hls && Hls.isSupported()) {
     hls = new Hls();
     hls.loadSource(channel.url);
     hls.attachMedia(videoEl);
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
-      videoEl.play().catch(e => console.error("Oynatma hatası:", e));
+      videoEl.play();
     });
   }
 }
 
-// 4. Arayüzü Oluşturma
 function buildChannels() {
-  if(!channelGroupsEl) return; // Element yoksa durdur
+  if (!channelGroupsEl) return;
 
   channelData.forEach((group) => {
     const wrapper = document.createElement("section");
@@ -79,26 +76,15 @@ function buildChannels() {
   });
 }
 
-// 5. Tema Yönetimi
-function applyTheme(theme) {
-  const isDay = theme === "day";
-  document.body.classList.toggle("day", isDay);
-  if(themeToggleBtn) themeToggleBtn.textContent = isDay ? "☀️" : "🌙";
-}
-
 function initTheme() {
-  const savedTheme = localStorage.getItem("tv_theme") || "night";
-  applyTheme(savedTheme);
-
-  if(themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
-      const nextTheme = document.body.classList.contains("day") ? "night" : "day";
-      localStorage.setItem("tv_theme", nextTheme);
-      applyTheme(nextTheme);
-    });
-  }
+  if (!themeToggleBtn) return;
+  
+  themeToggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("day");
+    themeToggleBtn.textContent = document.body.classList.contains("day") ? "☀️" : "🌙";
+  });
 }
 
-// Uygulamayı Başlat
+// Uygulamayı çalıştır
 buildChannels();
 initTheme();
