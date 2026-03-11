@@ -1,0 +1,201 @@
+:root {
+  --bg: #121212;
+  --panel: #1e1e1e;
+  --panel-2: #2a2a2a;
+  --text: #e0e0e0;
+  --accent: #38bdf8; /* MAVİ TV */
+  --border: rgba(255, 255, 255, 0.08);
+  --speed: 0.2s; /* Geçiş hızı biraz daha akıcı yapıldı */
+}
+
+body.day {
+  --bg: #ffffff;
+  --panel: #fcfcfc;
+  --panel-2: #f3f3f3;
+  --text: #000000;
+  --accent: #0284c7;
+  --border: #eeeeee;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  transition: background var(--speed), color var(--speed); 
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* TOPBAR AYARLARI */
+.topbar {
+  height: 60px;
+  background: var(--panel);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem 0 0;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.logo { 
+  width: 280px; 
+  font-size: 1.6rem; 
+  font-weight: 800; 
+  letter-spacing: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 28px;
+}
+
+.logo span { color: var(--accent); }
+
+.theme-toggle { 
+  cursor: pointer; 
+  font-size: 1.3rem; 
+  user-select: none; 
+  padding-right: 1.5rem; 
+}
+
+/* ANA YERLEŞİM (LAYOUT) */
+.layout {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  gap: 15px;
+  overflow: hidden;
+}
+
+/* SIDEBAR & KANAL LİSTESİ */
+.sidebar {
+  width: 280px;
+  background: var(--panel);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: 12px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  opacity: 0.6;
+}
+
+.channel-list {
+  overflow-y: auto; /* scroll yerine auto daha iyi bir pratiktir */
+  flex: 1;
+  padding: 0 10px 10px;
+}
+
+.channel-list::-webkit-scrollbar { width: 6px; }
+.channel-list::-webkit-scrollbar-track { background: transparent; }
+.channel-list::-webkit-scrollbar-thumb { 
+  background: var(--border); 
+  border-radius: 10px; 
+}
+.channel-list::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+.group-header {
+  padding: 12px 5px 5px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-transform: uppercase;
+  background: var(--panel);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.channel-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: var(--panel-2);
+  margin-top: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.channel-item:hover { 
+  background: var(--accent); 
+  color: #fff; 
+}
+
+/* LOGOLARI DÜZENLEYEN KRİTİK BÖLÜM */
+.channel-item img {
+  width: 32px; /* Biraz büyütüldü, daha okunaklı olur */
+  height: 32px;
+  object-fit: contain;
+  background: #000; /* Beyaz yerine siyah zemin */
+  border-radius: 6px;
+  padding: 3px;
+  /* Beyaz arkaplanı siyaha yedirmek için filtreler */
+  mix-blend-mode: screen; 
+  filter: contrast(1.1) brightness(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gündüz modunda logoların görünmesi için */
+body.day .channel-item img {
+  background: #eee;
+  mix-blend-mode: multiply; /* Gündüz modunda tam tersi mantık */
+  filter: none;
+}
+
+/* PLAYER ALANI */
+.player-area { flex: 1; display: flex; min-width: 0; }
+.player-card { 
+  width: 100%; 
+  height: 100%; 
+  background: #000; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  border: 1px solid var(--border); 
+}
+video { width: 100%; height: 100%; display: block; }
+
+/* MOBİL ÖZEL AYARLAR */
+@media (max-width: 768px) {
+  .topbar { 
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 40px 1fr 40px; 
+  }
+
+  .logo { 
+    width: auto; 
+    grid-column: 2;
+    justify-content: center; 
+    padding-left: 0;
+  }
+
+  .theme-toggle { 
+    grid-column: 3;
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .layout { flex-direction: column; padding: 10px; }
+  .sidebar { width: 100%; height: 50%; order: 2; }
+  .player-area { height: 35vh; flex: none; order: 1; }
+}
