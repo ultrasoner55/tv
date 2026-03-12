@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
-<body>
+<body id="top-point">
+
 <script>
     if (localStorage.getItem('tv-theme') === 'day') {
         document.body.classList.add('day');
@@ -18,7 +19,9 @@
 </script>
 
 <div class="topbar">
-    <div class="logo">Web<span>TV</span></div>
+    <a href="#top-point" class="logo-link">
+        <div class="logo">Web<span>TV</span></div>
+    </a>
     <div class="theme-toggle" id="themeBtn">🌙</div>
 </div>
 
