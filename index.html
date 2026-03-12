@@ -41,16 +41,30 @@
 <script src="app.js"></script>
 
 <script>
-    // Logo tıklandığında sadece kanal listesini (sidebar içindeki) en başa kaydırır
-    document.getElementById('logoToTop').addEventListener('click', function() {
-        const channelList = document.getElementById('channelGroups');
-        if (channelList) {
+    // Mobilde ve Masaüstünde Kanal Listesini Başa Saran Fonksiyon
+    const logoBtn = document.getElementById('logoToTop');
+    const channelList = document.getElementById('channelGroups');
+
+    if (logoBtn && channelList) {
+        const scrollToTop = (e) => {
+            e.preventDefault(); // Sayfanın genel kaymasını engeller
+            
+            // Doğrudan kanal listesi div'ini yukarı çeker
             channelList.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Akıcı kaydırma efekti
+                behavior: 'smooth'
             });
-        }
-    });
+
+            // Mobil tarayıcılar için garanti: Eğer smooth çalışmazsa direkt başa sar
+            if (channelList.scrollTop !== 0) {
+                channelList.scrollTop = 0;
+            }
+        };
+
+        // Hem tıklama hem de dokunma olaylarını dinliyoruz
+        logoBtn.addEventListener('click', scrollToTop);
+        logoBtn.addEventListener('touchstart', scrollToTop, { passive: false });
+    }
 </script>
 
 </body>
