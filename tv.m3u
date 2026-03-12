@@ -40,7 +40,7 @@ https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_7_AVRUPA.png" group-title="ÖZEL LİSTE",KANAL 7 AVRUPA
 https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_COCUK.png" group-title="ÖZEL LİSTE",TRT COCUK
-https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8
+https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/CARTOON_NETWORK.png" group-title="ÖZEL LİSTE",CARTOON NETWORK
 https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/Q2FydG9vbiBOZXR3b3JrIHwgQQ==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TV_8.png" group-title="ÖZEL LİSTE",TV 8
@@ -264,6 +264,7 @@ https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
 https://yayin.slowkaradeniztv.com:3390/hybrid/play.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fokus-org/tv-logos/master/logos/default.png" tvg-name="114. TRT Muzik" tvg-id=""  group-title="Muzik",TRT MUZIK
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+
 
 
 
