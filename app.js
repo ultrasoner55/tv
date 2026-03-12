@@ -3,14 +3,23 @@ const container = document.getElementById('channelGroups');
 const themeBtn = document.getElementById('themeBtn');
 let hls = null;
 
+// Tema ilk yükleme
 themeBtn.innerText = document.body.classList.contains('day') ? '☀️' : '🌙';
 
-themeBtn.onclick = () => {
+// --- TEMA DEĞİŞTİRME (DOKUNMATİK UYUMLU) ---
+const toggleTheme = (e) => {
+    // Mobilde tıklama ve dokunma çakışmasını önler
+    if (e.type === 'touchstart') e.preventDefault(); 
+    
     document.body.classList.toggle('day');
     const isDay = document.body.classList.contains('day');
     themeBtn.innerText = isDay ? '☀️' : '🌙';
     localStorage.setItem('tv-theme', isDay ? 'day' : 'night');
 };
+
+// Hem tıklama hem dokunma için dinleyici ekle
+themeBtn.addEventListener('click', toggleTheme);
+themeBtn.addEventListener('touchstart', toggleTheme, { passive: false });
 
 async function loadM3U() {
     try {
@@ -77,17 +86,24 @@ function playStream(url) {
     }
 }
 
-// --- YENİ EKLENEN KISIM: LOGOYA TIKLAYINCA KANAL LİSTESİNİ BAŞA SAR ---
+// --- LOGO VE BAŞLATMA AYARLARI ---
 document.addEventListener('DOMContentLoaded', () => {
     loadM3U();
     
-    const logo = document.getElementById('logoBtn');
+    // HTML'deki id'ye uygun olarak "logoToTop" veya "logoBtn" kontrolü
+    const logo = document.getElementById('logoToTop') || document.getElementById('logoBtn');
+    
     if (logo) {
-        logo.onclick = () => {
+        const scrollToTop = (e) => {
+            if (e.type === 'touchstart') e.preventDefault();
+            
             container.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         };
+
+        logo.addEventListener('click', scrollToTop);
+        logo.addEventListener('touchstart', scrollToTop, { passive: false });
     }
 });
