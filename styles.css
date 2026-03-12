@@ -8,7 +8,7 @@
   --speed: 0.2s; 
 }
 
-/* Yumuşak kaydırma efektini aktif ettik */
+/* Yumuşak kaydırma efekti */
 html {
   scroll-behavior: smooth;
 }
@@ -27,6 +27,8 @@ body.day {
   margin: 0; 
   padding: 0; 
   transition: background var(--speed), color var(--speed); 
+  /* Mobilde tıklanan öğelerin etrafındaki varsayılan renkli kutuyu kaldırır */
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -36,7 +38,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Sayfanın genelinin kaymasını engeller */
+  overflow: hidden; 
 }
 
 /* TOPBAR AYARLARI */
@@ -69,16 +71,24 @@ body {
 
 .logo span { color: var(--accent); }
 
+/* Logo basılma efekti */
 .logo:active {
   transform: scale(0.96);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
+/* TEMA BUTONU DÜZENLEMESİ */
 .theme-toggle { 
   cursor: pointer; 
   font-size: 1.3rem; 
   user-select: none; 
   padding-right: 1.5rem; 
+  transition: transform 0.1s ease;
+}
+
+/* Tema butonu basılma efekti */
+.theme-toggle:active {
+  transform: scale(0.8);
 }
 
 /* ANA YERLEŞİM (LAYOUT) */
@@ -87,7 +97,7 @@ body {
   flex: 1;
   padding: 15px;
   gap: 15px;
-  overflow: hidden; /* Dış kutunun taşmasını engeller */
+  overflow: hidden; 
 }
 
 /* SIDEBAR & KANAL LİSTESİ */
@@ -116,8 +126,8 @@ body {
   overflow-y: auto; 
   flex: 1;
   padding: 0 10px 10px;
-  scroll-behavior: smooth; /* JS kaydırması için kritik */
-  -webkit-overflow-scrolling: touch; /* Mobil ivmeli kaydırma */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; 
 }
 
 /* Scrollbar Tasarımı */
@@ -150,6 +160,11 @@ body {
   margin-top: 5px;
   border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.channel-item:active {
+  transform: scale(0.98);
 }
 
 .channel-item:hover { 
@@ -212,12 +227,12 @@ video { width: 100%; height: 100%; display: block; }
   .layout { 
     flex-direction: column; 
     padding: 10px; 
-    overflow-y: hidden; /* Ana sayfanın kaymasını mobilde de engeller */
+    overflow-y: hidden; 
   }
 
   .sidebar { 
     width: 100%; 
-    height: 50vh; /* Kendi yüksekliği olduğu için scroll içeride kalır */
+    height: 50vh; 
     order: 2; 
     flex-shrink: 0;
   }
