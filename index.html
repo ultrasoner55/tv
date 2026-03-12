@@ -19,7 +19,9 @@
 </script>
 
 <div class="topbar">
-    <div class="logo" id="logoToTop" style="cursor: pointer;">Web<span>TV</span></div>
+    <div class="logo" id="logoToTop" style="cursor: pointer; user-select: none;">
+        Web<span>TV</span>
+    </div>
     <div class="theme-toggle" id="themeBtn">🌙</div>
 </div>
 
@@ -39,12 +41,13 @@
 <script src="app.js"></script>
 
 <script>
+    // Logo tıklandığında sadece kanal listesini (sidebar içindeki) en başa kaydırır
     document.getElementById('logoToTop').addEventListener('click', function() {
         const channelList = document.getElementById('channelGroups');
         if (channelList) {
             channelList.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Yumuşak kaydırma sağlar
+                behavior: 'smooth' // Akıcı kaydırma efekti
             });
         }
     });
