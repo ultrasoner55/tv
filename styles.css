@@ -8,7 +8,7 @@
   --speed: 0.2s; 
 }
 
-/* YUMUŞAK KAYDIRMA */
+/* Yumuşak kaydırma efektini tüm sayfa ve elementler için aktif ettik */
 html {
   scroll-behavior: smooth;
 }
@@ -62,17 +62,18 @@ body {
   align-items: center;
   flex-shrink: 0;
   padding-left: 28px;
-  /* Tıklanabilir olması için eklenenler */
+  /* Tıklanabilir buton özellikleri */
   cursor: pointer; 
   user-select: none;
+  transition: transform 0.1s ease, opacity 0.2s ease;
 }
 
 .logo span { color: var(--accent); }
 
-/* Logo tıklandığında hafif bir basılma efekti */
+/* Logo tıklandığında (basıldığında) geri bildirim efekti */
 .logo:active {
-  transform: scale(0.98);
-  opacity: 0.8;
+  transform: scale(0.96);
+  opacity: 0.7;
 }
 
 .theme-toggle { 
@@ -117,10 +118,11 @@ body {
   overflow-y: auto; 
   flex: 1;
   padding: 0 10px 10px;
-  /* JavaScript ile scroll yaparken yumuşak kayması için */
+  /* JavaScript ile yapılan kaydırmanın yumuşak olması için kritik satır */
   scroll-behavior: smooth;
 }
 
+/* Scrollbar Tasarımı */
 .channel-list::-webkit-scrollbar { width: 6px; }
 .channel-list::-webkit-scrollbar-track { background: transparent; }
 .channel-list::-webkit-scrollbar-thumb { 
