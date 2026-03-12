@@ -16,11 +16,11 @@ https://trn03.tulix.tv/gt-showtvs/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/SHOW_TURK.png" group-title="ÖZEL LİSTE",SHOW TURK
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_D.png" group-title="ÖZEL LİSTE",KANAL D
-https://trn03.tulix.tv/gt-kanald-1tv/playlist.m3u8
+https://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EURO_D.png" group-title="ÖZEL LİSTE",EURO D
-https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
+https://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/ATV.png" group-title="ÖZEL LİSTE",ATV
-http://89.187.191.41/ATV-HD-TR/video.m3u8
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/ATV_AVRUPA.png" group-title="ÖZEL LİSTE",ATV AVRUPA
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/NTV.png" group-title="ÖZEL LİSTE",NTV
@@ -32,9 +32,9 @@ http://87.246.54.249:8080/NOW/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TLC.png" group-title="ÖZEL LİSTE",TLC
 https://trn03.tulix.tv/gt-tlc-tv/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/STAR.png" group-title="ÖZEL LİSTE",STAR TV
-http://87.246.54.249:8080/StarTV/index.m3u8
+https://mn-nl.mncdn.com/dogusdyg_star/live.m3u8?st=GpyldTWGu8o62E5eoq74Fw&e=1773435261
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EURO_STAR.png" group-title="ÖZEL LİSTE",EUROSTAR
-https://canlitvulusal.xyz/live/eurostar/index.m3u8
+https://mn-nl.mncdn.com/dogusdyg_star/live.m3u8?st=GpyldTWGu8o62E5eoq74Fw&e=1773435261
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_7.png" group-title="ÖZEL LİSTE",KANAL 7
 https://yurhnwtpys.turknet.ercdn.net/cvmbjbpmdx/kanal7/kanal7_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_7_AVRUPA.png" group-title="ÖZEL LİSTE",KANAL 7 AVRUPA
@@ -264,6 +264,7 @@ https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
 https://yayin.slowkaradeniztv.com:3390/hybrid/play.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fokus-org/tv-logos/master/logos/default.png" tvg-name="114. TRT Muzik" tvg-id=""  group-title="Muzik",TRT MUZIK
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+
 
 
 
