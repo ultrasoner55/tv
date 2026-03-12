@@ -77,4 +77,17 @@ function playStream(url) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', loadM3U);
+// --- YENİ EKLENEN KISIM: LOGOYA TIKLAYINCA KANAL LİSTESİNİ BAŞA SAR ---
+document.addEventListener('DOMContentLoaded', () => {
+    loadM3U();
+    
+    const logo = document.getElementById('logoBtn');
+    if (logo) {
+        logo.onclick = () => {
+            container.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    }
+});
