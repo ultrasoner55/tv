@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
-<body id="top-point">
+<body>
 
 <script>
     if (localStorage.getItem('tv-theme') === 'day') {
@@ -19,9 +19,7 @@
 </script>
 
 <div class="topbar">
-    <a href="#top-point" class="logo-link">
-        <div class="logo">Web<span>TV</span></div>
-    </a>
+    <div class="logo" id="logoToTop" style="cursor: pointer;">Web<span>TV</span></div>
     <div class="theme-toggle" id="themeBtn">🌙</div>
 </div>
 
@@ -39,5 +37,18 @@
 </div>
 
 <script src="app.js"></script>
+
+<script>
+    document.getElementById('logoToTop').addEventListener('click', function() {
+        const channelList = document.getElementById('channelGroups');
+        if (channelList) {
+            channelList.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Yumuşak kaydırma sağlar
+            });
+        }
+    });
+</script>
+
 </body>
 </html>
