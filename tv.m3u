@@ -14,7 +14,7 @@ https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/SHOW.png" group-title="ÖZEL LİSTE",SHOW
 https://canli-yayin.ultrasoner55.workers.dev/?id=showtv
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/SHOW_TURK.png" group-title="ÖZEL LİSTE",SHOW TURK
-https://live.glturk.workers.dev/?ID=https://www.showturk.com.tr/canli-yayin
+http://streams.uzunmuhalefet.com/stream/16e43b9b-e175-482c-a105-2253c06515c9.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_D.png" group-title="ÖZEL LİSTE",KANAL D
 https://live.glturk.workers.dev/?ID=https://www.kanald.com.tr/canli-yayin
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EURO_D.png" group-title="ÖZEL LİSTE",EURO D
