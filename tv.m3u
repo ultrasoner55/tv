@@ -18,33 +18,33 @@ http://streams.uzunmuhalefet.com/stream/16e43b9b-e175-482c-a105-2253c06515c9.m3u
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_D.png" group-title="ÖZEL LİSTE",KANAL D
 https://live.glturk.workers.dev/?ID=https://www.kanald.com.tr/canli-yayin
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EURO_D.png" group-title="ÖZEL LİSTE",EURO D
-https://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8
+http://live.duhnet.tv/S2/HLS_LIVE/eurodnp/track_4_1000/playlist.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/ATV.png" group-title="ÖZEL LİSTE",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/ATV_AVRUPA.png" group-title="ÖZEL LİSTE",ATV AVRUPA
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
+http://162.212.179.33/dvrfl05/gin-atvavrupa/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/NTV.png" group-title="ÖZEL LİSTE",NTV
-https://live.glturk.workers.dev/?ID=https://puhutv.com/ntv-canli-yayin
+https://dogus.daioncdn.net/ntv/ntv.m3u8?ce=3 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/DMAX.png" group-title="ÖZEL LİSTE",DMAX
-https://live.glturk.workers.dev/?ID=https://www.dmax.com.tr/canli-izle
+http://dygvideo.dygdigital.com/live/hls/dmaxdai?m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/NOW.png" group-title="ÖZEL LİSTE",NOW
-https://live.glturk.workers.dev/?ID=https://www.nowtv.com.tr/canli-yayin
+http://87.246.54.249:8080/NOW/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TLC.png" group-title="ÖZEL LİSTE",TLC
-https://live.glturk.workers.dev/?ID=https://www.tlctv.com.tr/canli-izle
+https://trn03.tulix.tv/gt-tlc-tv/index.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/STAR.png" group-title="ÖZEL LİSTE",STAR TV
-https://live.glturk.workers.dev/?ID=https://puhutv.com/star-tv-canli-yayin
+http://87.246.54.249:8080/StarTV/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EURO_STAR.png" group-title="ÖZEL LİSTE",EUROSTAR
-https://live.glturk.workers.dev/?ID=https://www.eurostartv.com.tr/canli-izle
+http://162.212.179.33/trn03/gt-eurostar/index.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_7.png" group-title="ÖZEL LİSTE",KANAL 7
-https://live.glturk.workers.dev/?ID=https://www.kanal7.com/canli-yayin-iframe.php
+http://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_7_AVRUPA.png" group-title="ÖZEL LİSTE",KANAL 7 AVRUPA
-https://live.glturk.workers.dev/?ID=https://www.kanal7avrupa.com/canli-yayin-iframe-avrupa.php
+http://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_COCUK.png" group-title="ÖZEL LİSTE",TRT COCUK
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/CARTOON_NETWORK.png" group-title="ÖZEL LİSTE",CARTOON NETWORK
-https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/Q2FydG9vbiBOZXR3b3JrIHwgQQ==
+https://bunuyazantosunokuyanakosun.denek1544.workers.dev/channel/Q2FydG9vbiBOZXR3b3JrIHwgQQ== 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TV_8.png" group-title="ÖZEL LİSTE",TV 8
-http://89.187.191.41/TV8-HD-TR/video.m3u8
+http://89.187.191.41/TV8-HD-TR/video.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TV_8_BUCUK.png" group-title="ÖZEL LİSTE",TV 8.5
 https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/HALK_TV.png" group-title="ÖZEL LİSTE",HALK TV
