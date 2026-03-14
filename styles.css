@@ -253,7 +253,28 @@ video { width: 100%; height: 100%; display: block; }
   .fancy-toggle {
     grid-column: 3;
     justify-self: end;
+    align-self: center;
     margin-right: 0;
+    width: 46px !important;
+    height: 22px !important;
+    border-radius: 11px !important;
+  }
+
+  .fancy-toggle .fancy-knob {
+    width: 14px !important;
+    height: 14px !important;
+    top: 2px;
+    left: 2px;
+  }
+
+  .fancy-toggle.day .fancy-knob {
+    transform: translateX(24px) !important;
+  }
+
+  .fancy-toggle .sun-shape,
+  .fancy-toggle .moon-shape {
+    width: 14px !important;
+    height: 14px !important;
   }
 
   .layout {
