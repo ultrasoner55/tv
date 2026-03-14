@@ -25,8 +25,8 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 3.Sağ üst köşedeki ay simgesiyle temayı değiştirebilirsiniz.
 
 # 📸 Ekran Görüntüleri
-![Web TV Arayüzü](https://github.com/ultrasoner55/tv/blob/main/screenshots/Web.png)
-![Web TV Arayüzü](https://github.com/ultrasoner55/tv/blob/main/screenshots/Mobile.jpeg)
+<img src="https://raw.githubusercontent.com/ultrasoner55/tv/main/screenshots/Web.png" alt="Web TV Arayüzü Web" width="600">
+<img src="https://raw.githubusercontent.com/ultrasoner55/tv/main/screenshots/Mobile.jpeg" alt="Web TV Arayüzü Mobil" width="250">
 
 # 👨‍💻 Geliştirici
 Soner Akça
