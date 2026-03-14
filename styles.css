@@ -266,3 +266,25 @@ video { width: 100%; height: 100%; display: block; }
     order: 1;
   }
 }
+
+/* Logo dikey ayraç — gecede beyaz, gündüzde siyah */
+.logo-divider {
+  stroke: rgba(255,255,255,0.5);
+}
+body.day .logo-divider {
+  stroke: rgba(0,0,0,0.4);
+}
+
+/* Mobilde video player ortalansın */
+@media (max-width: 768px) {
+  .player-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .player-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
