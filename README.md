@@ -28,19 +28,10 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 <img src="https://raw.githubusercontent.com/ultrasoner55/tv/main/screenshots/Web.png" alt="Web TV Arayüzü Web" width="750"><img src="https://raw.githubusercontent.com/ultrasoner55/tv/main/screenshots/Mobile.jpeg" alt="Web TV Arayüzü Mobil" width="250">
 
 # 👨‍💻 Geliştirici
-Soner Akça
-<p align="left">
-  <a href="https://facebook.com/ultrasoner55" target="_blank"><img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/master/images/facebook-logo.png" width="30"></a>
-  <a href="https://twitter.com/ultrasoner55" target="_blank"><img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/master/images/twitter-logo.png" width="30"></a>
-  <a href="https://instagram.com/ultrasoner55" target="_blank"><img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/master/images/instagram-logo.png" width="30"></a>
-  <a href="https://twitter.com/ultrasoner55" target="_blank"><img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/master/images/youtube-logo.png" width="30"></a>
-</p>
-・GitHub: Beni [GitHub]<a href="https://github.com/ultrasoner55">
-  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40" height="40" alt="GitHub Logo">
-</a>(https://github.com/ultrasoner55) üzerinden takip edebilirsiniz.
-### 🔗 Bana Ulaşın
+Soner Akça[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ultrasoner55)
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ultrasoner55)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/kullanici_adiniz)
+# 🌐 Sosyal Medya Hesaplarım
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/kullanici_adiniz)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/kullanici_adiniz)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/kullanici_adiniz)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/kanal_linkiniz)
