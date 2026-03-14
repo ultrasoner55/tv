@@ -54,7 +54,7 @@ body {
   width: var(--sidebar-w);
   /* layout padding ile hizalamak için: layout 15px padding var, sidebar da 15px içinde */
   /* topbar'da padding yok, direkt 15px boşluk bırakıp 280px genişlikte ortalıyoruz */
-  padding: 0 15px;
+  padding: 0 15px 0 30px;
   height: 100%;
   display: flex;
   align-items: center;
