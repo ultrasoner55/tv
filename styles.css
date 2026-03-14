@@ -54,7 +54,7 @@ body {
   width: var(--sidebar-w);
   /* layout padding ile hizalamak için: layout 15px padding var, sidebar da 15px içinde */
   /* topbar'da padding yok, direkt 15px boşluk bırakıp 280px genişlikte ortalıyoruz */
-  padding: 0 15px 0 55px;
+  padding: 0 15px 0 45px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -238,7 +238,7 @@ video { width: 100%; height: 100%; display: block; }
     width: auto;
     flex: 1;
     justify-content: flex-start;
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
 
   .topbar-spacer { display: none; }
