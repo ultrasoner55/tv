@@ -79,15 +79,15 @@ body {
   width: 56px !important;
   height: 26px !important;
   border-radius: 13px !important;
-  background: #1a1a2e;
+  background: var(--panel-2);
   position: relative;
   cursor: pointer;
   transition: background 0.5s;
   overflow: hidden;
-  border: 2px solid #2a2a4a !important;
+  border: 2px solid var(--accent) !important;
   flex-shrink: 0;
 }
-.fancy-toggle.day { background: #87CEEB; border-color: #4A9EF5 !important; }
+.fancy-toggle.day { background: var(--panel-2); border-color: var(--accent) !important; }
 
 .f-star { position: absolute; background: white; border-radius: 50%; transition: opacity 0.4s; }
 .fancy-toggle.day .f-star { opacity: 0; }
@@ -264,4 +264,13 @@ video { width: 100%; height: 100%; display: block; }
     flex: none; 
     order: 1; 
   }
+}
+
+/* Toggle gece/gündüz renk uyumu */
+.fancy-toggle {
+  background: var(--panel-2) !important;
+}
+.fancy-toggle.day {
+  background: #dff0fa !important;
+  border-color: var(--accent) !important;
 }
