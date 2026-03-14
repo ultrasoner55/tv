@@ -3,22 +3,27 @@ const container = document.getElementById('channelGroups');
 const themeBtn = document.getElementById('themeBtn');
 let hls = null;
 
-// TEMA AYARI
+// --- TEMA VE BAŞLATMA ---
 if (themeBtn) {
+    themeBtn.innerText = document.body.classList.contains('day') ? '☀️' : '🌙';
     themeBtn.onclick = () => {
         document.body.classList.toggle('day');
-        localStorage.setItem('tv-theme', document.body.classList.contains('day') ? 'day' : 'night');
+        const isDay = document.body.classList.contains('day');
+        themeBtn.innerText = isDay ? '☀️' : '🌙';
+        localStorage.setItem('tv-theme', isDay ? 'day' : 'night');
     };
 }
 
-// M3U YÜKLEME
+// --- M3U YÜKLEME ---
 async function loadM3U() {
     try {
         const response = await fetch('tv.m3u?v=' + Date.now());
         const data = await response.text();
         const channels = parseM3U(data);
         displayChannels(channels);
-    } catch (e) { container.innerHTML = "Hata!"; }
+    } catch (e) {
+        container.innerHTML = "<div style='padding:20px; color:red;'>Liste yüklenemedi!</div>";
+    }
 }
 
 function parseM3U(data) {
@@ -70,27 +75,41 @@ function displayChannels(channels) {
     }
 }
 
-// OYNATICI
+// --- AKILLI OYNATICI (ESKİ TRT DOSTU HALİ) ---
 function playStream(url) {
     if (hls) hls.destroy();
     
-    // TRT gibi zorlu kanallar için her zaman proxy kullanmak daha garantidir
-    const finalUrl = "proxy.php?url=" + encodeURIComponent(url);
+    const proxyUrl = "proxy.php?url=" + encodeURIComponent(url);
 
-    if (Hls.isSupported()) {
-        hls = new Hls({
-            xhrSetup: xhr => xhr.withCredentials = false,
-            // Bağlantı koparsa otomatik tekrar dene
-            manifestLoadingMaxRetry: 5,
-            levelLoadingMaxRetry: 5
-        });
-        hls.loadSource(finalUrl);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = finalUrl;
-        video.play();
-    }
+    const setupHls = (sourceUrl, isFirstAttempt = true) => {
+        if (Hls.isSupported()) {
+            hls = new Hls({
+                xhrSetup: xhr => xhr.withCredentials = false,
+                manifestLoadingMaxRetry: 3
+            });
+            
+            hls.loadSource(sourceUrl);
+            hls.attachMedia(video);
+            
+            hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+            
+            // Eğer ilk denemede hata alırsa (TRT değilse ve engelliyse)
+            hls.on(Hls.Events.ERROR, (event, data) => {
+                if (data.fatal && isFirstAttempt) {
+                    console.warn("Direkt bağlantı başarısız, Proxy deneniyor...");
+                    hls.destroy();
+                    setupHls(proxyUrl, false); // İkinci deneme proxy ile
+                }
+            });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            // Safari için
+            video.src = sourceUrl;
+            video.play();
+        }
+    };
+
+    // ÖNCE DİREKT DENE (TRT'nin çalışması için bu şart)
+    setupHls(url, true);
 }
 
 document.addEventListener('DOMContentLoaded', loadM3U);
