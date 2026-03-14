@@ -26,7 +26,7 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 
 # 📸 Ekran Görüntüleri
 ![Web TV Arayüzü](https://github.com/ultrasoner55/tv/blob/main/screenshots/Web.png)
-![Web TV Arayüzü](https://github.com/ultrasoner55/tv/blob/main/screenshots/Mobile.png)
+![Web TV Arayüzü](https://github.com/ultrasoner55/tv/blob/main/screenshots/Mobile.jpeg)
 
 # 👨‍💻 Geliştirici
 Soner Akça
