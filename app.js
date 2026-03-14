@@ -1,14 +1,18 @@
+// Elementleri seçiyoruz
 const video = document.getElementById('videoPlayer');
 const container = document.getElementById('channelGroups');
 const themeBtn = document.getElementById('themeBtn');
 let hls = null;
 
 // --- TEMA AYARLARI ---
-if (themeBtn) {
+function initTheme() {
+    if (!themeBtn) return;
+
+    // Sayfa yüklendiğinde butonun ikonunu ayarla
     themeBtn.innerText = document.body.classList.contains('day') ? '☀️' : '🌙';
 
     const toggleTheme = (e) => {
-        if (e.type === 'touchstart') e.preventDefault(); 
+        if (e.type === 'touchstart') e.preventDefault();
         document.body.classList.toggle('day');
         const isDay = document.body.classList.contains('day');
         themeBtn.innerText = isDay ? '☀️' : '🌙';
@@ -19,16 +23,17 @@ if (themeBtn) {
     themeBtn.addEventListener('touchstart', toggleTheme, { passive: false });
 }
 
-// --- M3U YÜKLEME VE PARÇALAMA ---
+// --- M3U YÜKLEME ---
 async function loadM3U() {
     try {
-        const response = await fetch('tv.m3u'); //
-        if (!response.ok) throw new Error('Dosya bulunamadı');
-        const data = await response.text(); //
+        const response = await fetch('tv.m3u');
+        if (!response.ok) throw new Error('M3U dosyası bulunamadı!');
+        const data = await response.text();
         const channels = parseM3U(data);
         displayChannels(channels);
     } catch (e) {
-        container.innerHTML = `<div style="padding:20px; color:red;">Liste yüklenemedi.</div>`;
+        if (container) container.innerHTML = "<div style='color:red; padding:10px;'>Kanallar yüklenemedi.</div>";
+        console.error("M3U Hatası:", e);
     }
 }
 
@@ -36,24 +41,23 @@ function parseM3U(data) {
     const lines = data.split('\n');
     const channels = [];
     let current = {};
-    
     lines.forEach(line => {
         line = line.trim();
-        if (line.startsWith('#EXTINF')) { //
+        if (line.startsWith('#EXTINF')) {
             current = {};
-            current.group = line.match(/group-title="([^"]+)"/)?.[1] || "TV";
+            current.group = line.match(/group-title="([^"]+)"/)?.[1] || "Genel";
             current.logo = line.match(/tvg-logo="([^"]+)"/)?.[1] || "favicon.png";
             current.name = line.split(',')[1]?.trim() || "Kanal";
-        } else if (line.startsWith('http')) { //
-            current.url = line.trim();
+        } else if (line.startsWith('http')) {
+            current.url = line;
             channels.push({...current});
         }
     });
     return channels;
 }
 
-// --- KANALLARI LİSTELEME ---
 function displayChannels(channels) {
+    if (!container) return;
     container.innerHTML = '';
     const groups = {};
     
@@ -72,8 +76,39 @@ function displayChannels(channels) {
             const item = document.createElement('div');
             item.className = 'channel-item';
             item.innerHTML = `<img src="${ch.logo}" onerror="this.src='favicon.png'"><span>${ch.name}</span>`;
-            
-            item.onclick = () => {
-                // Seçili kanal vurgusu (Opsiyonel görsel şölen)
-                document.querySelectorAll('.channel-item').forEach(el => el.style.background = 'none');
-                item.style.background = 'rgba(255,
+            item.onclick = () => playStream(ch.url);
+            container.appendChild(item);
+        });
+    }
+}
+
+function playStream(url) {
+    if (hls) { hls.destroy(); hls = null; }
+
+    if (Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+    } else if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.play();
+    }
+}
+
+// --- BAŞLATMA ---
+document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    loadM3U();
+
+    // Logo tıklandığında yukarı sarma
+    const logo = document.getElementById('logoToTop');
+    if (logo && container) {
+        const scrollToTop = (e) => {
+            if (e.type === 'touchstart') e.preventDefault();
+            container.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        logo.addEventListener('click', scrollToTop);
+        logo.addEventListener('touchstart', scrollToTop, { passive: false });
+    }
+});
