@@ -5,12 +5,11 @@
   --text: #e0e0e0;
   --accent: #38bdf8;
   --border: rgba(255, 255, 255, 0.08);
-  --speed: 0.2s; 
+  --speed: 0.2s;
+  --sidebar-w: 280px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body.day {
   --bg: #ffffff;
@@ -21,11 +20,11 @@ body.day {
   --border: #eeeeee;
 }
 
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
-  transition: background var(--speed), color var(--speed); 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background var(--speed), color var(--speed);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -36,58 +35,57 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-/* TOPBAR */
+/* TOPBAR — üç sütun: logo | boşluk | toggle */
 .topbar {
   height: 60px;
   background: var(--panel);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr auto;
   align-items: center;
   padding: 0 1.5rem 0 0;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
 
-/* LOGO */
-.logo { 
-  width: 280px; 
-  font-size: 1.6rem; 
-  font-weight: 800; 
-  letter-spacing: -1px;
+/* LOGO — sidebar genişliğinde, dikey+yatay ortalı */
+.logo {
+  width: var(--sidebar-w);
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  padding-left: 28px;
-  cursor: pointer; 
+  justify-content: center;
+  cursor: pointer;
   user-select: none;
   transition: transform 0.1s ease, opacity 0.2s ease;
+  flex-shrink: 0;
 }
-
-.logo span { color: var(--accent); }
 
 .logo:active {
   transform: scale(0.96);
   opacity: 0.8;
 }
 
-/* TEMA TOGGLE — küçük boyut */
+/* TOGGLE — dikey ortalı, sağ kenara yapışık */
 .fancy-toggle {
-  width: 56px !important;
-  height: 26px !important;
-  border-radius: 13px !important;
+  width: 56px;
+  height: 26px;
+  border-radius: 13px;
   background: var(--panel-2);
   position: relative;
   cursor: pointer;
   transition: background 0.5s;
   overflow: hidden;
-  border: 2px solid var(--border) !important;
+  border: 2px solid var(--border);
   flex-shrink: 0;
+  align-self: center;
 }
-.fancy-toggle.day { background: var(--panel-2); border-color: var(--border) !important; }
+.fancy-toggle.day {
+  background: var(--panel-2);
+  border-color: var(--border);
+}
 
 .f-star { position: absolute; background: white; border-radius: 50%; transition: opacity 0.4s; }
 .fancy-toggle.day .f-star { opacity: 0; }
@@ -99,8 +97,8 @@ body {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 18px !important;
-  height: 18px !important;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   transition: transform 0.45s cubic-bezier(.4,0,.2,1);
   z-index: 2;
@@ -108,12 +106,12 @@ body {
   align-items: center;
   justify-content: center;
 }
-.fancy-toggle.day .fancy-knob { transform: translateX(30px) !important; }
+.fancy-toggle.day .fancy-knob { transform: translateX(30px); }
 
 .sun-shape, .moon-shape {
   position: absolute;
-  width: 18px !important;
-  height: 18px !important;
+  width: 18px;
+  height: 18px;
   transition: opacity 0.3s;
   display: flex;
   align-items: center;
@@ -128,12 +126,12 @@ body {
   flex: 1;
   padding: 15px;
   gap: 15px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 280px;
+  width: var(--sidebar-w);
   background: var(--panel);
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -154,19 +152,16 @@ body {
 }
 
 .channel-list {
-  overflow-y: auto; 
+  overflow-y: auto;
   flex: 1;
   padding: 0 10px 10px;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
 }
 
 .channel-list::-webkit-scrollbar { width: 6px; }
 .channel-list::-webkit-scrollbar-track { background: transparent; }
-.channel-list::-webkit-scrollbar-thumb { 
-  background: var(--border); 
-  border-radius: 10px; 
-}
+.channel-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
 .channel-list::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
 .group-header {
@@ -197,80 +192,64 @@ body {
 .channel-item:hover { background: var(--accent); color: #fff; }
 
 .channel-item img {
-  width: 32px; 
+  width: 32px;
   height: 32px;
   object-fit: contain;
-  background: #000; 
+  background: #000;
   border-radius: 6px;
   padding: 3px;
-  mix-blend-mode: screen; 
+  mix-blend-mode: screen;
   filter: contrast(1.1) brightness(1.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 body.day .channel-item img {
   background: #eee;
-  mix-blend-mode: multiply; 
+  mix-blend-mode: multiply;
   filter: none;
 }
 
 /* PLAYER */
 .player-area { flex: 1; display: flex; min-width: 0; }
-.player-card { 
-  width: 100%; 
-  height: 100%; 
-  background: #000; 
-  border-radius: 12px; 
-  overflow: hidden; 
-  border: 1px solid var(--border); 
+.player-card {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
 }
 video { width: 100%; height: 100%; display: block; }
 
 /* MOBİL */
 @media (max-width: 768px) {
-  .topbar { 
+  .topbar {
+    grid-template-columns: 1fr auto;
     padding: 0 1rem;
-    display: grid;
-    grid-template-columns: 40px 1fr 40px; 
   }
 
-  .logo { 
-    width: auto; 
-    grid-column: 2;
-    justify-content: center;
-    padding-left: 0;
+  .logo {
+    width: auto;
+    justify-content: flex-start;
+    padding-left: 1rem;
   }
 
-  .fancy-toggle { 
-    grid-column: 3;
-    justify-self: end;
+  .layout {
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: hidden;
   }
 
-  .layout { 
-    flex-direction: column; 
-    padding: 10px; 
-    overflow-y: hidden; 
-  }
-
-  .sidebar { 
-    width: 100%; 
-    height: 50vh; 
-    order: 2; 
+  .sidebar {
+    width: 100%;
+    height: 50vh;
+    order: 2;
     flex-shrink: 0;
   }
 
-  .player-area { 
-    height: 35vh; 
-    flex: none; 
-    order: 1; 
+  .player-area {
+    height: 35vh;
+    flex: none;
+    order: 1;
   }
-}
-
-/* Toggle gece/gündüz renk uyumu */
-.fancy-toggle {
-  background: var(--panel-2) !important;
-}
-.fancy-toggle.day {
-  background: var(--panel-2) !important;
-  border-color: var(--border) !important;
 }
