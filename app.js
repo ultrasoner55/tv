@@ -2,24 +2,34 @@ const video = document.getElementById('videoPlayer');
 const container = document.getElementById('channelGroups');
 const themeBtn = document.getElementById('themeBtn');
 let hls = null;
+let retryTimeout = null;
 
 // --- TEMA AYARLARI ---
+function updateThemeIcon() {
+    if (themeBtn) {
+        themeBtn.textContent = document.body.classList.contains('day') ? '☀️' : '🌙';
+    }
+}
+
 if (themeBtn) {
     themeBtn.onclick = () => {
         document.body.classList.toggle('day');
         localStorage.setItem('tv-theme', document.body.classList.contains('day') ? 'day' : 'night');
+        updateThemeIcon();
     };
 }
+
+// Sayfa yüklenince ikonu ayarla
+updateThemeIcon();
 
 // --- KANAL LİSTESİNİ ÇEKME ---
 async function loadM3U() {
     try {
-        // GitHub Pages'ta önbellek hatasını önlemek için v= parametresi ekliyoruz
         const response = await fetch('./tv.m3u?v=' + Date.now());
-        if (!response.ok) throw new Error('M3U dosyası GitHub üzerinde bulunamadı!');
+        if (!response.ok) throw new Error('M3U dosyası bulunamadı!');
         const data = await response.text();
         const channels = parseM3U(data);
-        
+
         if (channels.length === 0) {
             container.innerHTML = "<div style='padding:20px;'>M3U dosyası boş veya formatı hatalı.</div>";
         } else {
@@ -32,7 +42,8 @@ async function loadM3U() {
 }
 
 function parseM3U(data) {
-    const lines = data.split('\n');
+    // \r\n ve \r karakterlerini temizle (Windows satır sonu sorunu)
+    const lines = data.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
     const channels = [];
     let current = null;
 
@@ -45,8 +56,9 @@ function parseM3U(data) {
                 name: line.split(',')[1]?.trim() || "Bilinmeyen Kanal"
             };
         } else if (line.startsWith('http') && current) {
-            current.url = line;
-            channels.push({...current});
+            // URL'deki boşlukları ve görünmez karakterleri temizle
+            current.url = line.trim().replace(/\s+/g, '');
+            channels.push({ ...current });
             current = null;
         }
     });
@@ -74,43 +86,131 @@ function displayChannels(channels) {
             item.onclick = () => {
                 document.querySelectorAll('.channel-item').forEach(el => el.classList.remove('active'));
                 item.classList.add('active');
-                playStream(ch.url);
+                playStream(ch.url, ch.name);
             };
             container.appendChild(item);
         });
     }
 }
 
-// --- GİTHUB UYUMLU OYNATICI (DIŞ PROXY DESTEKLİ) ---
-function playStream(url) {
-    if (hls) hls.destroy();
-    
-    // PHP yerine GitHub'da çalışan ücretsiz dış proxy'yi tanımlıyoruz
-    const externalProxy = "https://corsproxy.io/?" + encodeURIComponent(url);
+// --- GELİŞMİŞ OYNATICI ---
+function playStream(url, channelName = '') {
+    // Önceki oynatıcıyı ve retry timer'ı temizle
+    if (retryTimeout) clearTimeout(retryTimeout);
+    if (hls) {
+        hls.destroy();
+        hls = null;
+    }
 
-    const setupHls = (sourceUrl, isFirstAttempt = true) => {
-        if (Hls.isSupported()) {
-            hls = new Hls({
-                xhrSetup: xhr => xhr.withCredentials = false
-            });
-            hls.loadSource(sourceUrl);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
-            
-            hls.on(Hls.Events.ERROR, (event, data) => {
-                if (data.fatal && isFirstAttempt) {
-                    console.warn("Direkt bağlantı başarısız, Dış Proxy (corsproxy.io) deneniyor...");
+    // Yüklenme göstergesi
+    showPlayerMessage(`⏳ ${channelName || 'Kanal'} yükleniyor...`);
+
+    // Mixed content kontrolü: HTTP linkleri HTTPS proxy üzerinden gönder
+    const isHttp = url.startsWith('http://');
+    const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(url);
+
+    // HTTP linkleri direkt proxy'den başlat, HTTPS linkleri önce direkt dene
+    if (isHttp) {
+        console.log(`[${channelName}] HTTP link tespit edildi, proxy ile başlatılıyor.`);
+        setupHls(proxyUrl, false, channelName, url);
+    } else {
+        setupHls(url, true, channelName, proxyUrl);
+    }
+}
+
+function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
+    if (Hls.isSupported()) {
+        hls = new Hls({
+            xhrSetup: xhr => {
+                xhr.withCredentials = false;
+            },
+            // Daha hızlı hata tespiti için timeout ayarları
+            manifestLoadingTimeOut: 10000,
+            manifestLoadingMaxRetry: 1,
+            levelLoadingTimeOut: 10000,
+        });
+
+        hls.loadSource(sourceUrl);
+        hls.attachMedia(video);
+
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            hidePlayerMessage();
+            video.play().catch(e => console.warn("Otomatik oynatma engellendi:", e));
+        });
+
+        hls.on(Hls.Events.ERROR, (event, data) => {
+            console.warn(`[${channelName}] HLS Hata:`, data.type, data.details, '| Fatal:', data.fatal);
+
+            if (data.fatal || data.details === Hls.ErrorDetails.MANIFEST_LOAD_ERROR || data.details === Hls.ErrorDetails.MANIFEST_LOAD_TIMEOUT) {
+                if (canFallback) {
+                    console.warn(`[${channelName}] Direkt bağlantı başarısız → Proxy deneniyor...`);
+                    showPlayerMessage(`🔄 ${channelName}: Alternatif sunucu deneniyor...`);
                     hls.destroy();
-                    setupHls(externalProxy, false); 
+                    hls = null;
+                    // Kısa bir bekleme ile proxy'e geç
+                    retryTimeout = setTimeout(() => {
+                        setupHls(fallbackUrl, false, channelName, null);
+                    }, 500);
+                } else {
+                    showPlayerMessage(`❌ ${channelName} şu anda yayında değil veya erişilemiyor.`);
+                    hls.destroy();
+                    hls = null;
                 }
-            });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = isFirstAttempt ? sourceUrl : externalProxy;
-            video.play();
-        }
-    };
+            }
+        });
 
-    setupHls(url, true);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        // Safari / iOS native HLS
+        video.src = sourceUrl;
+        video.addEventListener('error', () => {
+            if (canFallback) {
+                video.src = fallbackUrl;
+                video.load();
+                video.play().catch(() => {});
+            } else {
+                showPlayerMessage(`❌ ${channelName} şu anda yayında değil.`);
+            }
+        }, { once: true });
+        video.play().catch(() => {});
+    } else {
+        showPlayerMessage('❌ Tarayıcınız HLS formatını desteklemiyor.');
+    }
+}
+
+// --- PLAYER MESAJ FONKSİYONLARI ---
+function showPlayerMessage(msg) {
+    let overlay = document.getElementById('playerOverlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'playerOverlay';
+        overlay.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.75);
+            color: #fff;
+            padding: 14px 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+            pointer-events: none;
+            z-index: 10;
+            max-width: 80%;
+        `;
+        const playerCard = document.querySelector('.player-card');
+        if (playerCard) {
+            playerCard.style.position = 'relative';
+            playerCard.appendChild(overlay);
+        }
+    }
+    overlay.textContent = msg;
+    overlay.style.display = 'block';
+}
+
+function hidePlayerMessage() {
+    const overlay = document.getElementById('playerOverlay');
+    if (overlay) overlay.style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', loadM3U);
