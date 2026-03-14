@@ -18,11 +18,11 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 ・JavaScript: Kanal geçişleri ve tema kontrolü.
 
 # 📖 Nasıl Kullanılır?
-1.Siteye giriş yapın: https://ultrasoner55.github.io/tv/
+1. Siteye giriş yapın: https://ultrasoner55.github.io/tv/
 
-2.Sol taraftaki (veya menüdeki) kanal listesinden izlemek istediğiniz kanalı seçin.
+2. Sol taraftaki (veya menüdeki) kanal listesinden izlemek istediğiniz kanalı seçin.
 
-3.Sağ üst köşedeki ay simgesiyle temayı değiştirebilirsiniz.
+3. Sağ üst köşedeki ay simgesiyle temayı değiştirebilirsiniz.
 
 # 📸 Ekran Görüntüleri
 <img src="https://raw.githubusercontent.com/ultrasoner55/tv/main/screenshots/Web.png" alt="Web TV Arayüzü Web" width="600">
