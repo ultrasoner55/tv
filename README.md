@@ -1,15 +1,34 @@
-# 📺 Web TV
+📺 Web TV - Canlı Yayın Platformu
+Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kolay erişim sağlayan modern bir Web TV arayüzüdür. Kullanıcı dostu tasarımı ve karanlık mod desteği ile kesintisiz bir izleme deneyimi sunar.
 
-Kategorilere ayrılmış kanal listesi, gündüz/gece teması, merkezde video oynatıcı ve M3U kaynak bağlantıları içeren basit bir web arayüzü.
+🚀 Özellikler
+・Geniş Kanal Listesi: Popüler TV kanallarına tek tıkla erişim.
 
-## ⚙️ Çalıştırma
+・Karanlık Mod (Dark Mode): Gece izlemeleri için göz yormayan tasarım.
 
-Projeyi klonladıktan sonra `index.html` dosyasını doğrudan tarayıcıda açabilirsiniz.
+・Responsive Tasarım: Mobil, tablet ve masaüstü cihazlarla tam uyumlu.
 
-Yerel sunucu ile açmak isterseniz:
+・Hızlı Arayüz: Minimalist kod yapısı sayesinde yüksek performans.
 
-```bash
-python3 -m http.server 8080
-```
+🛠️ Kullanılan Teknolojiler
+・HTML5: Sayfa yapısı ve video entegrasyonu.
 
-Ardından `http://localhost:8080` adresine gidin.
+・CSS3: Modern arayüz tasarımı ve animasyonlar.
+
+・JavaScript: Kanal geçişleri ve tema kontrolü.
+
+📖 Nasıl Kullanılır?
+1.Siteye giriş yapın: ultrasoner55.github.io/tv/
+
+2.Sol taraftaki (veya menüdeki) kanal listesinden izlemek istediğiniz kanalı seçin.
+
+3.Sağ üst köşedeki ay simgesiyle temayı değiştirebilirsiniz.
+
+📸 Ekran Görüntüleri
+(Buraya projenin bir ekran görüntüsünü eklemeniz çok şık durur)
+![Web TV Arayüzü](https://via.placeholder.com/800x450.png?text=Web+TV+Ekran+Goruntusu)
+
+👨‍💻 Geliştirici
+Soner Akça
+
+・GitHub: @ultrasoner55
