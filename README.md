@@ -29,6 +29,13 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 
 # 👨‍💻 Geliştirici
 Soner Akça
-
-・GitHub: Beni [GitHub](https://github.com/ultrasoner55) üzerinden takip edebilirsiniz.
+<p align="left">
+  <a href="https://facebook.com/ultrasoner55" target="_blank"><img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/master/images/facebook-logo.png" width="30"></a>
+  <a href="https://twitter.com/ultrasoner55" target="_blank"><img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/master/images/twitter-logo.png" width="30"></a>
+  <a href="https://instagram.com/ultrasoner55" target="_blank"><img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/master/images/instagram-logo.png" width="30"></a>
+  <a href="https://twitter.com/ultrasoner55" target="_blank"><img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/master/images/youtube-logo.png" width="30"></a>
+</p>
+・GitHub: Beni [GitHub]<a href="https://github.com/ultrasoner55">
+  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="40" height="40" alt="GitHub Logo">
+</a>(https://github.com/ultrasoner55) üzerinden takip edebilirsiniz.
 
