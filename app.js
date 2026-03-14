@@ -5,22 +5,21 @@ let hls = null;
 let retryTimeout = null;
 
 // --- TEMA AYARLARI ---
-function updateThemeIcon() {
-    if (themeBtn) {
-        themeBtn.textContent = document.body.classList.contains('day') ? '☀️' : '🌙';
-    }
-}
-
 if (themeBtn) {
     themeBtn.onclick = () => {
-        document.body.classList.toggle('day');
-        localStorage.setItem('tv-theme', document.body.classList.contains('day') ? 'day' : 'night');
-        updateThemeIcon();
+        const isDay = document.body.classList.toggle('day');
+        themeBtn.classList.toggle('day', isDay);
+        localStorage.setItem('tv-theme', isDay ? 'day' : 'night');
     };
 }
 
-// Sayfa yüklenince ikonu ayarla
-updateThemeIcon();
+// Sayfa yüklenince kaydedilen temayı butona da uygula
+(function () {
+    const saved = localStorage.getItem('tv-theme');
+    if (saved === 'day' && themeBtn) {
+        themeBtn.classList.add('day');
+    }
+})();
 
 // --- KANAL LİSTESİNİ ÇEKME ---
 async function loadM3U() {
@@ -42,7 +41,6 @@ async function loadM3U() {
 }
 
 function parseM3U(data) {
-    // \r\n ve \r karakterlerini temizle (Windows satır sonu sorunu)
     const lines = data.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
     const channels = [];
     let current = null;
@@ -56,7 +54,6 @@ function parseM3U(data) {
                 name: line.split(',')[1]?.trim() || "Bilinmeyen Kanal"
             };
         } else if (line.startsWith('http') && current) {
-            // URL'deki boşlukları ve görünmez karakterleri temizle
             current.url = line.trim().replace(/\s+/g, '');
             channels.push({ ...current });
             current = null;
@@ -95,21 +92,17 @@ function displayChannels(channels) {
 
 // --- GELİŞMİŞ OYNATICI ---
 function playStream(url, channelName = '') {
-    // Önceki oynatıcıyı ve retry timer'ı temizle
     if (retryTimeout) clearTimeout(retryTimeout);
     if (hls) {
         hls.destroy();
         hls = null;
     }
 
-    // Yüklenme göstergesi
     showPlayerMessage(`⏳ ${channelName || 'Kanal'} yükleniyor...`);
 
-    // Mixed content kontrolü: HTTP linkleri HTTPS proxy üzerinden gönder
     const isHttp = url.startsWith('http://');
     const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(url);
 
-    // HTTP linkleri direkt proxy'den başlat, HTTPS linkleri önce direkt dene
     if (isHttp) {
         console.log(`[${channelName}] HTTP link tespit edildi, proxy ile başlatılıyor.`);
         setupHls(proxyUrl, false, channelName, url);
@@ -124,7 +117,6 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
             xhrSetup: xhr => {
                 xhr.withCredentials = false;
             },
-            // Daha hızlı hata tespiti için timeout ayarları
             manifestLoadingTimeOut: 10000,
             manifestLoadingMaxRetry: 1,
             levelLoadingTimeOut: 10000,
@@ -147,7 +139,6 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
                     showPlayerMessage(`🔄 ${channelName}: Alternatif sunucu deneniyor...`);
                     hls.destroy();
                     hls = null;
-                    // Kısa bir bekleme ile proxy'e geç
                     retryTimeout = setTimeout(() => {
                         setupHls(fallbackUrl, false, channelName, null);
                     }, 500);
@@ -160,7 +151,6 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
         });
 
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        // Safari / iOS native HLS
         video.src = sourceUrl;
         video.addEventListener('error', () => {
             if (canFallback) {
