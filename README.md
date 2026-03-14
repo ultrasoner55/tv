@@ -26,7 +26,7 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 
 # 📸 Ekran Görüntüleri
 (Buraya projenin bir ekran görüntüsünü eklemeniz çok şık durur)
-![Web TV Arayüzü](https://via.placeholder.com/800x450.png?text=Web+TV+Ekran+Goruntusu)
+![Web TV Arayüzü](https://hizliresim.com/kmgicum))
 
 # 👨‍💻 Geliştirici
 Soner Akça
