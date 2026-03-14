@@ -25,8 +25,7 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 3.Sağ üst köşedeki ay simgesiyle temayı değiştirebilirsiniz.
 
 # 📸 Ekran Görüntüleri
-(Buraya projenin bir ekran görüntüsünü eklemeniz çok şık durur)
-![Web TV Arayüzü](https://hizliresim.com/kmgicum))
+<img src="[resim yolu](https://hizliresim.com/kmgicum)" alt="Web TV Arayüzü">
 
 # 👨‍💻 Geliştirici
 Soner Akça
