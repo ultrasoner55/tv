@@ -3,12 +3,11 @@
   --panel: #1e1e1e;
   --panel-2: #2a2a2a;
   --text: #e0e0e0;
-  --accent: #38bdf8; /* MAVİ TV */
+  --accent: #38bdf8;
   --border: rgba(255, 255, 255, 0.08);
   --speed: 0.2s; 
 }
 
-/* Yumuşak kaydırma efekti */
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +26,6 @@ body.day {
   margin: 0; 
   padding: 0; 
   transition: background var(--speed), color var(--speed); 
-  /* Mobilde tıklanan öğelerin etrafındaki varsayılan renkli kutuyu kaldırır */
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -41,7 +39,7 @@ body {
   overflow: hidden; 
 }
 
-/* TOPBAR AYARLARI */
+/* TOPBAR */
 .topbar {
   height: 60px;
   background: var(--panel);
@@ -53,7 +51,7 @@ body {
   flex-shrink: 0;
 }
 
-/* LOGO BUTON DÜZENLEMESİ */
+/* LOGO */
 .logo { 
   width: 280px; 
   font-size: 1.6rem; 
@@ -71,27 +69,60 @@ body {
 
 .logo span { color: var(--accent); }
 
-/* Logo basılma efekti */
 .logo:active {
   transform: scale(0.96);
   opacity: 0.8;
 }
 
-/* TEMA BUTONU DÜZENLEMESİ */
-.theme-toggle { 
-  cursor: pointer; 
-  font-size: 1.3rem; 
-  user-select: none; 
-  padding-right: 1.5rem; 
-  transition: transform 0.1s ease;
+/* TEMA TOGGLE — küçük boyut */
+.fancy-toggle {
+  width: 56px !important;
+  height: 26px !important;
+  border-radius: 13px !important;
+  background: #1a1a2e;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.5s;
+  overflow: hidden;
+  border: 2px solid #2a2a4a !important;
+  flex-shrink: 0;
 }
+.fancy-toggle.day { background: #87CEEB; border-color: #4A9EF5 !important; }
 
-/* Tema butonu basılma efekti */
-.theme-toggle:active {
-  transform: scale(0.8);
+.f-star { position: absolute; background: white; border-radius: 50%; transition: opacity 0.4s; }
+.fancy-toggle.day .f-star { opacity: 0; }
+
+.f-cloud { position: absolute; opacity: 0; transition: opacity 0.4s; }
+.fancy-toggle.day .f-cloud { opacity: 1; }
+
+.fancy-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50%;
+  transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.fancy-toggle.day .fancy-knob { transform: translateX(30px) !important; }
 
-/* ANA YERLEŞİM (LAYOUT) */
+.sun-shape, .moon-shape {
+  position: absolute;
+  width: 18px !important;
+  height: 18px !important;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fancy-toggle.day .moon-shape { opacity: 0; }
+.fancy-toggle:not(.day) .sun-shape { opacity: 0; }
+
+/* ANA YERLEŞİM */
 .layout {
   display: flex;
   flex: 1;
@@ -100,7 +131,7 @@ body {
   overflow: hidden; 
 }
 
-/* SIDEBAR & KANAL LİSTESİ */
+/* SIDEBAR */
 .sidebar {
   width: 280px;
   background: var(--panel);
@@ -130,7 +161,6 @@ body {
   -webkit-overflow-scrolling: touch; 
 }
 
-/* Scrollbar Tasarımı */
 .channel-list::-webkit-scrollbar { width: 6px; }
 .channel-list::-webkit-scrollbar-track { background: transparent; }
 .channel-list::-webkit-scrollbar-thumb { 
@@ -163,14 +193,8 @@ body {
   transition: transform 0.1s ease;
 }
 
-.channel-item:active {
-  transform: scale(0.98);
-}
-
-.channel-item:hover { 
-  background: var(--accent); 
-  color: #fff; 
-}
+.channel-item:active { transform: scale(0.98); }
+.channel-item:hover { background: var(--accent); color: #fff; }
 
 .channel-item img {
   width: 32px; 
@@ -190,7 +214,7 @@ body.day .channel-item img {
   filter: none;
 }
 
-/* PLAYER ALANI */
+/* PLAYER */
 .player-area { flex: 1; display: flex; min-width: 0; }
 .player-card { 
   width: 100%; 
@@ -202,7 +226,7 @@ body.day .channel-item img {
 }
 video { width: 100%; height: 100%; display: block; }
 
-/* MOBİL ÖZEL AYARLAR */
+/* MOBİL */
 @media (max-width: 768px) {
   .topbar { 
     padding: 0 1rem;
@@ -217,11 +241,9 @@ video { width: 100%; height: 100%; display: block; }
     padding-left: 0;
   }
 
-  .theme-toggle { 
+  .fancy-toggle { 
     grid-column: 3;
-    padding-right: 0;
-    display: flex;
-    justify-content: flex-end;
+    justify-self: end;
   }
 
   .layout { 
