@@ -18,7 +18,7 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 ・JavaScript: Kanal geçişleri ve tema kontrolü.
 
 # 📖 Nasıl Kullanılır?
-1.Siteye giriş yapın: https://www.ultrasoner55.github.io/tv/
+1.Siteye giriş yapın: https://ultrasoner55.github.io/tv/
 
 2.Sol taraftaki (veya menüdeki) kanal listesinden izlemek istediğiniz kanalı seçin.
 
