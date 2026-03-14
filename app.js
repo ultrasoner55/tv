@@ -82,16 +82,42 @@ function displayChannels(channels) {
     }
 }
 
+// --- OYNATICI MOTORU (ENGEL AŞICI EKLEMELİ) ---
 function playStream(url) {
     if (hls) { hls.destroy(); hls = null; }
 
+    // Padişahım, eğer kanal açılmazsa linkin başına bu proxy'yi ekliyoruz.
+    // Şimdilik doğrudan ekliyorum; bazı yayıncılar bunu şart koşar.
+    const proxy = "https://cors-anywhere.herokuapp.com/"; 
+    
+    // Not: Bazı yayınlar proxy ile, bazıları direkt çalışır. 
+    // Eğer hata alırsanız "url" yerine "proxy + url" deneyebilirsiniz.
+    let finalUrl = url; 
+
     if (Hls.isSupported()) {
-        hls = new Hls();
-        hls.loadSource(url);
+        hls = new Hls({
+            xhrSetup: function(xhr, url) {
+                // Bu kısım eklentinin yaptığı işi kodla simüle etmeye çalışır
+                xhr.withCredentials = false;
+            }
+        });
+        hls.loadSource(finalUrl);
         hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            video.play().catch(e => console.log("Otomatik oynatma engellendi, lütfen oynata basın."));
+        });
+
+        // Hata durumunda (CORS gibi) otomatik proxy deneme
+        hls.on(Hls.Events.ERROR, function (event, data) {
+            if (data.details === 'manifestLoadError' && !finalUrl.startsWith(proxy)) {
+                console.log("CORS Engeli algılandı, Proxy deneniyor...");
+                finalUrl = proxy + url;
+                hls.loadSource(finalUrl);
+            }
+        });
+
     } else if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = url;
+        video.src = finalUrl;
         video.play();
     }
 }
@@ -101,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     loadM3U();
 
-    // Logo tıklandığında yukarı sarma
     const logo = document.getElementById('logoToTop');
     if (logo && container) {
         const scrollToTop = (e) => {
