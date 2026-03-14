@@ -7,8 +7,6 @@ let hls = null;
 // --- TEMA AYARLARI ---
 function initTheme() {
     if (!themeBtn) return;
-
-    // Sayfa yüklendiğinde butonun ikonunu ayarla
     themeBtn.innerText = document.body.classList.contains('day') ? '☀️' : '🌙';
 
     const toggleTheme = (e) => {
@@ -82,44 +80,47 @@ function displayChannels(channels) {
     }
 }
 
-// --- OYNATICI MOTORU (ENGEL AŞICI EKLEMELİ) ---
+// --- OYNATICI MOTORU (CORS VE PROXY DESTEKLİ) ---
 function playStream(url) {
     if (hls) { hls.destroy(); hls = null; }
 
-    // Padişahım, eğer kanal açılmazsa linkin başına bu proxy'yi ekliyoruz.
-    // Şimdilik doğrudan ekliyorum; bazı yayıncılar bunu şart koşar.
-    const proxy = "https://cors-anywhere.herokuapp.com/"; 
+    // Kendi sunucunuzdaki proxy dosyası
+    const myProxy = "proxy.php?url=";
     
-    // Not: Bazı yayınlar proxy ile, bazıları direkt çalışır. 
-    // Eğer hata alırsanız "url" yerine "proxy + url" deneyebilirsiniz.
-    let finalUrl = url; 
+    // Önce direkt linki deniyoruz
+    let finalUrl = url;
 
-    if (Hls.isSupported()) {
-        hls = new Hls({
-            xhrSetup: function(xhr, url) {
-                // Bu kısım eklentinin yaptığı işi kodla simüle etmeye çalışır
-                xhr.withCredentials = false;
-            }
-        });
-        hls.loadSource(finalUrl);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => {
-            video.play().catch(e => console.log("Otomatik oynatma engellendi, lütfen oynata basın."));
-        });
+    function startHls(targetUrl) {
+        if (Hls.isSupported()) {
+            hls = new Hls({
+                xhrSetup: function(xhr) {
+                    xhr.withCredentials = false;
+                }
+            });
+            hls.loadSource(targetUrl);
+            hls.attachMedia(video);
+            
+            hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                video.play().catch(() => console.log("Otomatik oynatma bekliyor..."));
+            });
 
-        // Hata durumunda (CORS gibi) otomatik proxy deneme
-        hls.on(Hls.Events.ERROR, function (event, data) {
-            if (data.details === 'manifestLoadError' && !finalUrl.startsWith(proxy)) {
-                console.log("CORS Engeli algılandı, Proxy deneniyor...");
-                finalUrl = proxy + url;
-                hls.loadSource(finalUrl);
-            }
-        });
-
-    } else if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = finalUrl;
-        video.play();
+            // Hata Yakalama ve Proxy'ye Geçiş
+            hls.on(Hls.Events.ERROR, function (event, data) {
+                if (data.details === 'manifestLoadError' && !targetUrl.startsWith(myProxy)) {
+                    console.log("CORS Engeli! Kendi Proxy'niz deneniyor...");
+                    const proxiedUrl = myProxy + encodeURIComponent(url);
+                    hls.destroy();
+                    startHls(proxiedUrl);
+                }
+            });
+        } 
+        else if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = targetUrl;
+            video.play();
+        }
     }
+
+    startHls(finalUrl);
 }
 
 // --- BAŞLATMA ---
