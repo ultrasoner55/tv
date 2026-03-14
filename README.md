@@ -30,5 +30,5 @@ Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kol
 # 👨‍💻 Geliştirici
 Soner Akça
 
-・GitHub: Beni [GitHub](https://github.com/ultrasoner55)üzerinden takip edebilirsiniz.
+・GitHub: Beni [GitHub](https://github.com/ultrasoner55) üzerinden takip edebilirsiniz.
 
