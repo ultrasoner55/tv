@@ -99,14 +99,10 @@ function playStream(url, channelName = '') {
 
     showPlayerMessage(`⏳ ${channelName || 'Kanal'} yükleniyor...`);
 
-    const isHttp = url.startsWith('http://');
     const proxyUrl = "https://proxy.ultrasoner55.workers.dev/?url=" + encodeURIComponent(url);
 
-    if (isHttp) {
-        setupHls(proxyUrl, false, channelName, url);
-    } else {
-        setupHls(url, true, channelName, proxyUrl);
-    }
+    // Tüm kanalları direkt proxy üzerinden geçir
+    setupHls(proxyUrl, false, channelName, proxyUrl);
 }
 
 function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
