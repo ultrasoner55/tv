@@ -13,7 +13,6 @@ if (themeBtn) {
     };
 }
 
-// Sayfa yüklenince kaydedilen temayı butona da uygula
 (function () {
     const saved = localStorage.getItem('tv-theme');
     if (saved === 'day' && themeBtn) {
@@ -102,25 +101,8 @@ function playStream(url, channelName = '') {
 
     const isHttp = url.startsWith('http://');
     const proxyUrl = "https://proxy.ultrasoner55.workers.dev/?url=" + encodeURIComponent(url);
-```
 
----
-
-Sadece bu tek satır değişikliği yeterli. Geri kalan her şey zaten çalışıyor durumda.
-
-**Neden bu kadar basit?** Çünkü `app.js` zaten şöyle çalışıyor:
-- HTTPS linkleri → direkt oynatmayı dener, olmazsa proxy'e düşer
-- HTTP linkleri → direkt proxy'den geçirir
-
-Artık proxy olarak `corsproxy.io` (üçüncü parti) yerine kendi Cloudflare Worker'ın kullanılacak. ✅
-
----
-
-TV8 için `tv.m3u` dosyanda şu an şu link var:
-```
-https://89.187.191.41/TV8-HD-TR/video.m3u8
     if (isHttp) {
-        console.log(`[${channelName}] HTTP link tespit edildi, proxy ile başlatılıyor.`);
         setupHls(proxyUrl, false, channelName, url);
     } else {
         setupHls(url, true, channelName, proxyUrl);
@@ -147,11 +129,8 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
         });
 
         hls.on(Hls.Events.ERROR, (event, data) => {
-            console.warn(`[${channelName}] HLS Hata:`, data.type, data.details, '| Fatal:', data.fatal);
-
             if (data.fatal || data.details === Hls.ErrorDetails.MANIFEST_LOAD_ERROR || data.details === Hls.ErrorDetails.MANIFEST_LOAD_TIMEOUT) {
                 if (canFallback) {
-                    console.warn(`[${channelName}] Direkt bağlantı başarısız → Proxy deneniyor...`);
                     showPlayerMessage(`🔄 ${channelName}: Alternatif sunucu deneniyor...`);
                     hls.destroy();
                     hls = null;
