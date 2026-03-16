@@ -101,8 +101,24 @@ function playStream(url, channelName = '') {
     showPlayerMessage(`⏳ ${channelName || 'Kanal'} yükleniyor...`);
 
     const isHttp = url.startsWith('http://');
-    const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(url);
+    const proxyUrl = "https://proxy.ultrasoner55.workers.dev/?url=" + encodeURIComponent(url);
+```
 
+---
+
+Sadece bu tek satır değişikliği yeterli. Geri kalan her şey zaten çalışıyor durumda.
+
+**Neden bu kadar basit?** Çünkü `app.js` zaten şöyle çalışıyor:
+- HTTPS linkleri → direkt oynatmayı dener, olmazsa proxy'e düşer
+- HTTP linkleri → direkt proxy'den geçirir
+
+Artık proxy olarak `corsproxy.io` (üçüncü parti) yerine kendi Cloudflare Worker'ın kullanılacak. ✅
+
+---
+
+TV8 için `tv.m3u` dosyanda şu an şu link var:
+```
+https://89.187.191.41/TV8-HD-TR/video.m3u8
     if (isHttp) {
         console.log(`[${channelName}] HTTP link tespit edildi, proxy ile başlatılıyor.`);
         setupHls(proxyUrl, false, channelName, url);
