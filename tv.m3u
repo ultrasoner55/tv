@@ -214,10 +214,8 @@ https://kjasdmkjbas.denek1544.workers.dev/izle/tarihtv.m3u8
 http://87.121.104.29:1796/tgrtbelgeselyt/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fokus-org/tv-logos/master/logos/default.png" tvg-id="viasatexplore" tvg-name="Viasat Explore"  group-title="Belgesel",VIASAT EXPLORE
 https://fljghkjnfgin.testworker0y.workers.dev/channel/Vmlhc2F0IEV4cGxvcmU=
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fokus-org/tv-logos/master/logos/default.png" tvg-name="Viasat History" tvg-id=""  group-title="Belgesel",VIASAT HISTORY
-https://kjasdmkjbas.denek1544.workers.dev/izle/viasathistory.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fokus-org/tv-logos/master/logos/default.png" tvg-id="viasatrec" tvg-name="Viasat History"  group-title="Belgesel",VIASAT HISTORY
-https://kjasdmkjbas.denek1544.workers.dev/izle/viasathistory.m3u8
+https://65.108.239.207/viasathistory/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fokus-org/tv-logos/master/logos/default.png" tvg-id="historyrec" tvg-name="Viasat Nature"  group-title="Belgesel",VIASAT NATURE
 https://kjasdmkjbas.denek1544.workers.dev/izle/historychannel.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fokus-org/tv-logos/master/logos/default.png" tvg-id="yabantvtest" tvg-name="Yaban Tv"  group-title="Belgesel",YABAN TV
