@@ -138,7 +138,7 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
                         setupHls(fallbackUrl, false, channelName, null);
                     }, 500);
                 } else {
-                    showPlayerMessage(`❌ ${channelName} şu anda yayında değil veya erişilemiyor.`);
+                    hidePlayerMessage();
                     hls.destroy();
                     hls = null;
                 }
@@ -153,12 +153,12 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
                 video.load();
                 video.play().catch(() => {});
             } else {
-                showPlayerMessage(`❌ ${channelName} şu anda yayında değil.`);
+                hidePlayerMessage();
             }
         }, { once: true });
         video.play().catch(() => {});
     } else {
-        showPlayerMessage('❌ Tarayıcınız HLS formatını desteklemiyor.');
+        hidePlayerMessage();
     }
 }
 
