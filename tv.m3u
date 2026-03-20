@@ -278,3 +278,5 @@ https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 
 
 
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Viasat_History_logo.svg/200px-Viasat_History_logo.svg.png" group-title="BELGESEL",VIASAT HISTORY
+https://65.108.239.207/viasathistory/index.m3u8
