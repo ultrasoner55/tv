@@ -20,107 +20,54 @@ if (themeBtn) {
     }
 })();
 
-// --- METV REPO'DAN ÇEKİLECEK TÜM LİSTELER ---
-const METV_BASE = 'https://raw.githubusercontent.com/mehmetey03/METV/main/';
-const METV_LISTS = [
-    '1.m3u','5.m3u','metv.m3u','haber.m3u','muzik.m3u',
-    'cocuk.m3u','belgesel.m3u','dmax.m3u','liste.m3u','liste2.m3u',
-    's.m3u','mono.m3u','inat.m3u','inattv.m3u','atom.m3u',
-    'atom_mac.m3u','bossh.m3u','cafe.m3u','rectv.m3u','roxie.m3u',
-    'joker.m3u','puhutv.m3u','salamistv.m3u','salamistv1.m3u',
-    'all_world_sports.m3u','karsilasmalar.m3u','karsilasmalar1.m3u',
-    'karsilasmalar2.m3u','karsilasmalar3.m3u','karsilasmalar4.m3u',
-    'justsporthd.m3u','justsporthd1.m3u','daddylive.m3u',
-    'daddyliveevents.m3u','ace.m3u','istplay_streams.m3u',
-    'NexaTV.m3u','catcast_tv.m3u','global_radio.m3u',
-    'indirilen_playlist.m3u','Roxiestreams.m3u8','justintv_kanallar.m3u8',
-    'justintv_sirali.m3u8','ppv.m3u8','betorspin.m3u8','fscreen.m3u8'
-];
+// --- KANAL LİSTESİNİ ÇEKME ---
+const METV_URL = 'https://raw.githubusercontent.com/mehmetey03/METV/main/tv.m3u';
 
-const PROXIES = [
-    url => url,
-    url => 'https://corsproxy.io/?' + encodeURIComponent(url),
-    url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url)
-];
-
-async function fetchWithProxy(url) {
-    for (const proxy of PROXIES) {
+async function fetchMETV() {
+    const proxies = [
+        METV_URL,
+        'https://corsproxy.io/?' + encodeURIComponent(METV_URL),
+        'https://api.allorigins.win/raw?url=' + encodeURIComponent(METV_URL)
+    ];
+    for (const p of proxies) {
         try {
-            const res = await fetch(proxy(url), { signal: AbortSignal.timeout(8000) });
+            const res = await fetch(p);
             if (!res.ok) continue;
             const text = await res.text();
-            if (text.includes('#EXTM3U') || text.includes('#EXTINF')) return text;
-        } catch (e) {}
+            if (text.includes('#EXTM3U')) return text;
+        } catch(e) {}
     }
     return null;
 }
 
-// --- ANA YÜKLEME FONKSİYONU ---
 async function loadM3U() {
-    container.innerHTML = `
-        <div id="loadingMsg" style="padding:20px; text-align:center; color:var(--text);">
-            <div style="margin-bottom:10px; font-size:15px;">⏳ Listeler yükleniyor...</div>
-            <div id="loadProgress" style="font-size:12px; opacity:0.6;">Başlatılıyor...</div>
-        </div>`;
-
-    const setProgress = (msg) => {
-        const el = document.getElementById('loadProgress');
-        if (el) el.textContent = msg;
-    };
-
     try {
-        let allChannels = [];
+        const response = await fetch('./tv.m3u?v=' + Date.now());
+        if (!response.ok) throw new Error('M3U dosyası bulunamadı!');
+        const data = await response.text();
+        let channels = parseM3U(data);
 
-        // 1. Yerel tv.m3u
-        try {
-            const localRes = await fetch('./tv.m3u?v=' + Date.now());
-            if (localRes.ok) {
-                const parsed = parseM3U(await localRes.text());
-                allChannels = allChannels.concat(parsed);
-                setProgress('✓ Yerel liste: ' + parsed.length + ' kanal');
-            }
-        } catch (e) {}
-
-        // 2. METV listelerini 10'ar grupla paralel çek
-        const total = METV_LISTS.length;
-        let done = 0, metvTotal = 0;
-        const chunkSize = 10;
-
-        for (let i = 0; i < METV_LISTS.length; i += chunkSize) {
-            const chunk = METV_LISTS.slice(i, i + chunkSize);
-            const results = await Promise.allSettled(
-                chunk.map(file => fetchWithProxy(METV_BASE + file))
-            );
-            results.forEach(result => {
-                done++;
-                if (result.status === 'fulfilled' && result.value) {
-                    const parsed = parseM3U(result.value);
-                    allChannels = allChannels.concat(parsed);
-                    metvTotal += parsed.length;
-                }
-                setProgress('METV: ' + done + '/' + total + ' liste (' + metvTotal + ' kanal bulundu)');
-            });
-        }
-
-        // 3. Duplicate temizle
-        const seen = new Set();
-        const unique = allChannels.filter(ch => {
-            const key = ch.name.toLowerCase().trim() + '|' + ch.url.trim();
-            if (seen.has(key)) return false;
-            seen.add(key);
-            return true;
-        });
-
-        if (unique.length === 0) {
-            container.innerHTML = "<div style='padding:20px;'>Hiç kanal bulunamadı.</div>";
+        // METV listesini de çek ve birleştir
+        const metvText = await fetchMETV();
+        if (metvText) {
+            const metvChannels = parseM3U(metvText);
+            // Duplicate önlemek için: aynı isim ve URL'ye sahip kanalları filtrele
+            const existingKeys = new Set(channels.map(ch => ch.name.toLowerCase() + '|' + ch.url));
+            const newChannels = metvChannels.filter(ch => !existingKeys.has(ch.name.toLowerCase() + '|' + ch.url));
+            channels = channels.concat(newChannels);
+            console.log(`METV'den ${newChannels.length} yeni kanal eklendi.`);
         } else {
-            displayChannels(unique);
-            const hdr = document.querySelector('.sidebar-header');
-            if (hdr) hdr.textContent = 'Kanal Listesi (' + unique.length + ')';
+            console.warn('METV listesi yüklenemedi, sadece yerel liste kullanılıyor.');
         }
 
+        if (channels.length === 0) {
+            container.innerHTML = "<div style='padding:20px;'>M3U dosyası boş veya formatı hatalı.</div>";
+        } else {
+            displayChannels(channels);
+        }
     } catch (e) {
-        container.innerHTML = "<div style='padding:20px; color:red;'>Hata: " + e.message + "</div>";
+        container.innerHTML = `<div style='padding:20px; color:red;'>Hata: ${e.message}</div>`;
+        console.error("M3U Hatası:", e);
     }
 }
 
@@ -133,9 +80,9 @@ function parseM3U(data) {
         line = line.trim();
         if (line.startsWith('#EXTINF')) {
             current = {
-                group: line.match(/group-title="([^"]+)"/)?.[1] || 'Genel',
-                logo: line.match(/tvg-logo="([^"]+)"/)?.[1] || 'favicon.png',
-                name: line.split(',').slice(1).join(',').trim() || 'Bilinmeyen Kanal'
+                group: line.match(/group-title="([^"]+)"/)?.[1] || "Kanal Listesi",
+                logo: line.match(/tvg-logo="([^"]+)"/)?.[1] || "favicon.png",
+                name: line.split(',')[1]?.trim() || "Bilinmeyen Kanal"
             };
         } else if (line.startsWith('http') && current) {
             current.url = line.trim().replace(/\s+/g, '');
@@ -154,18 +101,16 @@ function displayChannels(channels) {
         groups[ch.group].push(ch);
     });
 
-    const sortedGroups = Object.keys(groups).sort((a, b) => a.localeCompare(b, 'tr'));
-
-    for (const g of sortedGroups) {
+    for (const g in groups) {
         const header = document.createElement('div');
         header.className = 'group-header';
-        header.innerText = g + ' (' + groups[g].length + ')';
+        header.innerText = g;
         container.appendChild(header);
 
         groups[g].forEach(ch => {
             const item = document.createElement('div');
             item.className = 'channel-item';
-            item.innerHTML = '<img src="' + ch.logo + '" onerror="this.src=\'favicon.png\'"><span>' + ch.name + '</span>';
+            item.innerHTML = `<img src="${ch.logo}" onerror="this.src='favicon.png'"><span>${ch.name}</span>`;
             item.onclick = () => {
                 document.querySelectorAll('.channel-item').forEach(el => el.classList.remove('active'));
                 item.classList.add('active');
@@ -179,7 +124,11 @@ function displayChannels(channels) {
 // --- GELİŞMİŞ OYNATICI ---
 function playStream(url, channelName = '') {
     if (retryTimeout) clearTimeout(retryTimeout);
-    if (hls) { hls.destroy(); hls = null; }
+    if (hls) {
+        hls.destroy();
+        hls = null;
+    }
+
     hidePlayerMessage();
 
     const isHttp = url.startsWith('http://');
@@ -195,11 +144,14 @@ function playStream(url, channelName = '') {
 function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
     if (Hls.isSupported()) {
         hls = new Hls({
-            xhrSetup: xhr => { xhr.withCredentials = false; },
+            xhrSetup: xhr => {
+                xhr.withCredentials = false;
+            },
             manifestLoadingTimeOut: 10000,
             manifestLoadingMaxRetry: 1,
             levelLoadingTimeOut: 10000,
         });
+
         hls.loadSource(sourceUrl);
         hls.attachMedia(video);
 
@@ -212,11 +164,15 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
             if (data.fatal || data.details === Hls.ErrorDetails.MANIFEST_LOAD_ERROR || data.details === Hls.ErrorDetails.MANIFEST_LOAD_TIMEOUT) {
                 if (canFallback) {
                     hidePlayerMessage();
-                    hls.destroy(); hls = null;
-                    retryTimeout = setTimeout(() => setupHls(fallbackUrl, false, channelName, null), 500);
+                    hls.destroy();
+                    hls = null;
+                    retryTimeout = setTimeout(() => {
+                        setupHls(fallbackUrl, false, channelName, null);
+                    }, 500);
                 } else {
                     hidePlayerMessage();
-                    hls.destroy(); hls = null;
+                    hls.destroy();
+                    hls = null;
                 }
             }
         });
@@ -224,8 +180,13 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
         video.src = sourceUrl;
         video.addEventListener('error', () => {
-            if (canFallback) { video.src = fallbackUrl; video.load(); video.play().catch(() => {}); }
-            else { hidePlayerMessage(); }
+            if (canFallback) {
+                video.src = fallbackUrl;
+                video.load();
+                video.play().catch(() => {});
+            } else {
+                hidePlayerMessage();
+            }
         }, { once: true });
         video.play().catch(() => {});
     } else {
@@ -233,14 +194,32 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
     }
 }
 
+// --- PLAYER MESAJ FONKSİYONLARI ---
 function showPlayerMessage(msg) {
     let overlay = document.getElementById('playerOverlay');
     if (!overlay) {
         overlay = document.createElement('div');
         overlay.id = 'playerOverlay';
-        overlay.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.75);color:#fff;padding:14px 22px;border-radius:10px;font-size:14px;text-align:center;pointer-events:none;z-index:10;max-width:80%;';
+        overlay.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.75);
+            color: #fff;
+            padding: 14px 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+            pointer-events: none;
+            z-index: 10;
+            max-width: 80%;
+        `;
         const playerCard = document.querySelector('.player-card');
-        if (playerCard) { playerCard.style.position = 'relative'; playerCard.appendChild(overlay); }
+        if (playerCard) {
+            playerCard.style.position = 'relative';
+            playerCard.appendChild(overlay);
+        }
     }
     overlay.textContent = msg;
     overlay.style.display = 'block';
@@ -254,6 +233,7 @@ function hidePlayerMessage() {
 document.addEventListener('DOMContentLoaded', function() {
     loadM3U();
 
+    // M3U TOGGLE
     const m3uToggle = document.getElementById('m3uToggle');
     if (m3uToggle) {
         m3uToggle.addEventListener('click', function() {
@@ -266,9 +246,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // M3U URL YÜKLE
     const m3uBtn = document.querySelector('.m3u-btn');
     if (m3uBtn) m3uBtn.addEventListener('click', loadFromUrl);
 
+    // M3U DOSYA
     const m3uFile = document.getElementById('m3uFile');
     if (m3uFile) m3uFile.addEventListener('change', function() { loadFromFile(this); });
 });
@@ -301,7 +283,7 @@ async function loadFromUrl() {
         if (channels.length === 0) throw new Error('Kanal bulunamadı');
         displayChannels(channels);
         setStatus('✓ ' + channels.length + ' kanal yüklendi');
-        setTimeout(() => setStatus(''), 3000);
+        setTimeout(function() { setStatus(''); }, 3000);
     } catch(e) {
         setStatus('Hata: ' + e.message, true);
     }
