@@ -97,7 +97,7 @@ function playStream(url, channelName = '') {
         hls = null;
     }
 
-    showPlayerMessage(`⏳ ${channelName || 'Kanal'} yükleniyor...`);
+    hidePlayerMessage();
 
     const isHttp = url.startsWith('http://');
     const proxyUrl = "https://proxy.ultrasoner55.workers.dev/?url=" + encodeURIComponent(url);
@@ -131,7 +131,7 @@ function setupHls(sourceUrl, canFallback, channelName, fallbackUrl) {
         hls.on(Hls.Events.ERROR, (event, data) => {
             if (data.fatal || data.details === Hls.ErrorDetails.MANIFEST_LOAD_ERROR || data.details === Hls.ErrorDetails.MANIFEST_LOAD_TIMEOUT) {
                 if (canFallback) {
-                    showPlayerMessage(`🔄 ${channelName}: Alternatif sunucu deneniyor...`);
+                    hidePlayerMessage();
                     hls.destroy();
                     hls = null;
                     retryTimeout = setTimeout(() => {
