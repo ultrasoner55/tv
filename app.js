@@ -21,12 +21,44 @@ if (themeBtn) {
 })();
 
 // --- KANAL LİSTESİNİ ÇEKME ---
+const METV_URL = 'https://raw.githubusercontent.com/mehmetey03/METV/main/tv.m3u';
+
+async function fetchMETV() {
+    const proxies = [
+        METV_URL,
+        'https://corsproxy.io/?' + encodeURIComponent(METV_URL),
+        'https://api.allorigins.win/raw?url=' + encodeURIComponent(METV_URL)
+    ];
+    for (const p of proxies) {
+        try {
+            const res = await fetch(p);
+            if (!res.ok) continue;
+            const text = await res.text();
+            if (text.includes('#EXTM3U')) return text;
+        } catch(e) {}
+    }
+    return null;
+}
+
 async function loadM3U() {
     try {
         const response = await fetch('./tv.m3u?v=' + Date.now());
         if (!response.ok) throw new Error('M3U dosyası bulunamadı!');
         const data = await response.text();
-        const channels = parseM3U(data);
+        let channels = parseM3U(data);
+
+        // METV listesini de çek ve birleştir
+        const metvText = await fetchMETV();
+        if (metvText) {
+            const metvChannels = parseM3U(metvText);
+            // Duplicate önlemek için: aynı isim ve URL'ye sahip kanalları filtrele
+            const existingKeys = new Set(channels.map(ch => ch.name.toLowerCase() + '|' + ch.url));
+            const newChannels = metvChannels.filter(ch => !existingKeys.has(ch.name.toLowerCase() + '|' + ch.url));
+            channels = channels.concat(newChannels);
+            console.log(`METV'den ${newChannels.length} yeni kanal eklendi.`);
+        } else {
+            console.warn('METV listesi yüklenemedi, sadece yerel liste kullanılıyor.');
+        }
 
         if (channels.length === 0) {
             container.innerHTML = "<div style='padding:20px;'>M3U dosyası boş veya formatı hatalı.</div>";
