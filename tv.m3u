@@ -78,7 +78,7 @@ https://tv-trtspor1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/A_SPOR.png" group-title="ÖZEL LİSTE",A SPOR
 https://www.canlitv.tech/hls/aspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/BEIN_SPORTS_HABER.png" group-title="ÖZEL LİSTE",BEIN SPORTS HABER
-http://162.212.179.33/dvrfl05/gin-beinsportshaber/tracks-v1a1/mono.m3u8
+http://87.121.104.29:1796/bshaberyt/stream.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="1. TRT 1" tvg-id=""  group-title="Ulusal",TRT 1
 https://tv-trt1.medya.trt.com.tr/master_1080.m3u8
@@ -166,24 +166,39 @@ https://dga1op10s1u3leo.450bb93555fef8.click/live/selcukbeinsports5/playlist.m3u
 https://dga1op10s1u3leo.450bb93555fef8.click/live/selcukbeinsportsmax1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS Max 2" tvg-id="beinmax2"  group-title="Spor",beIN SPORTS Max 2
 https://dga1op10s1u3leo.450bb93555fef8.click/live/selcukbeinsportsmax2/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="S SPORT 1" tvg-id="ssport1"  group-title="Spor",S SPORT 1
-https://dga1op10s1u3leo.450bb93555fef8.click/live/selcukssport/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="S SPORT 2" tvg-id="ssport2"  group-title="Spor",S SPORT 2
-https://dga1op10s1u3leo.450bb93555fef8.click/live/selcukssport2/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtspor" tvg-name="TRT Spor"  group-title="Spor",TRT SPOR
-https://tv-trtspor-esdai.medya.trt.com.tr/master_1440p.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="asporyt" tvg-name="A Spor"  group-title="Spor",A SPOR
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor_720p.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="bshaberyt" tvg-name="Bein Sports Haber"  group-title="Spor",BEIN SPORTS HABER
-http://87.121.104.29:1796/bshaberyt/stream.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="44. Euro Sport" tvg-id=""  group-title="Spor",EURO SPORT
-http://87.121.104.29:1796/eurosport1/stream.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="45. Euro Sport 2" tvg-id=""  group-title="Spor",EURO SPORT 2
-http://87.121.104.29:1796/eurosport2/stream.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="htspor" tvg-name="HT Spor"  group-title="Spor",HT SPOR
-http://87.121.104.29:5002/channel?id=394506
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",SMART SPORT
+https://api.hitnova.net/s/smarts/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",SMART SPORT 2
+https://api.hitnova.net/s/sms2/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",EURO SPORT
+https://api.hitnova.net/s/eu1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",EURO SPORT 2
+https://api.hitnova.net/s/eu2/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",TİVİBU SPOR
+https://api.hitnova.net/s/t1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",TİVİBU SPOR 2
+https://api.hitnova.net/s/t2/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",TİVİBU SPOR 3
+https://api.hitnova.net/s/t3/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",S SPORT 1
+https://api.hitnova.net/s/ss/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",S SPORT 2
+https://api.hitnova.net/s/ss2/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",A SPOR
+https://api.hitnova.net/s/as/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",TRT SPOR
+https://api.hitnova.net/s/trtspor/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="TRT Spor Yıldız"  group-title="Spor",TRT SPOR YILDIZ
 https://trt.daioncdn.net/trtspor-yildiz/master.m3u8?app=web&platform=trtspor&ppid=e67f6aa79d604002f37ace34d2ca101c
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",İDMAN TV
+https://andro.326503.xyz/checklist/androstreamliveidm.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="TR",CBC SPORT
+https://andro.2385437.xyz/checklist/androstreamlivecbcs.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="bshaberyt" tvg-name="Bein Sports Haber"  group-title="Spor",BEIN SPORTS HABER
+http://87.121.104.29:1796/bshaberyt/stream.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="htspor" tvg-name="HT Spor"  group-title="Spor",HT SPOR
+http://87.121.104.29:5002/channel?id=394506
+
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtbelgesela" tvg-name="TRT Belgesel"  group-title="Belgesel",TRT BELGESEL
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="BBC Earth" tvg-id=""  group-title="Belgesel",BBC EARTH
