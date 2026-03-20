@@ -198,4 +198,88 @@ function hidePlayerMessage() {
     if (overlay) overlay.style.display = 'none';
 }
 
-document.addEventListener('DOMContentLoaded', loadM3U);
+document.addEventListener('DOMContentLoaded', function() {
+    loadM3U();
+
+    // M3U TOGGLE
+    const m3uToggle = document.getElementById('m3uToggle');
+    if (m3uToggle) {
+        m3uToggle.addEventListener('click', function() {
+            const body = document.getElementById('m3uBody');
+            const arrow = document.getElementById('m3uArrow');
+            if (!body) return;
+            const isOpen = body.style.display === 'flex';
+            body.style.display = isOpen ? 'none' : 'flex';
+            if (arrow) arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+        });
+    }
+
+    // M3U URL YÜKLE
+    const m3uBtn = document.querySelector('.m3u-btn');
+    if (m3uBtn) m3uBtn.addEventListener('click', loadFromUrl);
+
+    // M3U DOSYA
+    const m3uFile = document.getElementById('m3uFile');
+    if (m3uFile) m3uFile.addEventListener('change', function() { loadFromFile(this); });
+});
+
+async function fetchWithFallback(url) {
+    const proxies = [
+        url,
+        'https://corsproxy.io/?' + encodeURIComponent(url),
+        'https://api.allorigins.win/raw?url=' + encodeURIComponent(url)
+    ];
+    for (const p of proxies) {
+        try {
+            const res = await fetch(p);
+            if (!res.ok) continue;
+            const text = await res.text();
+            if (text.includes('#EXTM3U')) return text;
+        } catch(e) {}
+    }
+    throw new Error('Bağlanamadı');
+}
+
+async function loadFromUrl() {
+    const urlInput = document.getElementById('m3uUrl');
+    const url = urlInput ? urlInput.value.trim() : '';
+    if (!url) { setStatus('Lütfen bir URL girin.', true); return; }
+    setStatus('Yükleniyor...');
+    try {
+        const text = await fetchWithFallback(url);
+        const channels = parseM3U(text);
+        if (channels.length === 0) throw new Error('Kanal bulunamadı');
+        displayChannels(channels);
+        setStatus('✓ ' + channels.length + ' kanal yüklendi');
+        setTimeout(function() { setStatus(''); }, 3000);
+    } catch(e) {
+        setStatus('Hata: ' + e.message, true);
+    }
+}
+
+function loadFromFile(input) {
+    const file = input.files[0];
+    if (!file) return;
+    setStatus('Okunuyor...');
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const text = e.target.result;
+            if (!text.includes('#EXTM3U')) throw new Error('Geçersiz M3U');
+            const channels = parseM3U(text);
+            if (channels.length === 0) throw new Error('Kanal bulunamadı');
+            displayChannels(channels);
+            setStatus('✓ ' + channels.length + ' kanal yüklendi');
+        } catch(e) {
+            setStatus('Hata: ' + e.message, true);
+        }
+    };
+    reader.readAsText(file);
+}
+
+function setStatus(msg, isError) {
+    const el = document.getElementById('m3uStatus');
+    if (!el) return;
+    el.textContent = msg;
+    el.className = 'm3u-status' + (isError ? ' error' : '');
+}
