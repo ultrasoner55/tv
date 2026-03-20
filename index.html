@@ -48,25 +48,6 @@
 
     <div class="topbar-spacer"></div>
 
-    <!-- Klavye Kısayolları Yardım Butonu -->
-    <button id="kbHelpBtn" onclick="toggleKbHelp()" title="Klavye Kısayolları" style="background:none;border:none;cursor:pointer;color:var(--text);padding:6px 10px;border-radius:8px;font-size:20px;opacity:0.7;transition:opacity 0.2s;display:flex;align-items:center;margin-right:8px;" onmouseover="this.style.opacity=&apos;1&apos;" onmouseout="this.style.opacity=&apos;0.7&apos;">⌨️</button>
-
-    <!-- Klavye Kısayolları Paneli -->
-    <div id="kbHelpOverlay" onclick="toggleKbHelp()" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:9997;"></div>
-    <div id="kbHelpPanel" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 28px;z-index:9998;min-width:300px;box-shadow:0 8px 32px rgba(0,0,0,0.4);font-family:&apos;Inter&apos;,sans-serif;">
-        <div style="font-size:17px;font-weight:700;margin-bottom:16px;color:var(--text);">⌨️ Klavye Kısayolları</div>
-        <table style="width:100%;border-collapse:collapse;font-size:14px;color:var(--text);">
-            <tr><td style="padding:6px 0;"><kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">Boşluk</kbd> / <kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">K</kbd></td><td style="padding:6px 8px;color:#888;">Oynat / Duraklat</td></tr>
-            <tr><td style="padding:6px 0;"><kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">→</kbd></td><td style="padding:6px 8px;color:#888;">10 saniye ileri</td></tr>
-            <tr><td style="padding:6px 0;"><kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">←</kbd></td><td style="padding:6px 8px;color:#888;">10 saniye geri</td></tr>
-            <tr><td style="padding:6px 0;"><kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">↑</kbd></td><td style="padding:6px 8px;color:#888;">Sesi artır</td></tr>
-            <tr><td style="padding:6px 0;"><kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">↓</kbd></td><td style="padding:6px 8px;color:#888;">Sesi azalt</td></tr>
-            <tr><td style="padding:6px 0;"><kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">M</kbd></td><td style="padding:6px 8px;color:#888;">Sesi kapat / aç</td></tr>
-            <tr><td style="padding:6px 0;"><kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">F</kbd> / <kbd style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:12px;">Enter</kbd></td><td style="padding:6px 8px;color:#888;">Tam ekran aç/kapat</td></tr>
-        </table>
-        <div style="text-align:center;margin-top:16px;"><button onclick="toggleKbHelp()" style="background:#1A6FD4;color:#fff;border:none;border-radius:8px;padding:8px 22px;cursor:pointer;font-size:13px;font-weight:600;">Kapat</button></div>
-    </div>
-
     <!-- Gece/Gündüz Toggle -->
     <div class="fancy-toggle" id="themeBtn" onclick="toggleTheme()">
         <div class="f-star" style="width:2px;height:2px;top:4px;left:30px;"></div>
@@ -144,15 +125,6 @@
         </div>
     </div>
 </div>
-<script>
-function toggleKbHelp() {
-    var panel = document.getElementById('kbHelpPanel');
-    var overlay = document.getElementById('kbHelpOverlay');
-    var isOpen = panel.style.display === 'block';
-    panel.style.display = isOpen ? 'none' : 'block';
-    overlay.style.display = isOpen ? 'none' : 'block';
-}
-</script>
 <script src="app.js"></script>
 <script>
     function toggleTheme() {
