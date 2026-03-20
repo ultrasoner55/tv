@@ -198,6 +198,125 @@ function hidePlayerMessage() {
     if (overlay) overlay.style.display = 'none';
 }
 
+// --- KLAVYE KISAYOLLARI ---
+document.addEventListener('keydown', function(e) {
+    // Input veya textarea odaklanmışsa kısayolları devre dışı bırak
+    const tag = document.activeElement.tagName.toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+
+    switch(e.key) {
+        case ' ':
+        case 'k':
+            // Boşluk / K → Oynat / Duraklat
+            e.preventDefault();
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+            showToast(video.paused ? '⏸ Duraklat' : '▶ Oynat');
+            break;
+
+        case 'ArrowRight':
+            // Sağ ok → 10 saniye ileri
+            e.preventDefault();
+            video.currentTime = Math.min(video.duration || 0, video.currentTime + 10);
+            showToast('⏩ +10sn');
+            break;
+
+        case 'ArrowLeft':
+            // Sol ok → 10 saniye geri
+            e.preventDefault();
+            video.currentTime = Math.max(0, video.currentTime - 10);
+            showToast('⏪ -10sn');
+            break;
+
+        case 'ArrowUp':
+            // Yukarı ok → Sesi artır
+            e.preventDefault();
+            video.volume = Math.min(1, video.volume + 0.1);
+            video.muted = false;
+            showToast('🔊 Ses: ' + Math.round(video.volume * 100) + '%');
+            break;
+
+        case 'ArrowDown':
+            // Aşağı ok → Sesi azalt
+            e.preventDefault();
+            video.volume = Math.max(0, video.volume - 0.1);
+            showToast('🔉 Ses: ' + Math.round(video.volume * 100) + '%');
+            break;
+
+        case 'm':
+        case 'M':
+            // M → Sesi kapat / aç
+            e.preventDefault();
+            video.muted = !video.muted;
+            showToast(video.muted ? '🔇 Sessiz' : '🔊 Ses Açık');
+            break;
+
+        case 'f':
+        case 'F':
+        case 'Enter':
+            // F / Enter → Tam ekran aç/kapat
+            e.preventDefault();
+            toggleFullscreen();
+            break;
+
+        case 'Escape':
+            // ESC → Tam ekrandan çık (tarayıcı zaten halleder ama yine de)
+            break;
+    }
+});
+
+// Tam ekran aç/kapat
+function toggleFullscreen() {
+    const playerCard = document.querySelector('.player-card');
+    const target = playerCard || video;
+
+    if (!document.fullscreenElement) {
+        target.requestFullscreen().catch(err => console.warn('Tam ekran hatası:', err));
+        showToast('⛶ Tam Ekran');
+    } else {
+        document.exitFullscreen();
+        showToast('⊠ Normal Ekran');
+    }
+}
+
+// Toast bildirimi göster
+let toastTimeout = null;
+function showToast(msg) {
+    let toast = document.getElementById('kbToast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'kbToast';
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.82);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.18s ease;
+            white-space: nowrap;
+        `;
+        document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    toast.style.opacity = '1';
+    if (toastTimeout) clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+        toast.style.opacity = '0';
+    }, 1400);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     loadM3U();
 
