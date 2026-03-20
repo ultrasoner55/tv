@@ -86,7 +86,7 @@ body {
 .f-star { position: absolute; background: white; border-radius: 50%; transition: opacity 0.4s; }
 .fancy-toggle.day .f-star { opacity: 0; }
 
-.f-cloud { position: absolute; opacity: 0; transition: opacity 0.4s; pointer-events: none; z-index: 3; }
+.f-cloud { position: absolute; opacity: 0; transition: opacity 0.4s; }
 .fancy-toggle.day .f-cloud { opacity: 1; }
 
 .fancy-knob {
