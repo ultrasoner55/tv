@@ -238,11 +238,11 @@ http://188.245.211.255:1935/canlitv/yabantv.stream/playlist.m3u8?hash=d21d7459ea
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ciftcitv" tvg-name="Çiftçi Tv"  group-title="Belgesel",ÇIFTÇI TV
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtcocuk" tvg-name="TRT Çocuk"  group-title="Çocuk",TRT ÇOCUK
-https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/VFJUIMOHb2N1aw==
+https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="cartoonnetwork" tvg-name="Cartoon Network"  group-title="Çocuk",CARTOON NETWORK
-https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/Q2FydG9vbiBOZXR3b3JrIHwgQQ==
+https://bunuyazantosunokuyanakosun.denek1544.workers.dev/channel/Q2FydG9vbiBOZXR3b3JrIHwgQQ==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="babytv" tvg-name="Baby TV"  group-title="Çocuk",BABY TV
-https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/QmFieSBUVg==
+https://saran-live.ercdn.net/babytv/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="disneyjunior" tvg-name="Disney Junior"  group-title="Çocuk",DISNEY JUNIOR
 https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/RGlzbmV5IEp1bmlvcg==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="minikago" tvg-name="Minika Go"  group-title="Çocuk",MINIKA GO
