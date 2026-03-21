@@ -22,7 +22,7 @@ https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/ATV.png" group-title="ÖZEL LİSTE",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/ATV_AVRUPA.png" group-title="ÖZEL LİSTE",ATV AVRUPA
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
+http://162.212.179.33/dvrfl05/gin-atvavrupa/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/NTV.png" group-title="ÖZEL LİSTE",NTV
 https://www.canlitv.tech/hls/ntv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/DMAX.png" group-title="ÖZEL LİSTE",DMAX
@@ -257,8 +257,6 @@ https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/w4dvY3VrIFNtYXJ0
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="125. Number One Ask" tvg-id=""  group-title="Muzik",NUMBER ONE ASK
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="123. Number One Turk FM Radyo" tvg-id=""  group-title="Muzik",NUMBER ONE TURK FM RADYO
-https://eustr75.mediatriple.net/Number1Media/00_Number1_Turk_FM.stream/chunklist_w181741155.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Hype Radio" tvg-id=""  group-title="Muzik",HYPE RADIO
 https://streammix.alsolnet.com/hyperadio/live/chunklist_w2051280106.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="117. Power" tvg-id=""  group-title="Muzik",POWER
