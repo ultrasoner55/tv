@@ -1,12 +1,12 @@
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_1.png" group-title="ÖZEL LİSTE",TRT 1
-https://tv-trt1.medya.trt.com.tr/master_1080.m3u8
+https://tv-trt1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_HABER.png" group-title="ÖZEL LİSTE",TRT HABER
-https://tv-trthaber.medya.trt.com.tr/master_1080.m3u8
+https://tv-trthaber.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_SPOR.png" group-title="ÖZEL LİSTE",TRT SPOR
-https://tv-trtspor1.medya.trt.com.tr/master_1080.m3u8
+https://tv-trtspor1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_MUZIK.png" group-title="ÖZEL LİSTE",TRT MUZIK
-https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+https://goldvod.org/live/hpgdisco/123456/9597.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_TURK.png" group-title="ÖZEL LİSTE",TRT TURK
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_BELGESEL.png" group-title="ÖZEL LİSTE",TRT BELGESEL
@@ -14,38 +14,37 @@ https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/SHOW.png" group-title="ÖZEL LİSTE",SHOW
 https://www.canlitv.tech/hls/showtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/SHOW_TURK.png" group-title="ÖZEL LİSTE",SHOW TURK
-https://streams.uzunmuhalefet.com/stream/16e43b9b-e175-482c-a105-2253c06515c9.m3u8
+https://goldvod.org/live/hpgdisco/123456/9516.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_D.png" group-title="ÖZEL LİSTE",KANAL D
-https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
+https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/kanald/kanald.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EURO_D.png" group-title="ÖZEL LİSTE",EURO D
-https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8
+https://goldvod.org/live/hpgdisco/123456/14.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/ATV.png" group-title="ÖZEL LİSTE",ATV
-https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/ATV_AVRUPA.png" group-title="ÖZEL LİSTE",ATV AVRUPA
 https://streams.uzunmuhalefet.com/stream/017621fb-d6f1-4e21-91d8-2510bdcb4ceb.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/NTV.png" group-title="ÖZEL LİSTE",NTV
-https://www.canlitv.tech/hls/ntv.m3u8
+https://dogus.daioncdn.net/ntv/ntv.m3u8?ce=3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/DMAX.png" group-title="ÖZEL LİSTE",DMAX
 https://dogus.daioncdn.net/dmax/dmax.m3u8?app=dmax_web
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/NOW.png" group-title="ÖZEL LİSTE",NOW
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TLC.png" group-title="ÖZEL LİSTE",TLC
-http://dygvideo.dygdigital.com/live/hls/tlctvdai?m3u8
+https://goldvod.org/live/hpgdisco/123456/95.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/STAR.png" group-title="ÖZEL LİSTE",STAR TV
 http://104.238.23.221/dsgo.php?id=245994
-https://streams.uzunmuhalefet.com/stream/a8ea8b0b-9c06-41ce-b7f9-35e895c78b77.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EURO_STAR.png" group-title="ÖZEL LİSTE",EUROSTAR
-https://162.212.179.33/trn03/gt-eurostar/index.m3u8
+https://goldvod.org/live/hpgdisco/123456/16.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_7.png" group-title="ÖZEL LİSTE",KANAL 7
 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KANAL_7_AVRUPA.png" group-title="ÖZEL LİSTE",KANAL 7 AVRUPA
-https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8
+https://goldvod.org/live/hpgdisco/123456/7.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_COCUK.png" group-title="ÖZEL LİSTE",TRT COCUK
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/CARTOON_NETWORK.png" group-title="ÖZEL LİSTE",CARTOON NETWORK
 https://bunuyazantosunokuyanakosun.denek1544.workers.dev/channel/Q2FydG9vbiBOZXR3b3JrIHwgQQ==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TV_8.png" group-title="ÖZEL LİSTE",TV 8
-https://api.hitnova.net/s/tv8/mono.m3u8
+https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8/tv8.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TV_8_BUCUK.png" group-title="ÖZEL LİSTE",TV 8.5
 https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/HALK_TV.png" group-title="ÖZEL LİSTE",HALK TV
@@ -53,50 +52,49 @@ https://halktv-live.daioncdn.net/halktv/halktv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TELE_1.png" group-title="ÖZEL LİSTE",TELE 1
 https://tele1-live.ercdn.net/tele1/tele1.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/CNN_TURK.png" group-title="ÖZEL LİSTE",CNN TÜRK
-https://raw.githubusercontent.com/tecotv2025/tecotv/refs/heads/main/playlist/Cnn_Turk.m3u8
+https://live.tecostream.xyz/CnnTurk.php
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/HABER_TURK.png" group-title="ÖZEL LİSTE",HABERTURK
 https://ensonhaber-live.ercdn.net/haberturk/haberturk_720p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TV_100.png" group-title="ÖZEL LİSTE",TV 100
-https://tv100-live.daioncdn.net/tv100/tv100.m3u8
+https://ensonhaber-live.ercdn.net/tv100/tv100.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/HABER_GLOBAL.png" group-title="ÖZEL LİSTE",HABER GLOBAL
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/FLASH_HABER.png" group-title="ÖZEL LİSTE",FLASH HABER
-https://flashhaber-live.ercdn.net/flashhaber/flashhaber.m3u8
+https://flashhaber-live.ercdn.net/flashhaber/flashhaber_720p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/SOZCU_TV.png" group-title="ÖZEL LİSTE",SOZCU TV
-https://www.canlitv.tech/hls/sozcu.m3u8
+https://goldvod.org/live/hpgdisco/123456/108.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/BENGU_TURK.png" group-title="ÖZEL LİSTE",BENGÜ TÜRK
-https://ensonhaber-live.ercdn.net/benguturk/benguturk_720p.m3u8
+https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EKOL_TV.png" group-title="ÖZEL LİSTE",EKOL TV
-https://ekoltv-live.ercdn.net/ekoltv/ekoltv.m3u8
+https://ekoltv-live.ercdn.net/ekoltv/ekoltv_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/KRT.png" group-title="ÖZEL LİSTE",KRT TV
-https://teknobaba.han686314.workers.dev/Krt_Tv.m3u8
+https://trn03.tulix.tv/gt-krt--tv/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/A_HABER.png" group-title="ÖZEL LİSTE",A HABER
-https://www.canlitv.tech/hls/ahaber.m3u8
+https://turkuaz.tecostream.xyz/ahaber
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TGRT_HABER.png" group-title="ÖZEL LİSTE",TGRT HABER
-https://www.canlitv.tech/hls/tgrthaber.m3u8
+https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TRT_SPOR.png" group-title="ÖZEL LİSTE",TRT 3 SPOR
 https://tv-trtspor1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/A_SPOR.png" group-title="ÖZEL LİSTE",A SPOR
-https://www.canlitv.tech/hls/aspor.m3u8
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/BEIN_SPORTS_HABER.png" group-title="ÖZEL LİSTE",BEIN SPORTS HABER
 http://87.121.104.29:1796/bshaberyt/stream.m3u8
-
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="1. TRT 1" tvg-id=""  group-title="Ulusal",TRT 1
 https://tv-trt1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtturk" tvg-name="TRT Türk "  group-title="Ulusal",TRT TÜRK
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="showtv" tvg-name="Show Tv "  group-title="Ulusal",SHOW TV
-https://kjasdmkjbas.denek1544.workers.dev/izle/showtv.m3u8
+https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="kanald" tvg-name="Kanal D "  group-title="Ulusal",KANAL D
-https://kjasdmkjbas.denek1544.workers.dev/izle/kanald-112.m3u8
+https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/kanald/kanald.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="7. ATV" tvg-id=""  group-title="Ulusal",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="dmax" tvg-name="Dmax "  group-title="Ulusal",DMAX
-https://dogus.daioncdn.net/dmax/dmax_720p.m3u8?token=RWJtNmsxSEE5YXI5aWVvdVU0NlcyMjhaTFZXRy84cWcxWEZra3ZIV0pnND0=&sid=7u9skhbfndzh&app=5a02c599-d17e-4982-9b04-090934d51af7&ce=3
+https://dogus.daioncdn.net/dmax/dmax.m3u8?app=dmax_web
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="foxtv" tvg-name="Now "  group-title="Ulusal",NOW
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tlc" tvg-name="TLC "  group-title="Ulusal",TLC
-https://trn03.tulix.tv/gt-tlc-tv/index.m3u8
+https://goldvod.org/live/hpgdisco/123456/95.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="startv" tvg-name="Star Tv "  group-title="Ulusal",STAR TV
 https://kjasdmkjbas.denek1544.workers.dev/izle/startv-113.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="13. Kanal 7" tvg-id=""  group-title="Ulusal",KANAL 7
@@ -108,41 +106,41 @@ https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/a2tv/a2tv_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="15. Beyaz Tv" tvg-id=""  group-title="Ulusal",BEYAZ TV
 https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="teve2" tvg-name="Teve 2 "  group-title="Ulusal",TEVE 2
-https://bdnkjfgd.testworker0y.workers.dev/channel/VGV2ZTI=
+https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/teve2/teve2_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtavaz" tvg-name="TRT Avaz"  group-title="Ulusal",TRT AVAZ
-https://bdnkjfgd.testworker0y.workers.dev/channel/VFJUIEF2YXo=
+https://tv-trtavaz.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtkurdi" tvg-name="TRT Kurdi"  group-title="Ulusal",TRT KURDI
-https://bdnkjfgd.testworker0y.workers.dev/channel/VFJUIEt1cmRp
+https://goldvod.org/live/hpgdisco/123456/41.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtworld" tvg-name="TRT World"  group-title="Ulusal",TRT WORLD
 https://tv-trtworld.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tv8" tvg-name="Tv 8 "  group-title="Ulusal",TV 8
-https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788
+https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8/tv8.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tv85" tvg-name="Tv 8 buçuk "  group-title="Ulusal",TV 8.5
 https://rkhubpaomb.turknet.ercdn.net/fwjkgpasof/tv8bucuk/tv8bucuk.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trthaber" tvg-name="TRT Haber"  group-title="Haber",TRT HABER
-https://zjbxhjchvnxz.testworker0y.workers.dev/channel/VFJUIEhhYmVyIHwgQQ==
+https://tv-trthaber.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ntvhaber" tvg-name="NTV"  group-title="Haber",NTV
-http://87.121.104.29:5002/channel?id=246120
+https://dogus.daioncdn.net/ntv/ntv.m3u8?ce=3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="halktv" tvg-name="Halk Tv"  group-title="Haber",HALK TV
-https://zjbxhjchvnxz.testworker0y.workers.dev/channel/SGFsayBUVg==
+https://halktv-live.daioncdn.net/halktv/halktv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="cnnturk" tvg-name="CNN Türk"  group-title="Haber",CNN TÜRK
-http://87.121.104.29:5002/channel?id=245940
+https://live.tecostream.xyz/CnnTurk.php
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="hanerglobalyeni" tvg-name="Haber Global "  group-title="Haber",HABER GLOBAL
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="flashhaberyt" tvg-name="Flash Haber"  group-title="Haber",FLASH HABER
-http://87.121.104.29:1796/flashhaberyt/stream.m3u8
+https://flashhaber-live.ercdn.net/flashhaber/flashhaber_720p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="sozcu" tvg-name="Sözcü Tv"  group-title="Haber",SÖZCÜ TV
-http://87.121.104.29:1796/sozcu/stream.m3u8
+https://goldvod.org/live/hpgdisco/123456/108.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="benguturkyt" tvg-name="Bengü Türk"  group-title="Haber",BENGÜ TÜRK
-http://87.121.104.29:1796/benguturkyt/stream.m3u8
+https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ahberyt" tvg-name="A Haber "  group-title="Haber",A HABER
-http://87.121.104.29:1796/ahberyt/stream.m3u8
+https://turkuaz.tecostream.xyz/ahaber
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="25. TGRT Haber" tvg-id=""  group-title="Haber",TGRT HABER
 https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="bloomberght" tvg-name="Bloomberg HT"  group-title="Haber",BLOOMBERG HT
-https://zjbxhjchvnxz.testworker0y.workers.dev/channel/Qmxvb21iZXJnIEhUIHwgQg==
+https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/bloomberght/bloomberght.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="haberturk" tvg-name="Haber Türk"  group-title="Haber",HABER TÜRK
-https://zjbxhjchvnxz.testworker0y.workers.dev/channel/SGFiZXJ0w7xyayB8IEI=
+https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/haberturktv/haberturktv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Ilke TV" tvg-id=""  group-title="Haber",ILKE TV
 https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="22. Kanal 24" tvg-id=""  group-title="Haber",KANAL 24
@@ -150,19 +148,19 @@ https://turkmedya-live.ercdn.net/tv24/tv24_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="21. Sozcu TV" tvg-id=""  group-title="Haber",SOZCU TV
 http://87.121.104.29:1796/sozcu/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tv100" tvg-name="TV 100"  group-title="Haber",TV 100
-https://zjbxhjchvnxz.testworker0y.workers.dev/channel/VFYxMDAgfCBB
+https://ensonhaber-live.ercdn.net/tv100/tv100.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ulusalkanalyt" tvg-name="Ulusal Kanal"  group-title="Haber",ULUSAL KANAL
-http://87.121.104.29:1796/ulusalkanalyt/stream.m3u8
+https://goldvod.org/live/hpgdisco/123456/114.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS 1" tvg-id="bein1"  group-title="Spor",beIN SPORTS 1
 https://noisy-cake-8ebc.travestigamzes.workers.dev/https://corestream.ronaldovurdu.help//hls/bein-sports-11.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS 2" tvg-id="bein2"  group-title="Spor",beIN SPORTS 2
-https://noisy-cake-8ebc.travestigamzes.workers.dev/https://corestream.ronaldovurdu.help//hls/bein-sports-2.m3u8
+https://goldvod.org/live/hpgdisco/123456/133.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS 3" tvg-id="bein3"  group-title="Spor",beIN SPORTS 3
-https://noisy-cake-8ebc.travestigamzes.workers.dev/https://corestream.ronaldovurdu.help//hls/bein-sports-3.m3u8
+https://goldvod.org/live/hpgdisco/123456/134.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS 4" tvg-id="bein4"  group-title="Spor",beIN SPORTS 4
-https://noisy-cake-8ebc.travestigamzes.workers.dev/https://corestream.ronaldovurdu.help//hls/bein-sports-4.m3u8
+https://goldvod.org/live/hpgdisco/123456/135.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS 5" tvg-id="bein5"  group-title="Spor",beIN SPORTS 5
-https://dga1op10s1u3leo.450bb93555fef8.click/live/selcukbeinsports5/playlist.m3u8
+https://goldvod.org/live/hpgdisco/123456/136.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS Max 1" tvg-id="beinmax1"  group-title="Spor",beIN SPORTS Max 1
 https://dga1op10s1u3leo.450bb93555fef8.click/live/selcukbeinsportsmax1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS Max 2" tvg-id="beinmax2"  group-title="Spor",beIN SPORTS Max 2
@@ -174,40 +172,39 @@ https://api.hitnova.net/s/sms2/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",EURO SPORT
 https://api.hitnova.net/s/eu1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",EURO SPORT 2
-https://api.hitnova.net/s/eu2/mono.m3u8
+https://goldvod.org/live/hpgdisco/123456/167.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",TİVİBU SPOR
-https://api.hitnova.net/s/t1/mono.m3u8
+https://goldvod.org/live/hpgdisco/123456/443.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",TİVİBU SPOR 2
 https://api.hitnova.net/s/t2/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",TİVİBU SPOR 3
 https://api.hitnova.net/s/t3/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",S SPORT 1
-https://api.hitnova.net/s/ss/mono.m3u8
+https://goldvod.org/live/hpgdisco/123456/168.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",S SPORT 2
-https://api.hitnova.net/s/ss2/mono.m3u8
+https://goldvod.org/live/hpgdisco/123456/169.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",A SPOR
-https://api.hitnova.net/s/as/mono.m3u8
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",TRT SPOR
-https://api.hitnova.net/s/trtspor/mono.m3u8
+https://tv-trtspor1.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="TRT Spor Yıldız"  group-title="Spor",TRT SPOR YILDIZ
 https://tv-trtspor2.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",İDMAN TV
-https://andro.326503.xyz/checklist/androstreamliveidm.m3u8
+https://goldvod.org/live/hpgdisco/123456/39.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",CBC SPORT
-https://andro.2385437.xyz/checklist/androstreamlivecbcs.m3u8
+https://goldvod.org/live/hpgdisco/123456/58.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="bshaberyt" tvg-name="Bein Sports Haber"  group-title="Spor",BEIN SPORTS HABER
 http://87.121.104.29:1796/bshaberyt/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="htspor" tvg-name="HT Spor"  group-title="Spor",HT SPOR
-https://ciner-live.ercdn.net/htspor/htspor.m3u8
-
+https://goldvod.org/live/hpgdisco/123456/154.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtbelgesela" tvg-name="TRT Belgesel"  group-title="Belgesel",TRT BELGESEL
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="BBC Earth" tvg-id=""  group-title="Belgesel",BBC EARTH
-https://kjasdmkjbas.denek1544.workers.dev/izle/bbcearthhd.m3u8
+https://goldvod.org/live/hpgdisco/123456/6852.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Discovery" tvg-id=""  group-title="Belgesel",DISCOVERY
-https://bstelevision.com/proxy_stream.php?u=http://109.205.187.51/live/PromaciosTelegram/VyjUvxQcbcNJ/217.m3u8?token=HkdcAhcJRw9GAAgEBFRTBAxSDVYCVFADVQFXAQEEC1BTVw1QB1JVV1AbFBFAQUcDVA5qCFUXX1cBXFMcExdAUxc6XQdGW0cEXQgBBhEZFxJcDlBDCwVJREMMBxILQAACV1EDQUhDAE0QXEpdUllqAlAVXAJUF18IRgkPHBMNXWkBAFkCCgVHD0YIGh8RXEYWF1lbFF1ZSURRDBdCUBZWFF9HAVdVUkcZRlpXRl1BRx8XWRcldBdJRFYdF1VfEVpZC0cOQQlSEA1GFRpaQGpHA0YXRwRQWAAUEV9BARNOEVsEHWsACw8LUAdNUVxdRhdcF1EFURMZRwtcCwpEXhBsRgwBFllGUlEEUggaTg==
+https://goldvod.org/live/hpgdisco/123456/8952.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoverychannel" tvg-name="Discovery Channel"  group-title="Belgesel",DISCOVERY CHANNEL
-https://fljghkjnfgin.testworker0y.workers.dev/channel/RGlzY292ZXJ5IENoYW5uZWw=
+http://mss.ayakkabiparti.lol/discovery/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoveryid" tvg-name="Discovery ID"  group-title="Belgesel",DISCOVERY ID
 https://new.testworkery0.workers.dev/stream/aHR0cHM6Ly9kc21hcnRnby1saXZlLmVyY2RuLm5ldC9kaXNjb3ZlcnlzY2llbmNlL2Rpc2NvdmVyeXNjaWVuY2UubTN1OA==.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoveryscience" tvg-name="Discovery Science"  group-title="Belgesel",DISCOVERY SCIENCE
@@ -215,27 +212,27 @@ https://fljghkjnfgin.testworker0y.workers.dev/channel/RGlzY292ZXJ5IFNjaWVuY2U=
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="docubox" tvg-name="DocuBOX"  group-title="Belgesel",DOCUBOX
 https://fljghkjnfgin.testworker0y.workers.dev/channel/RG9jdUJveA==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="lovenaturerec" tvg-name="Love Nature"  group-title="Belgesel",LOVE NATURE
-https://kjasdmkjbas.denek1544.workers.dev/izle/lovenature.m3u8
+https://goldvod.org/live/hpgdisco/123456/7393.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="103. National Geo" tvg-id=""  group-title="Belgesel",NATIONAL GEO
 https://bstelevision.com/proxy_stream.php?u=http://109.205.187.51/live/PromaciosTelegram/VyjUvxQcbcNJ/210.m3u8?token=HkdcAhcJRw9GAAgEBFRTBAxSDVYCVFADVQFXAQEEC1BTVw1QB1JVV1AbFBFAQUcDVA5qCFUXX1cBXFMcExdAUxc6XQdGW0cEXQgBBhEZFxJcDlBDCwVJREMMBxILQAACV1EDQUhDAE0QXEpdUllqAlAVXAJUF18IRgkPHBMNXWkBAFkCCgVHD0YIGh8RXEYWF1lbFF1ZSURRDBdCUBZWFF9HAVdVUkcZRlpXRl1BRx8XWRcldBdJRFYdF1VfEVpZC0cOQQlSEA1GFRpaQGpHA0YXRwRQWAAUEV9BARNOEVsEHWsACw8LUAdNUVxdRhdcF1EFURMZRwtcCwpEXhBsRgwBFllGUlEEUggaTg==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="natgeo" tvg-name="National Geographic"  group-title="Belgesel",NATIONAL GEOGRAPHIC
-https://fljghkjnfgin.testworker0y.workers.dev/channel/TmF0aW9uYWwgR2VvZ3JhcGhpYw==
+https://saran-live.ercdn.net/natgeohd/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="natgeowild" tvg-name="National Geographic Wild"  group-title="Belgesel",NATIONAL GEOGRAPHIC WILD
-https://fljghkjnfgin.testworker0y.workers.dev/channel/TmF0aW9uYWwgR2VvIFdJTEQ=
+https://saran-live.ercdn.net/natgeowild/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="naturetimetr" tvg-name="Nature Time Türkçede"  group-title="Belgesel",NATURE TIME
 http://87.121.104.29:1796/naturetimetr/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="rectarihtv" tvg-name="Tarih TV"  group-title="Belgesel",TARIH TV
 https://kjasdmkjbas.denek1544.workers.dev/izle/tarihtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tgrtbelgeselyt" tvg-name="TGRT Belgesel"  group-title="Belgesel",TGRT BELGESEL
-http://87.121.104.29:1796/tgrtbelgeselyt/stream.m3u8
+https://cdn.tecostream.xyz/Tgrt_Belgesel.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatexplore" tvg-name="Viasat Explore"  group-title="Belgesel",VIASAT EXPLORE
-https://fljghkjnfgin.testworker0y.workers.dev/channel/Vmlhc2F0IEV4cGxvcmU=
+https://goldvod.org/live/hpgdisco/123456/444.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatrec" tvg-name="Viasat History"  group-title="Belgesel",VIASAT HISTORY
-https://65.108.239.207/viasathistory/index.m3u8
+https://goldvod.org/live/hpgdisco/123456/164.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="historyrec" tvg-name="Viasat Nature"  group-title="Belgesel",VIASAT NATURE
 https://kjasdmkjbas.denek1544.workers.dev/izle/historychannel.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="yabantvtest" tvg-name="Yaban Tv"  group-title="Belgesel",YABAN TV
-http://188.245.211.255:1935/canlitv/yabantv.stream/playlist.m3u8?hash=d21d7459ead75e834b74495ed6103f1a
+https://giniko.metvmetv07.workers.dev/?id=12044.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ciftcitv" tvg-name="Çiftçi Tv"  group-title="Belgesel",ÇIFTÇI TV
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtcocuk" tvg-name="TRT Çocuk"  group-title="Çocuk",TRT ÇOCUK
@@ -245,13 +242,13 @@ https://bunuyazantosunokuyanakosun.denek1544.workers.dev/channel/Q2FydG9vbiBOZXR
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="babytv" tvg-name="Baby TV"  group-title="Çocuk",BABY TV
 https://saran-live.ercdn.net/babytv/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="disneyjunior" tvg-name="Disney Junior"  group-title="Çocuk",DISNEY JUNIOR
-https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/RGlzbmV5IEp1bmlvcg==
+https://saran-live.ercdn.net/disneyjunior/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="minikago" tvg-name="Minika Go"  group-title="Çocuk",MINIKA GO
-https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/TWluaWthIEdv
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="minikacocuk" tvg-name="Minika Çocuk"  group-title="Çocuk",MINIKA ÇOCUK
-https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/TWluaWthIMOHb2N1aw==
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Nickelodeon" tvg-id=""  group-title="Çocuk",NICKELODEON
-https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/Tmlja2Vsb2RlYW4=
+https://goldvod.org/live/hpgdisco/123456/453.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="cocuksmart" tvg-name="Çocuk Smart"  group-title="Çocuk",ÇOCUK SMART
 https://emekhirsizihaysiyetsizler.denek1544.workers.dev/channel/w4dvY3VrIFNtYXJ0
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Number One" tvg-id=""  group-title="Muzik",NUMBER ONE
@@ -276,19 +273,3 @@ https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
 https://yayin.slowkaradeniztv.com:3390/hybrid/play.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="114. TRT Muzik" tvg-id=""  group-title="Muzik",TRT MUZIK
 https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
