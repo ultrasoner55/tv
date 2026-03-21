@@ -30,7 +30,7 @@ https://dogus.daioncdn.net/dmax/dmax_720p.m3u8?token=RWJtNmsxSEE5YXI5aWVvdVU0Nlc
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/NOW.png" group-title="ÖZEL LİSTE",NOW
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/TLC.png" group-title="ÖZEL LİSTE",TLC
-https://trn03.tulix.tv/gt-tlc-tv/index.m3u8
+http://dygvideo.dygdigital.com/live/hls/tlctvdai?m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/STAR.png" group-title="ÖZEL LİSTE",STAR TV
 https://dygvideo.dygdigital.com/live/hls/startv4puhu
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/EURO_STAR.png" group-title="ÖZEL LİSTE",EUROSTAR
@@ -197,7 +197,7 @@ https://andro.2385437.xyz/checklist/androstreamlivecbcs.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="bshaberyt" tvg-name="Bein Sports Haber"  group-title="Spor",BEIN SPORTS HABER
 http://87.121.104.29:1796/bshaberyt/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="htspor" tvg-name="HT Spor"  group-title="Spor",HT SPOR
-http://87.121.104.29:5002/channel?id=394506
+https://ciner-live.ercdn.net/htspor/htspor.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtbelgesela" tvg-name="TRT Belgesel"  group-title="Belgesel",TRT BELGESEL
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
