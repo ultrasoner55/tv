@@ -1,3 +1,5 @@
+<img width="1370" height="768" alt="arka" src="https://github.com/user-attachments/assets/f11384bc-781c-4225-a1b9-628f13821409" />
+
 ## 📺 Web TV - Canlı Yayın Platformu
 Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kolay erişim sağlayan modern bir Web TV arayüzüdür. Kullanıcı dostu tasarımı ve karanlık mod desteği ile kesintisiz bir izleme deneyimi sunar.
 
