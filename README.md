@@ -1,4 +1,3 @@
-## 📺 Web [![TV](https://img.shields.io/badge/TV-4AABDB?style=flat-square&logoColor=white)](.) - Canlı Yayın Platformu
 ## 📺 Web TV - Canlı Yayın Platformu
 Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kolay erişim sağlayan modern bir Web TV arayüzüdür. Kullanıcı dostu tasarımı ve karanlık mod desteği ile kesintisiz bir izleme deneyimi sunar.
 
