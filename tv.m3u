@@ -111,8 +111,6 @@ https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8
 https://ackaxsqacw.turknet.ercdn.net/ozfkfbbjba/teve2/teve2_1080p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtavaz" tvg-name="TRT Avaz"  group-title="Ulusal",TRT AVAZ
 https://tv-trtavaz.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtkurdi" tvg-name="TRT Kurdi"  group-title="Ulusal",TRT KURDI
-https://goldvod.org/live/hpgdisco/123456/41.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtworld" tvg-name="TRT World"  group-title="Ulusal",TRT WORLD
 https://tv-trtworld.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tv8" tvg-name="Tv 8 "  group-title="Ulusal",TV 8
@@ -133,7 +131,7 @@ https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="flashhaberyt" tvg-name="Flash Haber"  group-title="Haber",FLASH HABER
 https://flashhaber-live.ercdn.net/flashhaber/flashhaber_720p.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="sozcu" tvg-name="Sözcü Tv"  group-title="Haber",SÖZCÜ TV
-https://goldvod.org/live/hpgdisco/123456/108.m3u8
+https://www.canlitv.tech/hls/sozcu.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="benguturkyt" tvg-name="Bengü Türk"  group-title="Haber",BENGÜ TÜRK
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ahberyt" tvg-name="A Haber "  group-title="Haber",A HABER
@@ -205,19 +203,19 @@ https://ciner-live.ercdn.net/htspor/htspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtbelgesela" tvg-name="TRT Belgesel"  group-title="Belgesel",TRT BELGESEL
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="BBC Earth" tvg-id=""  group-title="Belgesel",BBC EARTH
-https://goldvod.org/live/hpgdisco/123456/6852.m3u8
+http://65.108.239.207:80/bbc/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Discovery" tvg-id=""  group-title="Belgesel",DISCOVERY
-https://goldvod.org/live/hpgdisco/123456/8952.m3u8
+http://mss.ayakkabiparti.lol/discovery/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoverychannel" tvg-name="Discovery Channel"  group-title="Belgesel",DISCOVERY CHANNEL
 http://mss.ayakkabiparti.lol/discovery/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoveryid" tvg-name="Discovery ID"  group-title="Belgesel",DISCOVERY ID
-https://new.testworkery0.workers.dev/stream/aHR0cHM6Ly9kc21hcnRnby1saXZlLmVyY2RuLm5ldC9kaXNjb3ZlcnlzY2llbmNlL2Rpc2NvdmVyeXNjaWVuY2UubTN1OA==.m3u8
+http://65.108.239.207:80/discs/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoveryscience" tvg-name="Discovery Science"  group-title="Belgesel",DISCOVERY SCIENCE
 https://fljghkjnfgin.testworker0y.workers.dev/channel/RGlzY292ZXJ5IFNjaWVuY2U=
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="docubox" tvg-name="DocuBOX"  group-title="Belgesel",DOCUBOX
 https://fljghkjnfgin.testworker0y.workers.dev/channel/RG9jdUJveA==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="lovenaturerec" tvg-name="Love Nature"  group-title="Belgesel",LOVE NATURE
-https://goldvod.org/live/hpgdisco/123456/7393.m3u8
+http://65.108.239.207:80/lovenature/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="103. National Geo" tvg-id=""  group-title="Belgesel",NATIONAL GEO
 https://bstelevision.com/proxy_stream.php?u=http://109.205.187.51/live/PromaciosTelegram/VyjUvxQcbcNJ/210.m3u8?token=HkdcAhcJRw9GAAgEBFRTBAxSDVYCVFADVQFXAQEEC1BTVw1QB1JVV1AbFBFAQUcDVA5qCFUXX1cBXFMcExdAUxc6XQdGW0cEXQgBBhEZFxJcDlBDCwVJREMMBxILQAACV1EDQUhDAE0QXEpdUllqAlAVXAJUF18IRgkPHBMNXWkBAFkCCgVHD0YIGh8RXEYWF1lbFF1ZSURRDBdCUBZWFF9HAVdVUkcZRlpXRl1BRx8XWRcldBdJRFYdF1VfEVpZC0cOQQlSEA1GFRpaQGpHA0YXRwRQWAAUEV9BARNOEVsEHWsACw8LUAdNUVxdRhdcF1EFURMZRwtcCwpEXhBsRgwBFllGUlEEUggaTg==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="natgeo" tvg-name="National Geographic"  group-title="Belgesel",NATIONAL GEOGRAPHIC
@@ -231,7 +229,7 @@ https://kjasdmkjbas.denek1544.workers.dev/izle/tarihtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tgrtbelgeselyt" tvg-name="TGRT Belgesel"  group-title="Belgesel",TGRT BELGESEL
 https://cdn.tecostream.xyz/Tgrt_Belgesel.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatexplore" tvg-name="Viasat Explore"  group-title="Belgesel",VIASAT EXPLORE
-https://goldvod.org/live/hpgdisco/123456/444.m3u8
+http://65.108.239.207:80/docubox/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatrec" tvg-name="Viasat History"  group-title="Belgesel",VIASAT HISTORY
 https://65.108.239.207/viasathistory/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="historyrec" tvg-name="Viasat Nature"  group-title="Belgesel",VIASAT NATURE
