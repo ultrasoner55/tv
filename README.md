@@ -1,4 +1,5 @@
-## 📺 Web $\color{#ff5733}{HEX \space Kodu}$TV - Canlı Yayın Platformu
+## 📺 Web [![TV](https://img.shields.io/badge/TV-4AABDB?style=flat-square&logoColor=white)](.) - Canlı Yayın Platformu
+## 📺 Web TV - Canlı Yayın Platformu
 Bu proje, tarayıcı üzerinden çeşitli televizyon kanallarına hızlı ve kolay erişim sağlayan modern bir Web TV arayüzüdür. Kullanıcı dostu tasarımı ve karanlık mod desteği ile kesintisiz bir izleme deneyimi sunar.
 
 <img width="1370" height="768" alt="arka" src="https://github.com/user-attachments/assets/f11384bc-781c-4225-a1b9-628f13821409" />
