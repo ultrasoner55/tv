@@ -201,7 +201,7 @@ https://ciner-live.ercdn.net/htspor/htspor.m3u8
 -------------------------------------------------------------- BELGESEL ------------------------------------------------------------------
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtbelgesela" tvg-name="TRT Belgesel"  group-title="Belgesel",TRT BELGESEL
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-id="tlcsucvearastirma" tvg-name="TLC Suç ve Araştırma" tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Belgesel",TLC Suç ve Araştırma
+#EXTINF:-1 tvg-id="tlcsucvearastirma" tvg-name="TLC SUÇ VE ARAŞTIRMA" tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Belgesel",TLC Suç ve Araştırma
 http://87.121.104.29:1796/tlcsucvearastirma/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="BBC Earth" tvg-id=""  group-title="Belgesel",BBC EARTH
 https://yakinzamandakapatacam.denek1544.workers.dev/izle/bbcearthhd.m3u8
