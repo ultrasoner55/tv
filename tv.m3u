@@ -231,6 +231,8 @@ https://skerlerparlak.testworker0y.workers.dev/channel/Vmlhc2F0IEV4cGxvcmU=
 https://yakinzamandakapatacam.denek1544.workers.dev/izle/viasathistory.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="historyrec" tvg-name="Viasat Nature"  group-title="Belgesel",VIASAT NATURE
 https://yakinzamandakapatacam.denek1544.workers.dev/izle/historychannel.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="yabantvtest" tvg-name="Koy Tv"  group-title="Belgesel",KOY TV
+http://live.cdn-vizi.workers.dev/?ID=71
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="yabantvtest" tvg-name="Yaban Tv"  group-title="Belgesel",YABAN TV
 https://giniko.metvmetv07.workers.dev/?id=12044.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ciftcitv" tvg-name="Çiftçi Tv"  group-title="Belgesel",ÇIFTÇI TV
@@ -246,8 +248,6 @@ https://saran-live.ercdn.net/disneyjunior/index.m3u8
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="minikacocuk" tvg-name="Minika Çocuk"  group-title="Çocuk",MINIKA ÇOCUK
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Nickelodeon" tvg-id=""  group-title="Çocuk",NICKELODEON
-https://goldvod.org/live/hpgdisco/123456/453.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="cocuksmart" tvg-name="Çocuk Smart"  group-title="Çocuk",ÇOCUK SMART
 https://bunuyazantosunokuyanakosun.denek1544.workers.dev/channel/w4dvY3VrIFNtYXJ0
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtcocuk" tvg-name="TRT Çocuk"  group-title="Çocuk",TRT ÇOCUK
