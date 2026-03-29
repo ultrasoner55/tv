@@ -196,8 +196,32 @@ http://live.cdn-vizi.workers.dev/?ID=52
 https://tv-trtspor1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="TRT Spor Yıldız"  group-title="Spor",TRT SPOR YILDIZ
 https://tv-trtspor2.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii 1"  group-title="Spor",TABİİ 1
+
+
+
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor"  group-title="Spor",TABİİ SPOR
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 1"  group-title="Spor",TABİİ SPOR 1
 https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb1.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 2"  group-title="Spor",TABİİ SPOR 2
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb2.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 3"  group-title="Spor",TABİİ SPOR 3
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb3.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 4"  group-title="Spor",TABİİ SPOR 4
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb4.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 5"  group-title="Spor",TABİİ SPOR 5
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb5.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 6"  group-title="Spor",TABİİ SPOR 6
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb6.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 7"  group-title="Spor",TABİİ SPOR 7
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb7.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 8"  group-title="Spor",TABİİ SPOR 8
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb8.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 9"  group-title="Spor",TABİİ SPOR 9
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb9.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii Spor 10"  group-title="Spor",TABİİ SPOR 10
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb10.m3u8
+
 -------------------------------------------------------------- BELGESEL ------------------------------------------------------------------
 #EXTINF:-1 tvg-id="tlcsucvearastirma" tvg-name="TLC Suç ve Araştırma" tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Belgesel",TLC SUÇ VE ARAŞTIRMA
 https://87.121.104.29:1796/tlcsucvearastirma/stream.m3u8
