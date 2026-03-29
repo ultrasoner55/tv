@@ -255,8 +255,12 @@ https://bunuyazantosunokuyanakosun.denek1544.workers.dev/channel/w4dvY3VrIFNtYXJ
 -------------------------------------------------------------- MÜZİK ------------------------------------------------------------------
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Number One" tvg-id=""  group-title="Muzik",NUMBER ONE
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Number One Turk" tvg-id=""  group-title="Muzik",NUMBER ONE TURK
+http://live.cdn-vizi.workers.dev/?ID=46
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="125. Number One Ask" tvg-id=""  group-title="Muzik",NUMBER ONE ASK
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Dream Turk" tvg-id=""  group-title="Muzik",DREAM TURK
+http://live.cdn-vizi.workers.dev/?ID=48
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Hype Radio" tvg-id=""  group-title="Muzik",HYPE RADIO
 https://streammix.alsolnet.com/hyperadio/live/chunklist_w2051280106.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="117. Power" tvg-id=""  group-title="Muzik",POWER
