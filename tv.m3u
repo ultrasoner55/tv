@@ -202,21 +202,21 @@ https://ciner-live.ercdn.net/htspor/htspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtbelgesela" tvg-name="TRT Belgesel"  group-title="Belgesel",TRT BELGESEL
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="BBC Earth" tvg-id=""  group-title="Belgesel",BBC EARTH
-http://65.108.239.207:80/bbc/index.m3u8
+https://yakinzamandakapatacam.denek1544.workers.dev/izle/bbcearthhd.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Discovery" tvg-id=""  group-title="Belgesel",DISCOVERY
 http://mss.ayakkabiparti.lol/discovery/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoverychannel" tvg-name="Discovery Channel"  group-title="Belgesel",DISCOVERY CHANNEL
 http://mss.ayakkabiparti.lol/discovery/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoveryid" tvg-name="Discovery ID"  group-title="Belgesel",DISCOVERY ID
-http://65.108.239.207:80/discs/index.m3u8
+https://new.testworkery0.workers.dev/stream/aHR0cHM6Ly9kc21hcnRnby1saXZlLmVyY2RuLm5ldC9kaXNjb3ZlcnlzY2llbmNlL2Rpc2NvdmVyeXNjaWVuY2UubTN1OA==.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="discoveryscience" tvg-name="Discovery Science"  group-title="Belgesel",DISCOVERY SCIENCE
-https://fljghkjnfgin.testworker0y.workers.dev/channel/RGlzY292ZXJ5IFNjaWVuY2U=
+https://skerlerparlak.testworker0y.workers.dev/channel/RGlzY292ZXJ5IFNjaWVuY2U=
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="docubox" tvg-name="DocuBOX"  group-title="Belgesel",DOCUBOX
-https://fljghkjnfgin.testworker0y.workers.dev/channel/RG9jdUJveA==
+https://skerlerparlak.testworker0y.workers.dev/channel/RG9jdUJveA==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="lovenaturerec" tvg-name="Love Nature"  group-title="Belgesel",LOVE NATURE
-http://65.108.239.207:80/lovenature/index.m3u8
+https://yakinzamandakapatacam.denek1544.workers.dev/izle/lovenature.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="103. National Geo" tvg-id=""  group-title="Belgesel",NATIONAL GEO
-https://bstelevision.com/proxy_stream.php?u=http://109.205.187.51/live/PromaciosTelegram/VyjUvxQcbcNJ/210.m3u8?token=HkdcAhcJRw9GAAgEBFRTBAxSDVYCVFADVQFXAQEEC1BTVw1QB1JVV1AbFBFAQUcDVA5qCFUXX1cBXFMcExdAUxc6XQdGW0cEXQgBBhEZFxJcDlBDCwVJREMMBxILQAACV1EDQUhDAE0QXEpdUllqAlAVXAJUF18IRgkPHBMNXWkBAFkCCgVHD0YIGh8RXEYWF1lbFF1ZSURRDBdCUBZWFF9HAVdVUkcZRlpXRl1BRx8XWRcldBdJRFYdF1VfEVpZC0cOQQlSEA1GFRpaQGpHA0YXRwRQWAAUEV9BARNOEVsEHWsACw8LUAdNUVxdRhdcF1EFURMZRwtcCwpEXhBsRgwBFllGUlEEUggaTg==
+https://saran-live.ercdn.net/natgeohd/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="natgeo" tvg-name="National Geographic"  group-title="Belgesel",NATIONAL GEOGRAPHIC
 https://saran-live.ercdn.net/natgeohd/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="natgeowild" tvg-name="National Geographic Wild"  group-title="Belgesel",NATIONAL GEOGRAPHIC WILD
@@ -228,7 +228,7 @@ https://kjasdmkjbas.denek1544.workers.dev/izle/tarihtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tgrtbelgeselyt" tvg-name="TGRT Belgesel"  group-title="Belgesel",TGRT BELGESEL
 https://cdn.tecostream.xyz/Tgrt_Belgesel.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatexplore" tvg-name="Viasat Explore"  group-title="Belgesel",VIASAT EXPLORE
-http://65.108.239.207:80/docubox/index.m3u8
+https://skerlerparlak.testworker0y.workers.dev/channel/Vmlhc2F0IEV4cGxvcmU=
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatrec" tvg-name="Viasat History"  group-title="Belgesel",VIASAT HISTORY
 https://yakinzamandakapatacam.denek1544.workers.dev/izle/viasathistory.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="historyrec" tvg-name="Viasat Nature"  group-title="Belgesel",VIASAT NATURE
