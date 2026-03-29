@@ -185,7 +185,7 @@ https://api.hitnova.net/s/ss2/mono.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",BEIN SPORTS HABER
 https://87.121.104.29:1796/bshaberyt/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",A SPOR
-https://api.hitnova.net/s/as/mono.m3u8
+https://www.canlitv.tech/hls/aspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="htspor" tvg-name="HT Spor"  group-title="Spor",HT SPOR
 https://ciner-live.ercdn.net/htspor/htspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",İDMAN TV
@@ -193,9 +193,11 @@ http://live.cdn-vizi.workers.dev/?ID=53
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",CBC SPORT
 http://live.cdn-vizi.workers.dev/?ID=52
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Spor",TRT SPOR
-https://api.hitnova.net/s/trtspor/mono.m3u8
+https://tv-trtspor1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="TRT Spor Yıldız"  group-title="Spor",TRT SPOR YILDIZ
 https://tv-trtspor2.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtsporyildiz" tvg-name="Tabii 1"  group-title="Spor",TABİİ 1
+https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb1.m3u8
 -------------------------------------------------------------- BELGESEL ------------------------------------------------------------------
 #EXTINF:-1 tvg-id="tlcsucvearastirma" tvg-name="TLC Suç ve Araştırma" tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Belgesel",TLC SUÇ VE ARAŞTIRMA
 https://87.121.104.29:1796/tlcsucvearastirma/stream.m3u8
