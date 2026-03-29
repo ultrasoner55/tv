@@ -232,7 +232,7 @@ https://yakinzamandakapatacam.denek1544.workers.dev/izle/viasathistory.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="historyrec" tvg-name="Viasat Nature"  group-title="Belgesel",VIASAT NATURE
 https://yakinzamandakapatacam.denek1544.workers.dev/izle/historychannel.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="yabantvtest" tvg-name="Yaban Tv"  group-title="Belgesel",YABAN TV
-http://188.245.211.255:1935/canlitv/yabantv.stream/playlist.m3u8?hash=d21d7459ead75e834b74495ed6103f1a
+https://giniko.metvmetv07.workers.dev/?id=12044.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ciftcitv" tvg-name="Çiftçi Tv"  group-title="Belgesel",ÇIFTÇI TV
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
 -------------------------------------------------------------- ÇOCUK ------------------------------------------------------------------
@@ -255,10 +255,18 @@ https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 -------------------------------------------------------------- MÜZİK ------------------------------------------------------------------
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Hype Radio" tvg-id=""  group-title="Muzik",HYPE RADIO
 https://streammix.alsolnet.com/hyperadio/live/chunklist_w2051280106.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="114. Kral Tv" tvg-id=""  group-title="Muzik",KRAL TV
+http://dygvideo.dygdigital.com/live/hls/kraltv?m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="114. Kral Pop" tvg-id=""  group-title="Muzik",KRAL POP
+http://dygvideo.dygdigital.com/live/hls/kralpop?m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Number One" tvg-id=""  group-title="Muzik",NUMBER ONE
 https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Number One Turk" tvg-id=""  group-title="Muzik",NUMBER ONE TURK
 http://live.cdn-vizi.workers.dev/?ID=46
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Number One Damar" tvg-id=""  group-title="Muzik",NUMBER ONE DAMAR
+https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e19877b340.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Dream Tv" tvg-id=""  group-title="Muzik",DREAM TV
+https://dsmartgo-live.ercdn.net/dreamtv/dreamtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="124. Dream Turk" tvg-id=""  group-title="Muzik",DREAM TURK
 http://live.cdn-vizi.workers.dev/?ID=48
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="117. Power" tvg-id=""  group-title="Muzik",POWER
