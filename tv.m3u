@@ -124,7 +124,7 @@ https://dogus.daioncdn.net/ntv/ntv.m3u8?ce=3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="halktv" tvg-name="Halk Tv"  group-title="Haber",HALK TV
 https://halktv-live.daioncdn.net/halktv/halktv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="cnnturk" tvg-name="CNN Türk"  group-title="Haber",CNN TÜRK
-https://live.tecostream.xyz/CnnTurk.php
+http://live.cdn-vizi.workers.dev/?ID=12
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="hanerglobalyeni" tvg-name="Haber Global "  group-title="Haber",HABER GLOBAL
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="flashhaberyt" tvg-name="Flash Haber"  group-title="Haber",FLASH HABER
@@ -145,12 +145,10 @@ https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/haberturktv/haberturktv.m3u8
 https://stream.ilketv.com.tr/hls/ilkecanli.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="22. Kanal 24" tvg-id=""  group-title="Haber",KANAL 24
 https://turkmedya-live.ercdn.net/tv24/tv24_1080p.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="21. Sozcu TV" tvg-id=""  group-title="Haber",SOZCU TV
-http://87.121.104.29:1796/sozcu/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tv100" tvg-name="TV 100"  group-title="Haber",TV 100
 https://ensonhaber-live.ercdn.net/tv100/tv100.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ulusalkanalyt" tvg-name="Ulusal Kanal"  group-title="Haber",ULUSAL KANAL
-https://goldvod.org/live/hpgdisco/123456/114.m3u8
+http://live.cdn-vizi.workers.dev/?ID=58
 -------------------------------------------------------------- SPOR ------------------------------------------------------------------
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="beIN SPORTS 1" tvg-id="bein1"  group-title="Spor",beIN SPORTS 1
 https://noisy-cake-8ebc.travestigamzes.workers.dev/https://corestream.ronaldovurdu.help//hls/bein-sports-1.m3u8
