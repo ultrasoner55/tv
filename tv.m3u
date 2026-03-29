@@ -79,7 +79,7 @@ https://tv-trtspor1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/A_SPOR.png" group-title="ÖZEL LİSTE",A SPOR
 https://www.canlitv.tech/hls/aspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/BEIN_SPORTS_HABER.png" group-title="ÖZEL LİSTE",BEIN SPORTS HABER
-http://87.121.104.29:1796/bshaberyt/stream.m3u8
+http://live.yt-hls.workers.dev/UCPe9vNjHF1kEExT5kHwc7aw.m3u8
 -------------------------------------------------------------- ULUSAL ------------------------------------------------------------------
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="1. TRT 1" tvg-id=""  group-title="Ulusal",TRT 1
 https://tv-trt1.medya.trt.com.tr/master_1080.m3u8
