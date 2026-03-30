@@ -79,7 +79,8 @@ https://tv-trtspor1.medya.trt.com.tr/master_1080.m3u8
 https://www.canlitv.tech/hls/aspor.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/logolar/BEIN_SPORTS_HABER.png" group-title="ÖZEL LİSTE",BEIN SPORTS HABER
 http://87.121.104.29:1796/bshaberyt/stream.m3u8
--------------------------------------------------------------- ULUSAL ------------------------------------------------------------------
+-------------------------------------------------------------- ULUSAL ------------------------------------------------------------------
+
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="showtv" tvg-name="Show Tv "  group-title="Ulusal",SHOW TV
 http://live.cdn-vizi.workers.dev/?ID=3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="kanald" tvg-name="Kanal D "  group-title="Ulusal",KANAL D
@@ -116,7 +117,8 @@ https://tv-trtworld.medya.trt.com.tr/master.m3u8
 https://tv-trt1.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtturk" tvg-name="TRT Türk "  group-title="Ulusal",TRT TÜRK
 https://tv-trtturk.medya.trt.com.tr/master.m3u8
--------------------------------------------------------------- HABER ------------------------------------------------------------------
+-------------------------------------------------------------- HABER ------------------------------------------------------------------
+
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ntvhaber" tvg-name="NTV"  group-title="Haber",NTV
 https://dogus.daioncdn.net/ntv/ntv.m3u8?ce=3
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="halktv" tvg-name="Halk Tv"  group-title="Haber",HALK TV
@@ -224,7 +226,7 @@ https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/che
 
 -------------------------------------------------------------- BELGESEL ------------------------------------------------------------------
 #EXTINF:-1 tvg-id="tlcsucvearastirma" tvg-name="TLC Suç ve Araştırma" tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Belgesel",TLC SUÇ VE ARAŞTIRMA
-https://87.121.104.29:1796/tlcsucvearastirma/stream.m3u8
+http://87.121.104.29:1798/tlcsucvearastirma/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="rectarihtv" tvg-name="Tarih TV"  group-title="Belgesel",TARIH TV
 https://yakinzamandakapatacam.denek1544.workers.dev/izle/tarihtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatrec" tvg-name="Viasat History"  group-title="Belgesel",VIASAT HISTORY
@@ -261,7 +263,8 @@ https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
 http://live.cdn-vizi.workers.dev/?ID=31
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtbelgesela" tvg-name="TRT Belgesel"  group-title="Belgesel",TRT BELGESEL
 https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8
--------------------------------------------------------------- ÇOCUK ------------------------------------------------------------------
+-------------------------------------------------------------- ÇOCUK ------------------------------------------------------------------
+
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="cartoonnetwork" tvg-name="Cartoon Network"  group-title="Çocuk",CARTOON NETWORK
 https://bunuyazantosunokuyanakosun.denek1544.workers.dev/channel/Q2FydG9vbiBOZXR3b3JrIHwgQQ==
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="babytv" tvg-name="Baby TV"  group-title="Çocuk",BABY TV
