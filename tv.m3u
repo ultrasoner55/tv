@@ -226,7 +226,7 @@ https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/che
 
 -------------------------------------------------------------- BELGESEL ------------------------------------------------------------------
 #EXTINF:-1 tvg-id="tlcsucvearastirma" tvg-name="TLC Suç ve Araştırma" tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Belgesel",TLC SUÇ VE ARAŞTIRMA
-http://87.121.104.29:1798/tlcsucvearastirma/stream.m3u8
+http://87.121.104.29:1796/tlcsucvearastirma/stream.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="rectarihtv" tvg-name="Tarih TV"  group-title="Belgesel",TARIH TV
 https://yakinzamandakapatacam.denek1544.workers.dev/izle/tarihtv.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatrec" tvg-name="Viasat History"  group-title="Belgesel",VIASAT HISTORY
