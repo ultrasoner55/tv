@@ -129,7 +129,7 @@ http://live.cdn-vizi.workers.dev/?ID=12
 https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="flashhaberyt" tvg-name="Flash Haber"  group-title="Haber",FLASH HABER
 https://flashhaber-live.ercdn.net/flashhaber/flashhaber_720p.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="sozcu" tvg-name="SözcU Tv"  group-title="Haber",SÖZCU TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="sozcu" tvg-name="SözcU Tv"  group-title="Haber",SOZCU TV
 https://www.canlitv.tech/hls/sozcu.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="benguturkyt" tvg-name="BengU TUrk"  group-title="Haber",BENGU TURK
 https://tv.ensonhaber.com/benguturk/benguturk.m3u8
@@ -225,7 +225,7 @@ https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/che
 https://api.codetabs.com/v1/proxy/?quest=https://andro.okan11gote12sokan.cfd/checklist/androstreamlivetb10.m3u8
 
 -------------------------------------------------------------- BELGESEL ------------------------------------------------------------------
-#EXTINF:-1 tvg-id="tlcsucvearastirma" tvg-name="TLC Suç ve Araştırma" tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Belgesel",TLC SUÇ VE ARAŞTIRMA
+#EXTINF:-1 tvg-id="tlcsucvearastirma" tvg-name="TLC Suç ve Araştırma" tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" group-title="Belgesel",TLC SUC VE ARASTIRMA
 http://87.121.104.29:1796/tlcsucvearastirma/stream.m3u8 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="rectarihtv" tvg-name="Tarih TV"  group-title="Belgesel",TARIH TV
 http://65.108.239.207:80/tarihtv/index.m3u8
@@ -257,7 +257,7 @@ http://65.108.239.207:80/lovenature/index.m3u8
 http://live.cdn-vizi.workers.dev/?ID=71
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="yabantvtest" tvg-name="Yaban Tv"  group-title="Belgesel",YABAN TV
 https://giniko.metvmetv07.workers.dev/?id=12044.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ciftcitv" tvg-name="Çiftçi Tv"  group-title="Belgesel",ÇIFTÇI TV
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="ciftcitv" tvg-name="Çiftçi Tv"  group-title="Belgesel",CIFTCI TV
 https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="tgrtbelgeselyt" tvg-name="TGRT Belgesel"  group-title="Belgesel",TGRT BELGESEL
 https://cdn.tecostream.xyz/Tgrt_Belgesel.m3u8
@@ -273,11 +273,11 @@ https://saran-live.ercdn.net/babytv/index.m3u8
 https://saran-live.ercdn.net/disneyjunior/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="minikago" tvg-name="Minika Go"  group-title="Çocuk",MINIKA GO
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="minikacocuk" tvg-name="Minika Çocuk"  group-title="Çocuk",MINIKA ÇOCUK
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="minikacocuk" tvg-name="Minika Çocuk"  group-title="Çocuk",MINIKA COCUK
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="cocuksmart" tvg-name="Çocuk Smart"  group-title="Çocuk",ÇOCUK SMART
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="cocuksmart" tvg-name="Çocuk Smart"  group-title="Çocuk",COCUK SMART
 https://bunuyazantosunokuyanakosun.denek1544.workers.dev/channel/w4dvY3VrIFNtYXJ0
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtcocuk" tvg-name="TRT Çocuk"  group-title="Çocuk",TRT ÇOCUK
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="trtcocuk" tvg-name="TRT Çocuk"  group-title="Çocuk",TRT COCUK
 https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
 -------------------------------------------------------------- MUZIK ------------------------------------------------------------------
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-name="Hype Radio" tvg-id=""  group-title="Muzik",HYPE RADIO
