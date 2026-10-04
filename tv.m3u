@@ -230,7 +230,7 @@ http://87.121.104.29:1796/tlcsucvearastirma/stream.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="rectarihtv" tvg-name="Tarih TV"  group-title="Belgesel",TARIH TV
 http://65.108.239.207:80/tarihtv/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatrec" tvg-name="Viasat History"  group-title="Belgesel",VIASAT HISTORY
-http://65.108.239.207:80/viasathistory/index.m3u8
+https://65.108.239.207/viasathistory/index.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="viasatexplore" tvg-name="Viasat Explore"  group-title="Belgesel",VIASAT EXPLORE
 https://skerlerparlak.testworker0y.workers.dev/channel/Vmlhc2F0IEV4cGxvcmU=
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/ultrasoner55/tv/main/favicon.svg" tvg-id="historyrec" tvg-name="Viasat Nature"  group-title="Belgesel",VIASAT NATURE
